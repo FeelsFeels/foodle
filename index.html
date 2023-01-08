@@ -13,7 +13,8 @@
     <div class="bg-wrapper"></div>
     <h1>F🍩🍩DLE</h1>
     <div id="game">
-        <input type="text" list="guess-options_ingredients" id="foodGuessInput" placeholder="What food is this?">
+        <input type="text" list="guess-options_food" id="input_food" placeholder="What food is this?">
+        <datalist id="guess-options_food"></datalist>
 
         <div id="main">
             <div id="left">
@@ -32,9 +33,11 @@
                 </div>
             </div>
 
-            
-            <div id="food-picture-div" class="">
-                <img id="food-picture" src="src/food_pictures/pizza_margherita.jpg">
+            <div id="centre">
+                <div id="food-picture-div" class="">
+                    <img id="food-picture" src="src/food_pictures/pizza_margherita_5.jpg">
+                </div>
+                <div id="guessed_food"></div>
             </div>
 
             <div id="right">
@@ -51,12 +54,10 @@
                     <div id="guessed_course" class="guessed_container"></div>
                 </div>
             </div>
-      
         </div>
-    </div>
 
-    
-    
+
+    </div>
 
     <script src="bootstrap-5.2.2-dist\js\bootstrap.min.js"></script>
     <script src="food.js"></script>
