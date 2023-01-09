@@ -1,5 +1,5 @@
 input_food = document.getElementById('input_food');
-guessedDiv_food = document.getElementById('guessed_food')
+guessedDiv_food = document.getElementById('guessed-food')
 guessOptions_food = document.getElementById('guess-options_food');
 
 
@@ -65,6 +65,7 @@ function Guess(guessInfo, div, categoryList) {
         let previousGuesses = div.children;
         
         //place at firstmost 'wrong' position to put
+        let wrong = false;
         if(previousGuesses.length > 2){
             for (let i = 1; i < previousGuesses.length; i++){
                 console.log(previousGuesses[i].textContent);
@@ -74,9 +75,13 @@ function Guess(guessInfo, div, categoryList) {
                 }
                 else{
                     //if wrong, append before the wrong one
+                    wrong = true;
                     previousGuesses[i].insertAdjacentElement("beforebegin" ,newGuessElement)
                     break;
                 }
+            }
+            if(!wrong){
+                div.append(newGuessElement);
             }
         }
         else {
@@ -133,7 +138,7 @@ function GuessFood(guess){
 
     }
     else{
-        newGuessElement.classList.add('pill-food', 'pill--neutral');
+        newGuessElement.classList.add('pill-food', 'pill--danger');
     }
     guessedDiv_food.prepend(newGuessElement);
 
