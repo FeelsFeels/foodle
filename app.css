@@ -55,6 +55,29 @@ body {
     font-size: 18px;
 }
 
+#input_food {
+    width: 280px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    background: transparent;
+    border: transparent;
+    outline: none;
+}
+
+.paper-content textarea {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    /* border: 0;
+    outline: 0; */
+    background: transparent;
+    font-weight: bold;
+    font-size: 30px;
+    box-sizing: border-box;
+}
+
+/*
 .paper-content textarea {
     width: 100%;
     max-width: 100%;
@@ -72,7 +95,7 @@ body {
     box-sizing: border-box;
     z-index: 1;
 }
-
+*/
 
 
 #recipe-header {
@@ -119,7 +142,7 @@ body {
     flex-wrap: wrap;
 }
 
-#category-ingredients {
+#category-ingredient {
     margin-top: 28px;
     margin-left: 10px;
 }
@@ -137,7 +160,14 @@ body {
 }
 
 
-
+.guess-input {
+    width: 100px;
+    border: none;
+    /* border-bottom: 2px solid rgba(0, 0, 0, 1); */
+    background-color: rgba(0, 0, 0, 0);
+    padding-bottom: 0;
+    
+}
 
 
 .pill {

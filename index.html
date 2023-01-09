@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>new foodle</title>
     <link rel="stylesheet" href="bootstrap-5.2.2-dist\css\bootstrap.min.css">
-    <link rel="stylesheet" href="app2.css">
+    <link rel="stylesheet" href="app.css">
     <title>Document</title>
 </head>
 <body>
@@ -14,39 +14,31 @@
     
     <div class="paper">
         <div class="paper-content">
-            <div id="recipe-header">Recipe for ________</div>
+            <div id="recipe-header">Recipe for <input list="guess-options_food" autofocus id="input_food" type="text" placeholder="?????"></div>
+            <datalist id="guess-options_food"></datalist>
+            <!-- <div id="recipe-header">Recipe for <textarea></textarea></div> -->
             <!-- <textarea autofocus>Hello world! &#10;Here's a paper textarea tag.</textarea> -->
             <img id="food-picture" src="src/food_pictures/pizza_margherita_5.jpg">
             
             <div id ="category-holder">
                 <div id="left">
-                    <div class="category" id="category-ingredients">
+                    <div class="category" id="category-ingredient">
                         <span style="flex-basis: 100%; margin-top:-2px;">Ingredients:</span>
-                        <span class="pill pill--danger pill--border-color">Beans</span>
-                        <span class="pill pill--danger pill--border-color">Beans</span>
-                        <span class="pill pill--danger pill--border-color">Beans</span>
-                        <span class="pill pill--danger pill--border-color">Beans</span>
-                        <span class="pill pill--danger pill--border-color">Beans</span>
-                        <span class="pill pill--danger pill--border-color">Beans</span>
                     </div>
                 </div>
     
                 <div id="right">
                     <div class="category" id="category-origin">
                         <span style="flex-basis: 100%; margin-top:-2px;">Country of Origin:</span>
-                        <span class="pill pill--danger pill--border-color">Beans</span>
-                        <span class="pill pill--danger pill--border-color">Beans</span>
-                        <span class="pill pill--danger pill--border-color">Beans</span>
-                        <span class="pill pill--danger pill--border-color">Beans</span>
                     </div>
                     <div class="category" id="category-method">
                         <span style="flex-basis: 100%; margin-top:-2px;">Cooking Method:</span>
-                        <span class="pill pill--danger pill--border-color">Beans</span>
                     </div>
                 </div>
             </div>
 
             
+            <div id="guessed_food"></div>
         </div>
     </div>
 
