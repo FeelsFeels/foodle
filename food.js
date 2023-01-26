@@ -14,27 +14,26 @@ let newFood = new Food('Pizza', ['Cheese', 'Flour', 'Tomato', 'Mozzarella'], ['I
 
 
 let foodList = [
-	'Pizza',
-	'Full English Breakfast',
-	'Risotto',
-	'Katsudon',
-	'Bibimbap',
-	'Bak Chor Mee',
-	'Hainanese Chicken Rice',
-	'Ginseng Chicken Soup',
-	'Bingsu',
-	'Tortang Talong',
-	'Caesar Salad'
+  'Pizza',                  'Full English Breakfast',
+  'Risotto',                'Katsudon',
+  'Bibimbap',               'Bak Chor Mee',
+  'Hainanese Chicken Rice', 'Ginseng Chicken Soup',
+  'Bingsu',                 'Tortang Talong',
+  'Caesar Salad',           'Ceviche',
+  'Aush Reshteh',           'Aushak',
+  'Bolani',                 'Chapli Kabab',
+  'Fesenjan',               'Kesme',
+  'Gheimeh'
 ]
 
 let foodObjectList = {
-	Pizza: [
-    	[ 'Cheese', 'Flour', 'Tomato', 'Mozzarella' ],
-		[ 'Italy' ],
-		[ 'Baking' ],
-		[ 'Entree' ]
-	],
-	'Full English Breakfast': [
+  Pizza: [
+    [ 'Cheese', 'Flour', 'Tomato', 'Mozzarella' ],
+    [ 'Italy' ],
+    [ 'Baking' ],
+    [ 'Entree' ]
+  ],
+  'Full English Breakfast': [
     [
       'Bacon',    'Sausage',
       'Egg',      'Tomato',
@@ -97,7 +96,7 @@ let foodObjectList = {
       'Pork'
     ],
     [ 'Singapore' ],
-    [ 'Boiled' ],
+    [ 'Boiling' ],
     []
   ],
   'Hainanese Chicken Rice': [
@@ -117,13 +116,13 @@ let foodObjectList = {
   'Ginseng Chicken Soup': [
     [ 'Chicken', 'Ginseng', 'Garlic', 'Rice' ],
     [ 'Korea' ],
-    [ 'Boiled' ],
+    [ 'Boiling' ],
     [ 'Soup' ]
   ],
   Bingsu: [
     [ 'Ice', 'Red Beans', 'Condensed Milk', 'Fruit Syrup' ],
     [ 'Korea' ],
-    [],
+    [ 'Assembling' ],
     [ 'Dessert' ]
   ],
   'Tortang Talong': [
@@ -132,7 +131,7 @@ let foodObjectList = {
     [ 'Grilling', 'Frying' ],
     [ 'Side Dish' ]
   ],
-    'Caesar Salad': [
+  'Caesar Salad': [
     [
       'Lettuce',
       'Croutons',
@@ -149,9 +148,76 @@ let foodObjectList = {
     [ 'Mexico' ],
     [ 'Mixed' ],
     [ 'Appetiser', 'Salad' ]
+  ],
+  Ceviche: [
+    [ 'Fish', 'Lime', 'Lemon', 'Chilli', 'Onion', 'Coriander' ],
+    [ 'Peru', 'Costa Rica' ],
+    [ 'Curing', 'Assembling' ],
+    []
+  ],
+  'Aush Reshteh': [
+    [ 'Beans', 'Lentils', 'Noodles', 'Tumeric', 'Broth' ],
+    [ 'Iran', 'Afghanistan' ],
+    [ 'Simmering', 'Stewing' ],
+    [ 'Soup' ]
+  ],
+  Aushak: [
+    [ 'Pasta', 'Chives', 'Tomato', 'Yogurt', 'Mint' ],
+    [ 'Afghanistan' ],
+    [ 'Boiling' ],
+    []
+  ],
+  Bolani: [
+    [ 'Flour', 'Potato', 'Green Onion', 'Coriander' ],
+    [ 'Afghanistan' ],
+    [ 'Frying' ],
+    []
+  ],
+  'Chapli Kabab': [
+    [ 'Minced Meat', 'Beef', 'Mutton', 'Flour', 'Chilli', 'Coriander' ],
+    [ 'Afghanistan', 'Pakistan', 'India', 'Bangaladesh' ],
+    [ 'Frying', 'Deep Frying' ],
+    []
+  ],
+  Fesenjan: [
+    [
+      'Pomegranate',
+      'Walnut',
+      'Duck',
+      'Chicken',
+      'Onion',
+      'Tumeric',
+      'Cinnamon'
+    ],
+    [ 'Iran' ],
+    [ 'Stewing' ],
+    [ 'Stew' ]
+  ],
+  Kesme: [
+    [
+      'Noodles', 'Flour',
+      'Egg',     'Broth',
+      'Potato',  'Meat',
+      'Tomato'
+    ],
+    [ 'Turkey' ],
+    [ 'Simmering', 'Boiling' ],
+    [ 'Soup' ]
+  ],
+  Gheimeh: [
+    [
+      'Mutton',
+      'Tomato',
+      'Split Peas',
+      'Onion',
+      'Dried Lime',
+      'Potato'
+    ],
+    [ 'Iran' ],
+    [ 'Stewing' ],
+    [ 'Stew' ]
   ]
 }
-
 let ingredientList = [
   'Cheese',      'Flour',                'Tomato',
   'Mozzarella',  'Bacon',                'Sausage',
@@ -169,35 +235,35 @@ let ingredientList = [
   'Fruit Syrup', 'Eggplant',             'Salt',
   'Lettuce',     'Croutons',             'Lemon',
   'Olive Oil',   'Worcestershire Sauce', 'Anchovies',
-  'Mustard',     'Pepper'
+  'Mustard',     'Pepper',               'Fish',
+  'Lime',        'Coriander',            'Lentils',
+  'Tumeric',     'Pasta',                'Chives',
+  'Yogurt',      'Mint',                 'Potato',
+  'Green Onion', 'Mutton',               'Pomegranate',
+  'Walnut',      'Duck',                 'Cinnamon',
+  'Meat',        'Split Peas',           'Dried Lime'
 ]
-  let originList = [
-  'Italy',
-  'England',
-  'United Kingdom',
-  'Japan',
-  'Korea',
-  'Singapore',
-  'Malaysia',
-  'Thailand',
-  'Philippines',
-    'Mexico'
+let originList = [
+  'Italy',          'England',
+  'United Kingdom', 'Japan',
+  'Korea',          'Singapore',
+  'Malaysia',       'Thailand',
+  'Philippines',    'Mexico',
+  'Peru',           'Costa Rica',
+  'Iran',           'Afghanistan',
+  'Pakistan',       'India',
+  'Bangaladesh',    'Turkey'
 ]
 let methodList = [
-  'Baking',
-  'Frying',
-  'Simmering',
-  'Deep Frying',
-  'Mixed',
-  'Boiled',
-  'Grilling'
+  'Baking',     'Frying',
+  'Simmering',  'Deep Frying',
+  'Mixed',      'Boiling',
+  'Assembling', 'Grilling',
+  'Curing',     'Stewing'
 ]
 let courseList = [
-  'Entree',
-  'Breakfast',
-  'Soup',
-  'Dessert',
-  'Side Dish',
-  'Appetiser',
-  'Salad'
+  'Entree',    'Breakfast',
+  'Soup',      'Dessert',
+  'Side Dish', 'Appetiser',
+  'Salad',     'Stew'
 ]

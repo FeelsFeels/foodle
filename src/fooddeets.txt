@@ -3,9 +3,17 @@
 #Risotto/Rice,Stock,Broth,Bouillon,Butter,Onion,Cheese,White Wine/Italy/Simmering/Entree
 #Katsudon/Rice,Pork,Chicken,Breadcrumbs,Egg,Soy Sauce,Onion/Japan/Deep Frying/???
 #Bibimbap/Rice,Gochujang,Chilli,Soy Sauce,Egg,Beef,Carrot,Cucumber,Kimchi/Korea/Mixed/???
-#Bak Chor Mee/Noodles,Fishball,Minced Meat,Chilli,Oil,Vinegar,Pork/Singapore/Boiled/???
+#Bak Chor Mee/Noodles,Fishball,Minced Meat,Chilli,Oil,Vinegar,Pork/Singapore/Boiling/???
 #Hainanese Chicken Rice/Rice,Chicken,Stock,Ginger,Sesame Oil,Chilli,Cucumber/Singapore,Malaysia,Thailand/???/???
-#Ginseng Chicken Soup/Chicken,Ginseng,Garlic,Rice/Korea/Boiled/Soup
-#Bingsu/Ice,Red Beans,Condensed Milk,Fruit Syrup/Korea/???/Dessert
+#Ginseng Chicken Soup/Chicken,Ginseng,Garlic,Rice/Korea/Boiling/Soup
+#Bingsu/Ice,Red Beans,Condensed Milk,Fruit Syrup/Korea/Assembling/Dessert
 #Tortang Talong/Egg,Eggplant,Salt/Philippines/Grilling,Frying/Side Dish
 #Caesar Salad/Lettuce,Croutons,Lemon,Olive Oil,Egg,Worcestershire Sauce,Anchovies,Garlic,Mustard,Cheese,Pepper/Mexico/Mixed/Appetiser,Salad
+#Ceviche/Fish,Lime,Lemon,Chilli,Onion,Coriander/Peru,Costa Rica/Curing,Assembling/???
+#Aush Reshteh/Beans,Lentils,Noodles,Tumeric,Broth/Iran,Afghanistan/Simmering,Stewing/Soup
+#Aushak/Pasta,Chives,Tomato,Yogurt,Mint/Afghanistan/Boiling/???
+#Bolani/Flour,Potato,Green Onion,Coriander/Afghanistan/Frying/???
+#Chapli Kabab/Minced Meat,Beef,Mutton,Flour,Chilli,Coriander/Afghanistan,Pakistan,India,Bangaladesh/Frying,Deep Frying/???
+#Fesenjan/Pomegranate,Walnut,Duck,Chicken,Onion,Tumeric,Cinnamon/Iran/Stewing/Stew
+#Kesme/Noodles,Flour,Egg,Broth,Potato,Meat,Tomato/Turkey/Simmering,Boiling/Soup
+#Gheimeh/Mutton,Tomato,Split Peas,Onion,Dried Lime,Potato/Iran/Stewing/Stew
