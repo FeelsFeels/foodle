@@ -8,6 +8,9 @@ guessedDiv_origin = document.getElementById('category-origin');
 guessedDiv_method = document.getElementById('category-method');
 
 
+infoPopup = document.getElementById('info-popup');
+
+
 
 let guessed_food = [];
 let guessed_ingredient = [];
@@ -148,6 +151,15 @@ function GuessFood(guess){
 
 }
 
+function RemovePopup(target) {
+    target.classList.add("hidden");
+    document.body.style.overflow = "auto";
+}
+function ShowPopup(target) {
+    target.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+}
+
 function Init() {
     //Event listeners and datalists
     //Food datalist
@@ -164,7 +176,16 @@ function Init() {
             input_food.blur();
         }
     })
+    
+    infoPopup.addEventListener('click', (e)=>{
+        console.log(e.target);
+        if(e.target.classList.contains("popup")){
+            RemovePopup(infoPopup);
+        }
+    });
+    ShowPopup(infoPopup);
 }
+
 
 console.log('TESTICALS');
 

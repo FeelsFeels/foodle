@@ -10,14 +10,27 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <div class="bg-wrapper"></div> -->
-    
+    <header>
+        <div id="title-container">
+            <span style="font-size: 32px;">F🍩🍩DLE</span>
+            <input type="image" src='src/question-circle.svg' id="info-button" onclick="ShowPopup(infoPopup)"></input>
+        
+        </div>
+        <div id="title-description" >the round-the-world food guessing game</div>
+        
+        <!-- <button id="info-button">
+            
+        </button> -->
+        
+
+
+    </header>
     <div class="paper">
         <div class="paper-content">
-            <div id="recipe-header">Recipe for <input list="guess-options_food" autofocus id="input_food" type="text" placeholder="?????"></div>
+            <div id="recipe-header">
+                <span>Recipe for </span><input list="guess-options_food" autofocus id="input_food" type="text" placeholder="?????">
+            </div>
             <datalist id="guess-options_food"></datalist>
-            <!-- <div id="recipe-header">Recipe for <textarea></textarea></div> -->
-            <!-- <textarea autofocus>Hello world! &#10;Here's a paper textarea tag.</textarea> -->
             <img id="food-picture" src="src/food_pictures/pizza_margherita_5.jpg">
             
             <div id="guessed-food"></div>
@@ -40,6 +53,22 @@
             </div>
 
             
+        </div>
+    </div>
+
+    <div class="popup hidden" id="info-popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                How does Foodle Work? 
+                <input type="image" src='src/x-circle.svg' id="popup-close-button" onclick="RemovePopup(infoPopup)"></input>
+            </div>
+            <p>Foodle shows you a pixelated image of a dish which you have to guess.</p>
+            <p>Every failed guess unpixelates the image slightly, and gives you some hints.
+                The hints will show if the characteristics of your guessed dish is present in the actual dish.
+            </p>
+            <p>Learn more about the worlds' cuisines with Foodle!</p>
+            <p style="font-weight: bold;">Bon Appétit!</p>
+
         </div>
     </div>
 
