@@ -301,13 +301,14 @@ body {
 }
 .popup-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: auto; /* 15% from the top and centered */
+    margin-top: 6%;
     padding: 20px;
     border: 2px solid rgb(2, 132, 199);
     border-radius: 1rem;
     width: 60%;
     max-width: 500px;
-    min-width: 280px;
+    min-width: 320px;
 }
 
 .popup-header{
@@ -322,10 +323,33 @@ body {
     height: 28px;
     right: -10px;
     top: -10px;
-    /* display: inline-block; */
-    
+}
+
+#results-food-picture{
+    display: block;
+    width: 70%;
+    margin: auto;
+
+    box-shadow: 3px 3px 5px #575450;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+}
+
+#results-content {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#share-button {
+    margin-top: 10px;
 
 }
+#info-link{
+    font-size: 14px;
+    color: rgb(14 165 233);
+}
+
 
 .hidden {
     display: none;

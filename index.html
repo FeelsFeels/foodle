@@ -13,7 +13,10 @@
     <header>
         <div id="title-container">
             <span style="font-size: 32px;">F🍩🍩DLE</span>
-            <input type="image" src='src/question-circle.svg' id="info-button" onclick="ShowPopup(infoPopup)"></input>
+            <div>
+                <input type="image" src='src/question-circle.svg' id="info-button" onclick="ShowPopup(infoPopup)"></input>
+                <input type="image" src='src/bar-chart.svg' id="info-button" onclick="ShowPopup(resultsPopup)"></input>                
+            </div>
         
         </div>
         <div id="title-description" >the round-the-world food guessing game</div>
@@ -72,11 +75,36 @@
         </div>
     </div>
 
+    <div class="popup hidden" id="results-popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <div id="results-header">
+                    <span style="font-size: larger; color: #ff4e3d;">Game in progress...</span>
+                </div>
+                <input type="image" src='src/x-circle.svg' id="popup-close-button" onclick="RemovePopup(resultsPopup)"></input>
+            </div>
+            <div id="results-content" class="hidden">
+                <img id="results-food-picture" src="src/food_pictures/pizza_margherita_5.jpg">                
+                <button id="share-button" onclick="ShareWin()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+                        <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+                    </svg>
+                    <span id="share-button_text">Share it!</span>
+                </button>
+                <div>
+                    <a id="info-link" target="_blank">Find out more</a>                    
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+
     <script src="bootstrap-5.2.2-dist\js\bootstrap.min.js"></script>
     <script src="food.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
 
-
+<!-- #4CAF50 -->
 <!-- <span class="pill pill--danger pill--border-color">Frying</span> -->

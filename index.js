@@ -9,7 +9,11 @@ guessedDiv_method = document.getElementById('category-method');
 
 
 infoPopup = document.getElementById('info-popup');
-
+resultsPopup = document.getElementById('results-popup');
+resultsHeader = document.getElementById('results-header');
+resultsContent = document.getElementById('results-content');
+resultsShareButtonText = document.getElementById('share-button_text');
+resultsLink = document.getElementById('info-link');
 
 
 let guessed_food = [];
@@ -19,6 +23,8 @@ let guessed_method = [];
 let guessed_course = [];
 
 let mostPreviousGuessElements = [];
+
+let numberOfGuesses = 0;
 
 
 function GuessFormatter(str){
@@ -110,8 +116,10 @@ function GuessFood(guess){
         return;
     }
 
-    let guessedFoodInfo = foodObjectList[value];
+    numberOfGuesses += 1;
     guessed_food.push(value);
+
+    let guessedFoodInfo = foodObjectList[value];
     let newGuessElement = document.createElement('span');
     newGuessElement.textContent = value;
     
@@ -137,6 +145,7 @@ function GuessFood(guess){
 
     if(newFood.foodName == value){
         //wingame
+        Win();
         newGuessElement.classList.add('pill-food', 'pill--success');
 
     }
@@ -150,6 +159,40 @@ function GuessFood(guess){
     mostPreviousGuessElements.push(newGuessElement);
 
 }
+
+function Win() {
+    resultsHeader.innerHTML = '';
+
+    let congratulations = document.createElement('div');
+    congratulations.setAttribute('style', 'font-size: larger; color: #4CAF50;');
+    congratulations.textContent = 'Congratulations!';
+
+    let winStatement = document.createElement('div');
+    winStatement.textContent = `You got it in ${numberOfGuesses}!`;
+
+    resultsHeader.append(congratulations);
+    resultsHeader.append(winStatement);
+    
+    let winContent = document.createElement('div');
+    winContent.innerText = `It's ${newFood.foodName}!`
+    
+    resultsContent.prepend(winContent);
+
+
+    resultsContent.classList.remove("hidden");
+
+
+    ShowPopup(resultsPopup);
+}
+
+function ShareWin() {
+    navigator.clipboard.writeText(`I guessed the food in ${numberOfGuesses}! https://feelsfeels.github.io/foodle`);
+    resultsShareButtonText.innerText = 'Copied!';
+    setTimeout(() => {
+        resultsShareButtonText.innerText = 'Share it!'
+    }, 2000)
+}
+
 
 function RemovePopup(target) {
     target.classList.add("hidden");
@@ -183,6 +226,15 @@ function Init() {
             RemovePopup(infoPopup);
         }
     });
+    resultsPopup.addEventListener('click', (e)=>{
+        console.log(e.target);
+        if(e.target.classList.contains("popup")){
+            RemovePopup(resultsPopup);
+        }
+    });
+
+    resultsLink.href = 'https://en.wikipedia.org/wiki/Pizza';
+
     ShowPopup(infoPopup);
 }
 
