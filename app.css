@@ -145,7 +145,18 @@ body {
 
     box-shadow: 3px 3px 5px #575450;
     box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+}
 
+#food-picture-canvas {
+    display: block;
+    width: 480px;
+    height: 320px;
+    margin-left: 80px;
+    margin-top: 15px;
+    transform: rotate(-5deg);
+    
+    box-shadow: 3px 3px 5px #575450;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
 }
 
 

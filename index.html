@@ -34,7 +34,8 @@
                 <span>Recipe for </span><input list="guess-options_food" autofocus id="input_food" type="text" placeholder="?????">
             </div>
             <datalist id="guess-options_food"></datalist>
-            <img id="food-picture" src="src/food_pictures/pizza_margherita_5.jpg">
+            <img id="food-picture" src="src/food_pictures/risotto.png">
+            <!-- <canvas id="food-picture-canvas"></canvas> -->
             
             <div id="guessed-food"></div>
             <div id ="category-holder">
@@ -84,7 +85,7 @@
                 <input type="image" src='src/x-circle.svg' id="popup-close-button" onclick="RemovePopup(resultsPopup)"></input>
             </div>
             <div id="results-content" class="hidden">
-                <img id="results-food-picture" src="src/food_pictures/pizza_margherita_5.jpg">                
+                <img id="results-food-picture" src="src/food_pictures/pizza_margherita.jpg">                
                 <button id="share-button" onclick="ShareWin()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
                         <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>

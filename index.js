@@ -7,6 +7,9 @@ guessedDiv_ingredient = document.getElementById('category-ingredient');
 guessedDiv_origin = document.getElementById('category-origin');
 guessedDiv_method = document.getElementById('category-method');
 
+let foodImg = document.getElementById('food-picture');
+// let foodCanvas = document.getElementById('food-picture-canvas');
+// let foodCtx = foodCanvas.getContext('2d');
 
 infoPopup = document.getElementById('info-popup');
 resultsPopup = document.getElementById('results-popup');
@@ -203,6 +206,43 @@ function ShowPopup(target) {
     document.body.style.overflow = "hidden";
 }
 
+
+function PixelateImage(originalImage, pixelationFactor) {
+    const canvas = document.createElement("canvas");
+    const context = canvas.getContext("2d");
+
+    const originalWidth = originalImage.width;
+    const originalHeight = originalImage.height;
+    const canvasWidth = originalWidth;
+    const canvasHeight = originalHeight;
+
+    canvas.width = canvasWidth;
+    canvas.height = canvasHeight;
+
+    context.drawImage(originalImage, 0, 0, originalWidth, originalHeight);
+    const originalImageData = context.getImageData(0, 0, originalWidth, originalHeight).data;
+
+    if(pixelationFactor !== 0){
+        for (let y = 0; y < originalHeight; y += pixelationFactor){
+            for (let x = 0; x < originalWidth; x += pixelationFactor){
+                const pixelIndexPosition = (x + y * originalWidth) * 4;
+
+                context.fillStyle = `rgba(
+                    ${originalImageData[pixelIndexPosition]},
+                    ${originalImageData[pixelIndexPosition + 1]},
+                    ${originalImageData[pixelIndexPosition + 2]},
+                    ${originalImageData[pixelIndexPosition + 3]}                    
+                )`;
+                context.fillRect(x, y, pixelationFactor, pixelationFactor);
+            }
+        }
+    }
+    console.log('drawing to canvas');
+    foodImg.src = canvas.toDataURL();
+
+}
+
+
 function Init() {
     //Event listeners and datalists
     //Food datalist
@@ -221,13 +261,11 @@ function Init() {
     })
     
     infoPopup.addEventListener('click', (e)=>{
-        console.log(e.target);
         if(e.target.classList.contains("popup")){
             RemovePopup(infoPopup);
         }
     });
     resultsPopup.addEventListener('click', (e)=>{
-        console.log(e.target);
         if(e.target.classList.contains("popup")){
             RemovePopup(resultsPopup);
         }
@@ -235,12 +273,19 @@ function Init() {
 
     resultsLink.href = 'https://en.wikipedia.org/wiki/Pizza';
 
+    // foodCanvas.width = 480;
+    // foodCanvas.height = 320;
+    // let img = new Image();
+    // img.src = "src/food_pictures/pizza_margherita.jpg"
+    
+    // let img = new Image(480, 320);
+    // img.src = 'src/food_pictures/full_english_breakfast.jpg'
+    // foodImg.crossOrigin ="Anonymous";
+    PixelateImage(foodImg, 4);
+
+
     ShowPopup(infoPopup);
 }
-
-
-console.log('TESTICALS');
-
 
 Init();
 
