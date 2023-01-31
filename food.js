@@ -22,257 +22,342 @@ function GetRandomFood(){
 
 
 
+
 let foodList = [
-  'Pizza',                  'Full English Breakfast',
-  'Risotto',                'Katsudon',
-  'Bibimbap',               'Bak Chor Mee',
-  'Hainanese Chicken Rice', 'Ginseng Chicken Soup',
-  'Bingsu',                 'Tortang Talong',
-  'Caesar Salad',           'Ceviche',
-  'Aush Reshteh',           'Aushak',
-  'Bolani',                 'Chapli Kabab',
-  'Fesenjan',               'Kesme',
-  'Gheimeh'
+	'Pizza',                  'Full English Breakfast',
+	'Risotto',                'Katsudon',
+	'Bibimbap',               'Bak Chor Mee',
+	'Hainanese Chicken Rice', 'Ginseng Chicken Soup',
+	'Bingsu',                 'Tortang Talong',
+	'Caesar Salad',           'Ceviche',
+	'Aush Reshteh',           'Aushak',
+	'Bolani',                 'Chapli Kabab',
+	'Fesenjan',               'Kesme',
+	'Gheimeh',                'Baklava',
+	'Knafeh',                 'Baba Ghanoush',
+	'Balaleet',               'Chakhchoukha',
+	'Chebakia',               'Churros',
+	'Frittata',               'Quiche Lorraine',
+	'Faloodeh',               'Fatayer',
+	'Turkish Delight'
 ]
 
 let foodObjectList = {
-  Pizza: [
-    [ 'Cheese', 'Flour', 'Tomato', 'Mozzarella' ],
-    [ 'Italy' ],
-    [ 'Baking' ],
-    [ 'Entree' ]
-  ],
-  'Full English Breakfast': [
-    [
-      'Bacon',    'Sausage',
-      'Egg',      'Tomato',
-      'Mushroom', 'Bread',
-      'Beans'
-    ],
-    [ 'England', 'United Kingdom' ],
-    [ 'Frying' ],
-    [ 'Breakfast' ]
-  ],
-  Risotto: [
-    [
-      'Rice',
-      'Stock',
-      'Broth',
-      'Bouillon',
-      'Butter',
-      'Onion',
-      'Cheese',
-      'White Wine'
-    ],
-    [ 'Italy' ],
-    [ 'Simmering' ],
-    [ 'Entree' ]
-  ],
-  Katsudon: [
-    [
-      'Rice',
-      'Pork',
-      'Chicken',
-      'Breadcrumbs',
-      'Egg',
-      'Soy Sauce',
-      'Onion'
-    ],
-    [ 'Japan' ],
-    [ 'Deep Frying' ],
-    []
-  ],
-  Bibimbap: [
-    [
-      'Rice',   'Gochujang',
-      'Chilli', 'Soy Sauce',
-      'Egg',    'Beef',
-      'Carrot', 'Cucumber',
-      'Kimchi'
-    ],
-    [ 'Korea' ],
-    [ 'Mixed' ],
-    []
-  ],
-  'Bak Chor Mee': [
-    [
-      'Noodles',
-      'Fishball',
-      'Minced Meat',
-      'Chilli',
-      'Oil',
-      'Vinegar',
-      'Pork'
-    ],
-    [ 'Singapore' ],
-    [ 'Boiling' ],
-    []
-  ],
-  'Hainanese Chicken Rice': [
-    [
-      'Rice',
-      'Chicken',
-      'Stock',
-      'Ginger',
-      'Sesame Oil',
-      'Chilli',
-      'Cucumber'
-    ],
-    [ 'Singapore', 'Malaysia', 'Thailand' ],
-    [],
-    []
-  ],
-  'Ginseng Chicken Soup': [
-    [ 'Chicken', 'Ginseng', 'Garlic', 'Rice' ],
-    [ 'Korea' ],
-    [ 'Boiling' ],
-    [ 'Soup' ]
-  ],
-  Bingsu: [
-    [ 'Ice', 'Red Beans', 'Condensed Milk', 'Fruit Syrup' ],
-    [ 'Korea' ],
-    [ 'Assembling' ],
-    [ 'Dessert' ]
-  ],
-  'Tortang Talong': [
-    [ 'Egg', 'Eggplant', 'Salt' ],
-    [ 'Philippines' ],
-    [ 'Grilling', 'Frying' ],
-    [ 'Side Dish' ]
-  ],
-  'Caesar Salad': [
-    [
-      'Lettuce',
-      'Croutons',
-      'Lemon',
-      'Olive Oil',
-      'Egg',
-      'Worcestershire Sauce',
-      'Anchovies',
-      'Garlic',
-      'Mustard',
-      'Cheese',
-      'Pepper'
-    ],
-    [ 'Mexico' ],
-    [ 'Mixed' ],
-    [ 'Appetiser', 'Salad' ]
-  ],
-  Ceviche: [
-    [ 'Fish', 'Lime', 'Lemon', 'Chilli', 'Onion', 'Coriander' ],
-    [ 'Peru', 'Costa Rica' ],
-    [ 'Curing', 'Assembling' ],
-    []
-  ],
-  'Aush Reshteh': [
-    [ 'Beans', 'Lentils', 'Noodles', 'Tumeric', 'Broth' ],
-    [ 'Iran', 'Afghanistan' ],
-    [ 'Simmering', 'Stewing' ],
-    [ 'Soup' ]
-  ],
-  Aushak: [
-    [ 'Pasta', 'Chives', 'Tomato', 'Yogurt', 'Mint' ],
-    [ 'Afghanistan' ],
-    [ 'Boiling' ],
-    []
-  ],
-  Bolani: [
-    [ 'Flour', 'Potato', 'Green Onion', 'Coriander' ],
-    [ 'Afghanistan' ],
-    [ 'Frying' ],
-    []
-  ],
-  'Chapli Kabab': [
-    [ 'Minced Meat', 'Beef', 'Mutton', 'Flour', 'Chilli', 'Coriander' ],
-    [ 'Afghanistan', 'Pakistan', 'India', 'Bangaladesh' ],
-    [ 'Frying', 'Deep Frying' ],
-    []
-  ],
-  Fesenjan: [
-    [
-      'Pomegranate',
-      'Walnut',
-      'Duck',
-      'Chicken',
-      'Onion',
-      'Tumeric',
-      'Cinnamon'
-    ],
-    [ 'Iran' ],
-    [ 'Stewing' ],
-    [ 'Stew' ]
-  ],
-  Kesme: [
-    [
-      'Noodles', 'Flour',
-      'Egg',     'Broth',
-      'Potato',  'Meat',
-      'Tomato'
-    ],
-    [ 'Turkey' ],
-    [ 'Simmering', 'Boiling' ],
-    [ 'Soup' ]
-  ],
-  Gheimeh: [
-    [
-      'Mutton',
-      'Tomato',
-      'Split Peas',
-      'Onion',
-      'Dried Lime',
-      'Potato'
-    ],
-    [ 'Iran' ],
-    [ 'Stewing' ],
-    [ 'Stew' ]
-  ]
+Pizza: [
+	[ 'Cheese', 'Flour', 'Tomato', 'Mozzarella' ],
+	[ 'Italy' ],
+	[ 'Baking' ],
+	[ 'Entree' ]
+],
+'Full English Breakfast': [
+	[
+	'Bacon',    'Sausage',
+	'Egg',      'Tomato',
+	'Mushroom', 'Bread',
+	'Beans'
+	],
+	[ 'England', 'United Kingdom' ],
+	[ 'Frying' ],
+	[ 'Breakfast' ]
+],
+Risotto: [
+	[
+	'Rice',
+	'Stock',
+	'Broth',
+	'Bouillon',
+	'Butter',
+	'Onion',
+	'Cheese',
+	'White Wine'
+	],
+	[ 'Italy' ],
+	[ 'Simmering' ],
+	[ 'Entree' ]
+],
+Katsudon: [
+	[
+	'Rice',
+	'Pork',
+	'Chicken',
+	'Breadcrumbs',
+	'Egg',
+	'Soy Sauce',
+	'Onion'
+	],
+	[ 'Japan' ],
+	[ 'Deep Frying' ],
+	[]
+],
+Bibimbap: [
+	[
+	'Rice',   'Gochujang',
+	'Chilli', 'Soy Sauce',
+	'Egg',    'Beef',
+	'Carrot', 'Cucumber',
+	'Kimchi'
+	],
+	[ 'Korea' ],
+	[ 'Mixing' ],
+	[]
+],
+'Bak Chor Mee': [
+	[
+	'Noodles',
+	'Fishball',
+	'Minced Meat',
+	'Chilli',
+	'Oil',
+	'Vinegar',
+	'Pork'
+	],
+	[ 'Singapore' ],
+	[ 'Boiling' ],
+	[]
+],
+'Hainanese Chicken Rice': [
+	[ 'Rice', 'Chicken', 'Stock', 'Ginger', 'Sesame Oil', 'Chilli' ],
+	[ 'Singapore', 'Malaysia', 'Thailand' ],
+	[ 'Steaming' ],
+	[]
+],
+'Ginseng Chicken Soup': [
+	[ 'Chicken', 'Ginseng', 'Garlic', 'Rice' ],
+	[ 'Korea' ],
+	[ 'Boiling' ],
+	[ 'Soup' ]
+],
+Bingsu: [
+	[ 'Ice', 'Red Beans', 'Condensed Milk', 'Syrup' ],
+	[ 'Korea' ],
+	[ 'Freezing', 'Assembling' ],
+	[ 'Dessert' ]
+],
+'Tortang Talong': [
+	[ 'Egg', 'Eggplant', 'Salt' ],
+	[ 'Philippines' ],
+	[ 'Grilling', 'Frying' ],
+	[ 'Side Dish' ]
+],
+'Caesar Salad': [
+	[
+	'Lettuce',
+	'Croutons',
+	'Lemon',
+	'Olive Oil',
+	'Egg',
+	'Worcestershire Sauce',
+	'Anchovies',
+	'Garlic',
+	'Mustard',
+	'Cheese',
+	'Pepper'
+	],
+	[ 'Mexico' ],
+	[ 'Mixing' ],
+	[ 'Appetiser', 'Salad' ]
+],
+Ceviche: [
+	[ 'Fish', 'Lime', 'Lemon', 'Chilli', 'Onion', 'Coriander' ],
+	[ 'Peru', 'Costa Rica' ],
+	[ 'Curing', 'Assembling' ],
+	[]
+],
+'Aush Reshteh': [
+	[ 'Beans', 'Lentils', 'Noodles', 'Tumeric', 'Broth' ],
+	[ 'Iran', 'Afghanistan' ],
+	[ 'Simmering', 'Stewing' ],
+	[ 'Soup' ]
+],
+Aushak: [
+	[ 'Pasta', 'Chives', 'Tomato', 'Yogurt', 'Mint' ],
+	[ 'Afghanistan' ],
+	[ 'Boiling' ],
+	[]
+],
+Bolani: [
+	[ 'Flour', 'Potato', 'Green Onion', 'Coriander' ],
+	[ 'Afghanistan' ],
+	[ 'Frying' ],
+	[]
+],
+'Chapli Kabab': [
+	[ 'Minced Meat', 'Beef', 'Mutton', 'Flour', 'Chilli', 'Coriander' ],
+	[ 'Afghanistan', 'Pakistan', 'India', 'Bangaladesh' ],
+	[ 'Frying', 'Deep Frying' ],
+	[]
+],
+Fesenjan: [
+	[
+	'Pomegranate',
+	'Walnut',
+	'Duck',
+	'Chicken',
+	'Onion',
+	'Tumeric',
+	'Cinnamon'
+	],
+	[ 'Iran' ],
+	[ 'Stewing' ],
+	[ 'Stew' ]
+],
+Kesme: [
+	[
+	'Noodles', 'Flour',
+	'Egg',     'Broth',
+	'Potato',  'Meat',
+	'Tomato'
+	],
+	[ 'Turkey' ],
+	[ 'Simmering', 'Boiling' ],
+	[ 'Soup' ]
+],
+Gheimeh: [
+	[
+	'Mutton',
+	'Tomato',
+	'Split Peas',
+	'Onion',
+	'Dried Lime',
+	'Potato'
+	],
+	[ 'Iran' ],
+	[ 'Stewing' ],
+	[ 'Stew' ]
+],
+Baklava: [
+	[ 'Dough', 'Syrup', 'Pistachio', 'Walnut', 'Butter' ],
+	[ 'Turkey' ],
+	[ 'Baking' ],
+	[ 'Pastry' ]
+],
+Knafeh: [
+	[ 'Dough', 'Cheese', 'Almonds', 'Pistachio', 'Rose Water' ],
+	[ 'Turkey', 'Iran', 'Iraq', 'Saudi Arabia' ],
+	[ 'Baking' ],
+	[ 'Dessert' ]
+],
+'Baba Ghanoush': [
+	[ 'Eggplant', 'Olive Oil', 'Lemon', 'Tahini' ],
+	[ 'Israel', 'Jordan', 'Lebanon', 'Palestine', 'Syria' ],
+	[ 'Baking', 'Broiling', 'Mixing' ],
+	[ 'Appetiser' ]
+],
+Balaleet: [
+	[ 'Noodles', 'Cardamom', 'Rose Water', 'Saffron', 'Egg' ],
+	[ 'Iraq', 'Saudi Arabia', 'UAE' ],
+	[ 'Frying' ],
+	[ 'Breakfast' ]
+],
+Chakhchoukha: [
+	[ 'Bread', 'Chickpea', 'Tomato', 'Onion', 'Garlic', 'Mutton' ],
+	[ 'Algeria' ],
+	[ 'Stewing' ],
+	[ 'Stew' ]
+],
+Chebakia: [
+	[ 'Dough', 'Honey', 'Orange Blossom Water', 'Sesame' ],
+	[ 'Algeria', 'Libya', 'Morocco', 'Tunisia', 'Mauritania' ],
+	[ 'Deep Frying' ],
+	[ 'Dessert' ]
+],
+Churros: [
+	[ 'Dough', 'Cinnamon', 'Sugar', '' ],
+	[ 'Spain', 'Portugal' ],
+	[ 'Deep Frying' ],
+	[]
+],
+Frittata: [
+	[ 'Egg', 'Meat', 'Cheese', 'Vegetables' ],
+	[ 'Italy' ],
+	[ 'Frying' ],
+	[]
+],
+'Quiche Lorraine': [
+	[ 'Pastry', 'Egg', 'Cheese', 'Bacon', 'Cream' ],
+	[ 'France' ],
+	[ 'Baking' ],
+	[]
+],
+Faloodeh: [
+	[ 'Noodles', 'Syrup', 'Sugar', 'Rose Water', 'Lime' ],
+	[ 'Iran' ],
+	[ 'Mixing', 'Freezing' ],
+	[ 'Dessert' ]
+],
+Fatayer: [
+	[ 'Dough', 'Meat', 'Spinach', 'Cheese' ],
+	[ 'Egypt', 'Iraq', 'Lebanon' ],
+	[ 'Baking' ],
+	[]
+],
+'Turkish Delight': [
+	[ 'Starch', 'Sugar', 'Pistachio', 'Dates', 'Rose Water' ],
+	[ 'Turkey', 'Iran' ],
+	[ 'Boiling', 'Mixing' ],
+	[ 'Confection' ]
+]
 }
 let ingredientList = [
-  'Cheese',      'Flour',                'Tomato',
-  'Mozzarella',  'Bacon',                'Sausage',
-  'Egg',         'Mushroom',             'Bread',
-  'Beans',       'Rice',                 'Stock',
-  'Broth',       'Bouillon',             'Butter',
-  'Onion',       'White Wine',           'Pork',
-  'Chicken',     'Breadcrumbs',          'Soy Sauce',
-  'Gochujang',   'Chilli',               'Beef',
-  'Carrot',      'Cucumber',             'Kimchi',
-  'Noodles',     'Fishball',             'Minced Meat',
-  'Oil',         'Vinegar',              'Ginger',
-  'Sesame Oil',  'Ginseng',              'Garlic',
-  'Ice',         'Red Beans',            'Condensed Milk',
-  'Fruit Syrup', 'Eggplant',             'Salt',
-  'Lettuce',     'Croutons',             'Lemon',
-  'Olive Oil',   'Worcestershire Sauce', 'Anchovies',
-  'Mustard',     'Pepper',               'Fish',
-  'Lime',        'Coriander',            'Lentils',
-  'Tumeric',     'Pasta',                'Chives',
-  'Yogurt',      'Mint',                 'Potato',
-  'Green Onion', 'Mutton',               'Pomegranate',
-  'Walnut',      'Duck',                 'Cinnamon',
-  'Meat',        'Split Peas',           'Dried Lime'
+'Cheese',               'Flour',                'Tomato',
+'Mozzarella',           'Bacon',                'Sausage',
+'Egg',                  'Mushroom',             'Bread',
+'Beans',                'Rice',                 'Stock',
+'Broth',                'Bouillon',             'Butter',
+'Onion',                'White Wine',           'Pork',
+'Chicken',              'Breadcrumbs',          'Soy Sauce',
+'Gochujang',            'Chilli',               'Beef',
+'Carrot',               'Cucumber',             'Kimchi',
+'Noodles',              'Fishball',             'Minced Meat',
+'Oil',                  'Vinegar',              'Ginger',
+'Sesame Oil',           'Ginseng',              'Garlic',
+'Ice',                  'Red Beans',            'Condensed Milk',
+'Syrup',                'Eggplant',             'Salt',
+'Lettuce',              'Croutons',             'Lemon',
+'Olive Oil',            'Worcestershire Sauce', 'Anchovies',
+'Mustard',              'Pepper',               'Fish',
+'Lime',                 'Coriander',            'Lentils',
+'Tumeric',              'Pasta',                'Chives',
+'Yogurt',               'Mint',                 'Potato',
+'Green Onion',          'Mutton',               'Pomegranate',
+'Walnut',               'Duck',                 'Cinnamon',
+'Meat',                 'Split Peas',           'Dried Lime',
+'Dough',                'Pistachio',            'Almonds',
+'Rose Water',           'Tahini',               'Cardamom',
+'Saffron',              'Chickpea',             'Honey',
+'Orange Blossom Water', 'Sesame',               'Sugar',
+'',                     'Vegetables',           'Pastry',
+'Cream',                'Spinach',              'Starch',
+'Dates'
 ]
 let originList = [
-  'Italy',          'England',
-  'United Kingdom', 'Japan',
-  'Korea',          'Singapore',
-  'Malaysia',       'Thailand',
-  'Philippines',    'Mexico',
-  'Peru',           'Costa Rica',
-  'Iran',           'Afghanistan',
-  'Pakistan',       'India',
-  'Bangaladesh',    'Turkey'
+'Italy',      'England',      'United Kingdom',
+'Japan',      'Korea',        'Singapore',
+'Malaysia',   'Thailand',     'Philippines',
+'Mexico',     'Peru',         'Costa Rica',
+'Iran',       'Afghanistan',  'Pakistan',
+'India',      'Bangaladesh',  'Turkey',
+'Iraq',       'Saudi Arabia', 'Israel',
+'Jordan',     'Lebanon',      'Palestine',
+'Syria',      'UAE',          'Algeria',
+'Libya',      'Morocco',      'Tunisia',
+'Mauritania', 'Spain',        'Portugal',
+'France',     'Egypt'
 ]
 let methodList = [
-  'Baking',     'Frying',
-  'Simmering',  'Deep Frying',
-  'Mixed',      'Boiling',
-  'Assembling', 'Grilling',
-  'Curing',     'Stewing'
+'Baking',     'Frying',
+'Simmering',  'Deep Frying',
+'Mixing',     'Boiling',
+'Steaming',   'Freezing',
+'Assembling', 'Grilling',
+'Curing',     'Stewing',
+'Broiling'
 ]
 let courseList = [
-  'Entree',    'Breakfast',
-  'Soup',      'Dessert',
-  'Side Dish', 'Appetiser',
-  'Salad',     'Stew'
+'Entree',    'Breakfast',
+'Soup',      'Dessert',
+'Side Dish', 'Appetiser',
+'Salad',     'Stew',
+'Pastry',    'Confection'
 ]
+  
