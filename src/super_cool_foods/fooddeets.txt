@@ -4,9 +4,9 @@
 #Katsudon/Rice,Pork,Chicken,Breadcrumbs,Egg,Soy Sauce,Onion/Japan/Deep Frying/???
 #Bibimbap/Rice,Gochujang,Chilli,Soy Sauce,Egg,Beef,Carrot,Cucumber,Kimchi/Korea/Mixing/???
 #Bak Chor Mee/Noodles,Fishball,Minced Meat,Chilli,Oil,Vinegar,Pork/Singapore/Boiling/???
-#Hainanese Chicken Rice/Rice,Chicken,Stock,Ginger,Sesame Oil,Chilli,Cucumber/Singapore,Malaysia,Thailand/???/???
+#Hainanese Chicken Rice/Rice,Chicken,Stock,Ginger,Sesame Oil,Chilli/Singapore,Malaysia,Thailand/Steaming/???
 #Ginseng Chicken Soup/Chicken,Ginseng,Garlic,Rice/Korea/Boiling/Soup
-#Bingsu/Ice,Red Beans,Condensed Milk,Syrup/Korea/Assembling/Dessert
+#Bingsu/Ice,Red Beans,Condensed Milk,Syrup/Korea/Freezing,Assembling/Dessert
 #Tortang Talong/Egg,Eggplant,Salt/Philippines/Grilling,Frying/Side Dish
 #Caesar Salad/Lettuce,Croutons,Lemon,Olive Oil,Egg,Worcestershire Sauce,Anchovies,Garlic,Mustard,Cheese,Pepper/Mexico/Mixing/Appetiser,Salad
 #Ceviche/Fish,Lime,Lemon,Chilli,Onion,Coriander/Peru,Costa Rica/Curing,Assembling/???

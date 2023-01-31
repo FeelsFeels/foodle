@@ -15,6 +15,7 @@ infoPopup = document.getElementById('info-popup');
 resultsPopup = document.getElementById('results-popup');
 resultsHeader = document.getElementById('results-header');
 resultsContent = document.getElementById('results-content');
+resultsPicture = document.getElementById('results-food-picture');
 resultsShareButtonText = document.getElementById('share-button_text');
 resultsLink = document.getElementById('info-link');
 
@@ -28,6 +29,7 @@ let guessed_course = [];
 let mostPreviousGuessElements = [];
 
 let numberOfGuesses = 0;
+let currentPixelationFactor = 12;
 
 
 function GuessFormatter(str){
@@ -80,7 +82,6 @@ function Guess(guessInfo, div, categoryList) {
         let wrong = false;
         if(previousGuesses.length > 2){
             for (let i = 1; i < previousGuesses.length; i++){
-                console.log(previousGuesses[i].textContent);
                 //if correct, move on instantly
                 if(guessInfo[1].includes(previousGuesses[i].textContent)){
                     continue;
@@ -97,7 +98,6 @@ function Guess(guessInfo, div, categoryList) {
             }
         }
         else {
-            console.log('less')
             div.append(newGuessElement);
         }
         newGuessElement.classList.add('pill', 'pill--danger');
@@ -150,10 +150,12 @@ function GuessFood(guess){
         //wingame
         Win();
         newGuessElement.classList.add('pill-food', 'pill--success');
+        PixelateImage(originalFoodImg, 0);
 
     }
     else{
         newGuessElement.classList.add('pill-food', 'pill--danger');
+        PixelateImage(originalFoodImg, 12 - numberOfGuesses);
     }
     guessedDiv_food.prepend(newGuessElement);
 
@@ -206,6 +208,33 @@ function ShowPopup(target) {
     document.body.style.overflow = "hidden";
 }
 
+let superoriginalimage = new Image();
+
+
+let originalFoodImg = new Image();
+
+function InitialiseFoodPicture() {
+    //Need to adjust all sizes based on screen size
+    originalFoodImg.src = newFoodLinks[0];
+
+    foodImg.src = newFoodLinks[0];
+    resultsPicture.src = newFoodLinks[0];
+
+    originalFoodImg.onload = function() {
+        //dont choose shitty pics with bad aspect ratio
+        let w = originalFoodImg.naturalWidth;
+        let h = originalFoodImg.naturalHeight;
+        let aspect = w/h;
+
+        foodImg.height = 320;
+        foodImg.width = 320 * aspect;
+        
+        PixelateImage(originalFoodImg, 10);
+
+        resultsPicture.height = 237;
+        resultsPicture.width = 237 * aspect;
+    }
+}
 
 function PixelateImage(originalImage, pixelationFactor) {
     const canvas = document.createElement("canvas");
@@ -222,7 +251,7 @@ function PixelateImage(originalImage, pixelationFactor) {
     context.drawImage(originalImage, 0, 0, originalWidth, originalHeight);
     const originalImageData = context.getImageData(0, 0, originalWidth, originalHeight).data;
 
-    if(pixelationFactor !== 0){
+    if(pixelationFactor > 4){
         for (let y = 0; y < originalHeight; y += pixelationFactor){
             for (let x = 0; x < originalWidth; x += pixelationFactor){
                 const pixelIndexPosition = (x + y * originalWidth) * 4;
@@ -237,7 +266,7 @@ function PixelateImage(originalImage, pixelationFactor) {
             }
         }
     }
-    console.log('drawing to canvas');
+    
     foodImg.src = canvas.toDataURL();
 
 }
@@ -271,20 +300,12 @@ function Init() {
         }
     });
 
-    resultsLink.href = 'https://en.wikipedia.org/wiki/Pizza';
-
-    // foodCanvas.width = 480;
-    // foodCanvas.height = 320;
-    // let img = new Image();
-    // img.src = "src/food_pictures/pizza_margherita.jpg"
     
-    // let img = new Image(480, 320);
-    // img.src = 'src/food_pictures/full_english_breakfast.jpg'
-    // foodImg.crossOrigin ="Anonymous";
-    PixelateImage(foodImg, 4);
-
-
+    GetRandomFood();
+    InitialiseFoodPicture();
     ShowPopup(infoPopup);
+
+    resultsLink.href = newFoodLinks[1];
 }
 
 Init();
@@ -292,33 +313,3 @@ Init();
 
 
 
-
-
-// function GuessIngredient(guess) {
-//     //formatting for comparison with list
-//     let value = GuessFormatter(guess);
-
-//     console.log('guessing ingredient: ' + value)
-//     if(!ingredientList.includes(value)){
-//         //not an ingredient in this game
-//         return;
-//     }
-//     if(guessedIngredientList.includes(value)){
-//         //Already guessed previously
-//         return;
-//     }
-    
-//     //remove ingredients from guess options
-//     guessedIngredientList.push(value);
-//     let newGuessElement = document.createElement('span');
-//     newGuessElement.textContent = value;
-
-//     if(newFood.ingredients.includes(value)){
-//         newGuessElement.classList.add('pill', 'pill--success');
-//         guessedDiv_ingredient.prepend(newGuessElement);
-//     }
-//     else{
-//         newGuessElement.classList.add('pill', 'pill--danger');
-//         guessedDiv_ingredient.appendChild(newGuessElement);
-//     }
-// }

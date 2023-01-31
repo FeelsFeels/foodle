@@ -6,10 +6,19 @@ class Food {
         this.method = method;
         this.course = course;
     }
-
 }
 
-let newFood = new Food('Pizza', ['Cheese', 'Flour', 'Tomato', 'Mozzarella'], ['Italy'], ['Baking']);
+let newFood;
+let newFoodLinks;
+
+function GetRandomFood(){
+	let chosenFood = foodList[Math.floor(foodList.length * Math.random())];
+	// chosenFood = 'Kesme';
+	newFood = new Food(chosenFood, foodObjectList[chosenFood][0], foodObjectList[chosenFood][1], foodObjectList[chosenFood][2]);
+	newFoodLinks = ['src/food_pictures/' + foodLinks[chosenFood][0], 'https://' + foodLinks[chosenFood][1]];
+	console.log(newFoodLinks);
+}
+
 
 
 
