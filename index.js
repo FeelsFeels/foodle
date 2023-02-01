@@ -136,14 +136,20 @@ function GuessFood(guess){
     mostPreviousGuessElements = []
 
     //populate category with data    
-    guessedFoodInfo[0].forEach(ingredient => {
-        Guess([ingredient, newFood.ingredients, guessed_ingredient], guessedDiv_ingredient, ingredientList);
+    guessedFoodInfo[0].forEach((ingredient, i) => {
+        setTimeout(() => {
+            Guess([ingredient, newFood.ingredients, guessed_ingredient], guessedDiv_ingredient, ingredientList);
+        }, i * 100);
     });
-    guessedFoodInfo[1].forEach(origin => {
+    guessedFoodInfo[1].forEach((origin, i) => {
+        setTimeout(() => {
         Guess([origin, newFood.origin, guessed_origin], guessedDiv_origin, originList);
+        }, i * 400);
     });
-    guessedFoodInfo[2].forEach(method => {
-        Guess([method, newFood.method, guessed_method], guessedDiv_method, methodList);
+    guessedFoodInfo[2].forEach((method, i) => {
+        setTimeout(() => {
+            Guess([method, newFood.method, guessed_method], guessedDiv_method, methodList);            
+        }, i * 400);
     });
 
     if(newFood.foodName == value){
@@ -156,7 +162,7 @@ function GuessFood(guess){
     else{
         newGuessElement.classList.add('pill-food', 'pill--danger');
         PixelateImage(originalFoodImg, 12 - numberOfGuesses);
-        // document.getElementById("scrollTo").scrollIntoView(true);
+        
         window.scrollTo(0, scrollPosition);
     }
     guessedDiv_food.prepend(newGuessElement);
@@ -210,13 +216,13 @@ function ShowPopup(target) {
     document.body.style.overflow = "hidden";
 }
 
-let superoriginalimage = new Image();
-
-
 let originalFoodImg = new Image();
 
 function InitialiseFoodPicture() {
     //Need to adjust all sizes based on screen size
+    let deviceWidth = window.innerWidth;
+    let deviceHeight = window.innerHeight;
+
     originalFoodImg.src = newFoodLinks[0];
 
     foodImg.src = newFoodLinks[0];
@@ -228,13 +234,29 @@ function InitialiseFoodPicture() {
         let h = originalFoodImg.naturalHeight;
         let aspect = w/h;
 
-        foodImg.height = 320;
-        foodImg.width = 320 * aspect;
+        if(deviceWidth > 890){
+            //assume laptop size ++, full width, looks best here
+            foodImg.height = 320;
+            foodImg.width = 320 * aspect;
+            resultsPicture.height = 237;
+            resultsPicture.width = 237 * aspect;
+        }
+        else if (deviceWidth > 625){
+            //assume tablet
+            foodImg.height = 280;
+            foodImg.width = 280 * aspect;
+            resultsPicture.height = 207;
+            resultsPicture.width = 207 * aspect;
+        }
+        else if (deviceWidth > 320) {
+            foodImg.height = 200;
+            foodImg.width = 200 * aspect;
+            resultsPicture.height = 150;
+            resultsPicture.width = 150 * aspect;
+        }
         
         PixelateImage(originalFoodImg, 10);
 
-        resultsPicture.height = 237;
-        resultsPicture.width = 237 * aspect;
     }
 }
 
@@ -274,8 +296,9 @@ function PixelateImage(originalImage, pixelationFactor) {
 }
 
 function SetScrollPosition() {
-    let pos = guessedDiv_ingredient.getBoundingClientRect().bottom;
+    // let pos = guessedDiv_ingredient.getBoundingClientRect().bottom;
     // let offset = document.documentElement.scrollTop;
+    let pos = guessedDiv_ingredient.offsetTop;
     scrollPosition = pos;
 }
 
