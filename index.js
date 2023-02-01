@@ -8,9 +8,6 @@ guessedDiv_origin = document.getElementById('category-origin');
 guessedDiv_method = document.getElementById('category-method');
 
 let foodImg = document.getElementById('food-picture');
-// let foodCanvas = document.getElementById('food-picture-canvas');
-// let foodCtx = foodCanvas.getContext('2d');
-
 infoPopup = document.getElementById('info-popup');
 resultsPopup = document.getElementById('results-popup');
 resultsHeader = document.getElementById('results-header');
@@ -18,6 +15,8 @@ resultsContent = document.getElementById('results-content');
 resultsPicture = document.getElementById('results-food-picture');
 resultsShareButtonText = document.getElementById('share-button_text');
 resultsLink = document.getElementById('info-link');
+
+
 
 
 let guessed_food = [];
@@ -30,6 +29,7 @@ let mostPreviousGuessElements = [];
 
 let numberOfGuesses = 0;
 let currentPixelationFactor = 12;
+let scrollPosition;
 
 
 function GuessFormatter(str){
@@ -156,6 +156,8 @@ function GuessFood(guess){
     else{
         newGuessElement.classList.add('pill-food', 'pill--danger');
         PixelateImage(originalFoodImg, 12 - numberOfGuesses);
+        // document.getElementById("scrollTo").scrollIntoView(true);
+        window.scrollTo(0, scrollPosition);
     }
     guessedDiv_food.prepend(newGuessElement);
 
@@ -271,6 +273,11 @@ function PixelateImage(originalImage, pixelationFactor) {
 
 }
 
+function SetScrollPosition() {
+    let pos = guessedDiv_ingredient.getBoundingClientRect().bottom;
+    // let offset = document.documentElement.scrollTop;
+    scrollPosition = pos;
+}
 
 function Init() {
     //Event listeners and datalists
@@ -300,7 +307,7 @@ function Init() {
         }
     });
 
-    
+    SetScrollPosition();
     GetRandomFood();
     InitialiseFoodPicture();
     ShowPopup(infoPopup);
