@@ -31,11 +31,11 @@
     <div class="paper">
         <div class="paper-content">
             <div id="recipe-header">
-                <input list="guess-options_food" autofocus id="input_food" type="text" placeholder="What food is this...?">            
+                <input list="guess-options_food" role="combobox" id="input_food" type="text" placeholder="What food is this...?">            
+                <div id="search-results-container"></div>
             </div>
             <datalist id="guess-options_food"></datalist>
             <img id="food-picture">
-            <!-- <canvas id="food-picture-canvas"></canvas> -->
             
             <div id="guessed-food"></div>
             <div id ="category-holder">

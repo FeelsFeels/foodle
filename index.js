@@ -16,6 +16,8 @@ resultsPicture = document.getElementById('results-food-picture');
 resultsShareButtonText = document.getElementById('share-button_text');
 resultsLink = document.getElementById('info-link');
 
+let searchResultsDiv = document.getElementById('search-results-container');
+let searchResultsDisplayed = false;
 
 
 
@@ -38,6 +40,47 @@ function GuessFormatter(str){
     return value;
 }
 
+function FilterFoodSearch(searchString){
+    if(searchString == ''){
+        RenderSearchResults(foodList);
+        return;
+    }
+    
+    let filteredSearch = foodList.filter(food => {
+        let lowercased = food.toLowerCase();
+        if(lowercased.includes(searchString.toLowerCase())){
+            return true;
+        }
+    });
+    RenderSearchResults(filteredSearch);
+}
+
+function RenderSearchResults(results){
+    while(searchResultsDiv.firstChild) {
+        searchResultsDiv.removeChild(searchResultsDiv.lastChild);
+    }
+    if(results.length == 0){
+        searchResultsDisplayed = false;
+        return;
+    }
+
+    //create ul and add all the lis to it
+    let list = document.createElement('ul');
+    results.forEach(food => {
+        item = document.createElement('li');
+        item.textContent = food;
+        list.appendChild(item);
+    });
+
+    list.addEventListener("click", function(e){
+        GuessFood(e.target.textContent);
+        while(searchResultsDiv.firstChild) {
+            searchResultsDiv.removeChild(searchResultsDiv.lastChild);
+        }
+    });
+    searchResultsDiv.appendChild(list);
+    searchResultsDisplayed = true;
+}
 
 function Guess(guessInfo, div, categoryList) {
     //guessinfo
@@ -110,6 +153,9 @@ function Guess(guessInfo, div, categoryList) {
 }
 
 function GuessFood(guess){
+    input_food.value = '';
+    input_food.blur();
+    
     let value = GuessFormatter(guess);
 
     if(guessed_food.includes(value)){
@@ -305,19 +351,21 @@ function SetScrollPosition() {
 function Init() {
     //Event listeners and datalists
     //Food datalist
-    foodList.forEach((item) => {
-        let option = document.createElement('option');
-        option.value = item;
-        guessOptions_food.append(option);
-    });
+    // foodList.forEach((item) => {
+    //     let option = document.createElement('option');
+    //     option.value = item;
+    //     guessOptions_food.append(option);
+    // });
 
     input_food.addEventListener('keyup', (e) => {
         if(e.key == "Enter"){
             GuessFood(input_food.value);
-            input_food.value = '';
-            input_food.blur();
+            RenderSearchResults([]);
         }
-    })
+    });
+    input_food.addEventListener('input', (e) => {
+        FilterFoodSearch(input_food.value);
+    });
     
     infoPopup.addEventListener('click', (e)=>{
         if(e.target.classList.contains("popup")){
@@ -328,6 +376,18 @@ function Init() {
         if(e.target.classList.contains("popup")){
             RemovePopup(resultsPopup);
         }
+    });
+
+    document.addEventListener('click', (e)=> {
+        if(!searchResultsDisplayed){
+            if(input_food != ''){
+                input_food.value = '';
+            }
+            return;
+        }
+        RenderSearchResults([]);
+        input_food.value = '';
+        input_food.blur();
     });
 
     SetScrollPosition();

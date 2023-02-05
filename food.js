@@ -17,6 +17,8 @@ function GetRandomFood(){
 	newFood = new Food(chosenFood, foodObjectList[chosenFood][0], foodObjectList[chosenFood][1], foodObjectList[chosenFood][2]);
 	newFoodLinks = ['src/food_pictures/' + foodLinks[chosenFood][0], 'https://' + foodLinks[chosenFood][1]];
 	console.log(newFoodLinks);
+
+	foodList.sort();
 }
 
 
