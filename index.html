@@ -29,11 +29,11 @@
 
     </header>
     <div class="paper">
+        <div id="recipe-header">
+            <input list="guess-options_food" role="combobox" id="input_food" type="text" spellcheck="false" placeholder="What food is this...?">            
+            <div id="search-results-container"></div>
+        </div>
         <div class="paper-content">
-            <div id="recipe-header">
-                <input list="guess-options_food" role="combobox" id="input_food" type="text" placeholder="What food is this...?">            
-                <div id="search-results-container"></div>
-            </div>
             <datalist id="guess-options_food"></datalist>
             <img id="food-picture">
             
@@ -67,8 +67,10 @@
                 <input type="image" src='src/x-circle.svg' id="popup-close-button" onclick="RemovePopup(infoPopup)"></input>
             </div>
             <p>Foodle shows you a pixelated image of a dish which you have to guess.</p>
-            <p>Every failed guess unpixelates the image slightly, and gives you some hints.
-                The hints will show if the characteristics of your guessed dish is present in the actual dish.
+            <p>Every failed guess unpixelates the image slightly, and gives you some clues. <br>
+                If the clue shown is green, the ingredient is present in the dish. If the clue is red, the ingredient is not used. <br>
+                The same applies for the country and cooking method clues.
+                <!-- The hints will show if the characteristics of your guessed dish is present in the actual dish. -->
             </p>
             <p>Learn more about the worlds' cuisines with Foodle!</p>
             <p style="font-weight: bold;">Bon Appétit!</p>

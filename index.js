@@ -56,13 +56,8 @@ function FilterFoodSearch(searchString){
 }
 
 function RenderSearchResults(results){
-    while(searchResultsDiv.firstChild) {
-        searchResultsDiv.removeChild(searchResultsDiv.lastChild);
-    }
-    if(results.length == 0){
-        searchResultsDisplayed = false;
-        return;
-    }
+
+    CloseFoodSearch();
 
     //create ul and add all the lis to it
     let list = document.createElement('ul');
@@ -81,6 +76,14 @@ function RenderSearchResults(results){
     searchResultsDiv.appendChild(list);
     searchResultsDisplayed = true;
 }
+
+function CloseFoodSearch(){
+    while(searchResultsDiv.firstChild) {
+        searchResultsDiv.removeChild(searchResultsDiv.lastChild);
+    }
+    searchResultsDisplayed = false;
+}
+
 
 function Guess(guessInfo, div, categoryList) {
     //guessinfo
@@ -349,18 +352,11 @@ function SetScrollPosition() {
 }
 
 function Init() {
-    //Event listeners and datalists
-    //Food datalist
-    // foodList.forEach((item) => {
-    //     let option = document.createElement('option');
-    //     option.value = item;
-    //     guessOptions_food.append(option);
-    // });
-
+    //Event listeners
     input_food.addEventListener('keyup', (e) => {
         if(e.key == "Enter"){
             GuessFood(input_food.value);
-            RenderSearchResults([]);
+            CloseFoodSearch();
         }
     });
     input_food.addEventListener('input', (e) => {
@@ -380,12 +376,17 @@ function Init() {
 
     document.addEventListener('click', (e)=> {
         if(!searchResultsDisplayed){
+            if(e.target.id == 'input_food'){
+                FilterFoodSearch('');
+                return;
+            }
+            
             if(input_food != ''){
                 input_food.value = '';
             }
             return;
         }
-        RenderSearchResults([]);
+        CloseFoodSearch()
         input_food.value = '';
         input_food.blur();
     });
