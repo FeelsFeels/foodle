@@ -223,6 +223,10 @@ function GuessFood(guess){
 }
 
 function Win() {
+    input_food.readOnly = true;
+    input_food.setAttribute("placeholder", `It's ${newFood.foodName}!`);
+    input_food.classList.add("input_food_win");
+
     resultsHeader.innerHTML = '';
 
     let congratulations = document.createElement('div');
@@ -239,8 +243,6 @@ function Win() {
     winContent.innerText = `It's ${newFood.foodName}!`
     
     resultsContent.prepend(winContent);
-
-
     resultsContent.classList.remove("hidden");
 
 

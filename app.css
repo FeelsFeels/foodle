@@ -96,6 +96,14 @@ body {
     border-bottom: 2px solid black;
     line-height: 0px;
 }
+.input_food_win{
+    pointer-events: none;
+}
+
+.input_food_win::placeholder {
+    color: black;
+    opacity: 1;
+}
 
 #search-results-container{
     /* position: absolute; */
