@@ -203,6 +203,7 @@ function GuessFood(guess){
 
     if(newFood.foodName == value){
         //wingame
+        window.scrollTo(0, scrollPosition);
         Win();
         newGuessElement.classList.add('pill-food', 'pill--success');
         PixelateImage(originalFoodImg, 0);

@@ -29,3 +29,22 @@
 #Faloodeh\faloodeh.jpg\wikipedia.org/wiki/Faloodeh
 #Fatayer\fatayer.jpg\wikipedia.org/wiki/Fatayer
 #Turkish Delight\turkish_delight.jpg\wikipedia.org/wiki/Turkish_delight
+#Australian Meat Pie\australian_meat_pie.jpg\wikipedia.org/wiki/Meat_pie_(Australia_and_New_Zealand)
+#Egg Drop Soup\egg_drop_soup.jpg\wikipedia.org/wiki/Egg_drop_soup
+#Eiernockerl\eiernockerl.jpg\wikipedia.org/wiki/Eiernockerl
+#Gnocchi\gnocchi.jpg\wikipedia.org/wiki/Gnocchi
+#Frankenburger Bratknodel\frankenburger_bratknodel.jpg\wikipedia.org/wiki/Frankenburger_Bratknödel
+#Goulash\goulash.jpg\wikipedia.org/wiki/Goulash
+#Tafelspitz\tafelspitz.jpg\wikipedia.org/wiki/Tafelspitz
+#Apple Strudel\apple_strudel.jpg\wikipedia.org/wiki/Apple_strudel
+#Apple Pie\apple_pie.jpg\wikipedia.org/wiki/Apple_pie
+#Kaiserschmarrn\kaiserschmarrn.jpg\wikipedia.org/wiki/Kaiserschmarrn
+#Germknodel\germknodel.jpg\wikipedia.org/wiki/Germknödel
+#Kasespatzle\kasespatzle.jpg\wikipedia.org/wiki/Käsespätzle
+#Wiener Schnitzel\wiener_schnitzel.jpg\wikipedia.org/wiki/Wiener_schnitzel
+#Mezzelune\mezzelune.jfif\wikipedia.org/wiki/Schlutzkrapfen
+#Kuku Sabzi\kuku_sabzi.jpg\wikipedia.org/wiki/Kuku_(food)
+#Dovga\dovga.jfif\wikipedia.org/wiki/Dovga
+#Khachapuri\khachapuri.jpg\wikipedia.org/wiki/Khachapuri
+#Ajapsandali\ajapsandali.jpg\wikipedia.org/wiki/Ajapsandali
+#Ghapama\ghapama.jfif\wikipedia.org/wiki/Ghapama

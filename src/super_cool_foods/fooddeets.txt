@@ -12,7 +12,7 @@
 #Ceviche/Fish,Lime,Lemon,Chilli,Onion,Coriander/Peru,Costa Rica/Curing,Assembling/???
 #Aush Reshteh/Beans,Lentils,Noodles,Tumeric,Broth/Iran,Afghanistan/Simmering,Stewing/Soup
 #Aushak/Pasta,Chives,Tomato,Yogurt,Mint/Afghanistan/Boiling/???
-#Bolani/Flour,Potato,Green Onion,Coriander/Afghanistan/Frying/???
+#Bolani/Flour,Potato,Scallion,Coriander/Afghanistan/Frying/???
 #Chapli Kabab/Minced Meat,Beef,Mutton,Flour,Chilli,Coriander/Afghanistan,Pakistan,India,Bangaladesh/Frying,Deep Frying/???
 #Fesenjan/Pomegranate,Walnut,Duck,Chicken,Onion,Tumeric,Cinnamon/Iran/Stewing/Stew
 #Kesme/Noodles,Flour,Egg,Broth,Potato,Meat,Tomato/Turkey/Simmering,Boiling/Soup
@@ -23,9 +23,28 @@
 #Balaleet/Noodles,Cardamom,Rose Water,Saffron,Egg/Iraq,Saudi Arabia,UAE/Frying/Breakfast
 #Chakhchoukha/Bread,Chickpea,Tomato,Onion,Garlic,Mutton/Algeria/Stewing/Stew
 #Chebakia/Dough,Honey,Orange Blossom Water,Sesame/Algeria,Libya,Morocco,Tunisia,Mauritania/Deep Frying/Dessert
-#Churros/Dough,Cinnamon,Sugar,/Spain,Portugal/Deep Frying/???
+#Churros/Dough,Cinnamon,Sugar/Spain,Portugal/Deep Frying/???
 #Frittata/Egg,Meat,Cheese,Vegetables/Italy/Frying/???
 #Quiche Lorraine/Pastry,Egg,Cheese,Bacon,Cream/France/Baking/???
 #Faloodeh/Noodles,Syrup,Sugar,Rose Water,Lime/Iran/Mixing,Freezing/Dessert
-#Fatayer/Dough,Meat,Spinach,Cheese/Egypt,Iraq,Lebanon/Baking/???
+#Fatayer/Dough,Minced Meat,Spinach,Cheese/Egypt,Iraq,Lebanon/Baking/???
 #Turkish Delight/Starch,Sugar,Pistachio,Dates,Rose Water/Turkey,Iran/Boiling,Mixing/Confection
+#Australian Meat Pie/Dough,Minced Meat,Gravy/Australia,New Zealand/Baking/???
+#Egg Drop Soup/Egg,Broth,Scallion,Tofu/China/Boiling/Soup
+#Eiernockerl/Flour,Egg,Milk,Butter/Austria/Boiling,Frying/Dumpling
+#Gnocchi/Potato,Flour,Egg,Butter/Italy/Boiling,Frying/Entree
+#Frankenburger Bratknodel/Dough,Minced Meat,Paprika,Onion,Garlic,Lard/Austria/Boiling/Dumpling
+#Goulash/Meat,Stock,Vegetables,Paprika,Potato/Hungary/Boiling/Stew,Soup
+#Tafelspitz/Beef,Apple,Horseradish,Broth/Austria,Germany/Boiling/???
+#Apple Strudel/Flour,Oil,Butter,Apple,Cinnamon/Austria/Baking/Pastry
+#Apple Pie/Apple,Flour,Sugar,Milk,Cinnamon,Butter/England/Baking/Pie
+#Kaiserschmarrn/Flour,Egg,Sugar,Milk,Butter/Austria,Hungary/Frying/???
+#Germknodel/Dough,Sugar,Butter,Poppy Seeds,Jam/Austria,Germany/Steaming/???
+#Kasespatzle/Noodles,Cheese,Onion/Germany/Baked/???
+#Wiener Schnitzel/Veal,Breadcrumbs/Germany,Austria/Deep Frying/???
+#Mezzelune/Dough,Egg,Olive Oil,Cheese,Spinach,Mushrooms/Italy,Austria/Boiling/???
+#Kuku Sabzi/Egg,Coriander,Scallion,Cranberry/Iran/Frying,Steaming/???
+#Dovga/Yogurt,Flour,Rice,Egg,Spinach,Dill,Coriander,Mint/Azerbaijan/Simmering/???
+#Khachapuri/Bread,Cheese,Egg,Flour/Georgia/Baking/???
+#Ajapsandali/Eggplant,Onion,Garlic,Tomato,Bell Pepper/Georgia,Armenia/Stewing/???
+#Ghapama/Pumpkin,Rice,Almonds,Apple,Raisins,Dates/Armenia/Baking/Stew
