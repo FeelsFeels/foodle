@@ -15,8 +15,27 @@ body {
 </head>
 <body>
 
-<h1>Resize the browser window to see the effect!</h1>
-<p>The media query will only apply if the media type is screen and the viewport is 480px wide or wider.</p>
+	<h1>Resize the browser window to see the effect!</h1>
+	<p>The media query will only apply if the media type is screen and the viewport is 480px wide or wider.</p>
 
+	<button onclick="WEE()">DINGGGGGGGGG</button>
+
+	<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+	<script>
+		
+		function WEE(){
+			var myCanvas = document.createElement('canvas');
+			document.body.appendChild(myCanvas);
+
+			var myConfetti = window.confetti.create(myCanvas, {
+				resize: true
+			});
+		
+			myConfetti({
+			particleCount: 100,
+			spread: 160
+			});
+		}
+	</script>
 </body>
 </html>

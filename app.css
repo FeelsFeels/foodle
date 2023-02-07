@@ -3,6 +3,11 @@
 @import url("https://fonts.googleapis.com/css?family=Neucha|Patrick+Hand+SC&display=swap");
 
 
+header {
+    position: relative;
+    z-index: 3;
+}
+
 #title-container {
     display: flex;
     width: 60%;
@@ -86,6 +91,7 @@ body {
 
 
 #input_food {
+    position: relative;
     width: 60%;
     min-width: 468px;
     text-align: center;
@@ -95,6 +101,7 @@ body {
     border: none;
     border-bottom: 2px solid black;
     line-height: 0px;
+    z-index: 10;
 }
 .input_food_win{
     pointer-events: none;
@@ -135,7 +142,7 @@ body {
     overflow: auto;
     border-radius: 0.375rem;
 
-    z-index: 1;
+    z-index: 10;
 }
 #search-results-container ul li{
     padding-top: 0.25rem;
@@ -301,9 +308,8 @@ body {
 }
 
 .popup {
-    /* display: none; */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 20; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -365,6 +371,17 @@ body {
     color: rgb(14 165 233);
 }
 
+#confetti-canvas {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+
+    z-index: 2;
+}
+
 
 .hidden {
     display: none;
@@ -408,3 +425,14 @@ body {
         min-width: unset;
     }
 }
+
+
+/* 
+z indexes to note
+popup: 20
+input_food: 10
+search_results_container: 10
+header: 3
+confetti: 2
+paper: 0
+*/

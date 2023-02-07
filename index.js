@@ -19,6 +19,14 @@ resultsLink = document.getElementById('info-link');
 let searchResultsDiv = document.getElementById('search-results-container');
 let searchResultsDisplayed = false;
 
+//Setting up confetti on win
+let confettiCanvas = document.getElementById('confetti-canvas')
+let confettiEndTime;
+let winConfetti = window.confetti.create(confettiCanvas, {
+    resize: true,
+    // useWorker: true,
+    disableForReducedMotion: true
+});
 
 
 let guessed_food = [];
@@ -203,7 +211,6 @@ function GuessFood(guess){
 
     if(newFood.foodName == value){
         //wingame
-        window.scrollTo(0, scrollPosition);
         Win();
         newGuessElement.classList.add('pill-food', 'pill--success');
         PixelateImage(originalFoodImg, 0);
@@ -228,6 +235,7 @@ function Win() {
     input_food.setAttribute("placeholder", `It's ${newFood.foodName}!`);
     input_food.classList.add("input_food_win");
 
+    //Generate content for winning popup
     resultsHeader.innerHTML = '';
 
     let congratulations = document.createElement('div');
@@ -246,6 +254,7 @@ function Win() {
     resultsContent.prepend(winContent);
     resultsContent.classList.remove("hidden");
 
+    PrepareConfetti(1500);
 
     ShowPopup(resultsPopup);
 }
@@ -354,6 +363,34 @@ function SetScrollPosition() {
     scrollPosition = pos;
 }
 
+function PrepareConfetti(duration) {
+
+    let paper = document.getElementsByClassName("paper")[0];
+
+    confettiCanvas.width = paper.offsetWidth;
+    confettiCanvas.height = paper.offsetHeight;
+
+
+    confettiEndTime = Date.now() + duration;
+    ShootConfetti();    
+}
+
+function ShootConfetti(){
+    winConfetti({
+        particleCount: 5,
+        startVelocity: 30,
+        spread: 120,
+        origin: {
+            x: 0.5,
+            y: 0.2
+        }
+    });
+
+    if(Date.now() < confettiEndTime) {
+        requestAnimationFrame(ShootConfetti);
+    }
+}
+
 function Init() {
     //Event listeners
     input_food.addEventListener('keyup', (e) => {
@@ -393,6 +430,7 @@ function Init() {
         input_food.value = '';
         input_food.blur();
     });
+    
 
     SetScrollPosition();
     GetRandomFood();
