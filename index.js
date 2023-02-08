@@ -13,11 +13,13 @@ resultsPopup = document.getElementById('results-popup');
 resultsHeader = document.getElementById('results-header');
 resultsContent = document.getElementById('results-content');
 resultsPicture = document.getElementById('results-food-picture');
+resultsShareButton = document.getElementById('share-button');
 resultsShareButtonText = document.getElementById('share-button_text');
 resultsLink = document.getElementById('info-link');
 
 let searchResultsDiv = document.getElementById('search-results-container');
 let searchResultsDisplayed = false;
+let guessCountDisplay = document.getElementById('guess-count');
 
 //Setting up confetti on win
 let confettiCanvas = document.getElementById('confetti-canvas')
@@ -38,7 +40,7 @@ let guessed_course = [];
 let mostPreviousGuessElements = [];
 
 let numberOfGuesses = 0;
-let currentPixelationFactor = 12;
+let initialPixelationFactor = 14;
 let scrollPosition;
 
 
@@ -177,12 +179,13 @@ function GuessFood(guess){
     }
 
     numberOfGuesses += 1;
-    guessed_food.push(value);
+    guessCountDisplay.textContent = numberOfGuesses + '/6';
 
+    //New Pill to show what food item you guessed
+    guessed_food.push(value);
     let guessedFoodInfo = foodObjectList[value];
     let newGuessElement = document.createElement('span');
     newGuessElement.textContent = value;
-    
     
     //Remove border highlights to most recent guess
     if(mostPreviousGuessElements.length != 0){
@@ -218,9 +221,16 @@ function GuessFood(guess){
     }
     else{
         newGuessElement.classList.add('pill-food', 'pill--danger');
-        PixelateImage(originalFoodImg, 12 - numberOfGuesses);
+
+        if(numberOfGuesses >= 6){
+            Lose();
+            PixelateImage(originalFoodImg, 0);
+        }
+        else{
+            PixelateImage(originalFoodImg, initialPixelationFactor - numberOfGuesses * 2);
+            window.scrollTo(0, scrollPosition);
+        }
         
-        window.scrollTo(0, scrollPosition);
     }
     guessedDiv_food.prepend(newGuessElement);
 
@@ -233,7 +243,7 @@ function GuessFood(guess){
 function Win() {
     input_food.readOnly = true;
     input_food.setAttribute("placeholder", `It's ${newFood.foodName}!`);
-    input_food.classList.add("input_food_win");
+    input_food.classList.add("input_food_gameend");
 
     //Generate content for winning popup
     resultsHeader.innerHTML = '';
@@ -254,13 +264,47 @@ function Win() {
     resultsContent.prepend(winContent);
     resultsContent.classList.remove("hidden");
 
-    PrepareConfetti(1500);
+    PrepareConfetti(500);
 
+    resultsShareButton.setAttribute('onclick', 'ShareWin()');
+    ShowPopup(resultsPopup);
+}
+
+function Lose() {
+    input_food.readOnly = true;
+    input_food.setAttribute("placeholder", `It's ${newFood.foodName}!`);
+    input_food.classList.add("input_food_gameend");
+
+    resultsHeader.innerHTML = '';
+    let consolations = document.createElement('div');
+    consolations.setAttribute('style', 'font-size: larger; color: #DC2626');
+    consolations.textContent = "Oops!";
+
+    let loseStatement = document.createElement('div');
+    loseStatement.textContent = `You didn't get it this time. Try again tomorrow?`;
+
+    resultsHeader.append(consolations);
+    resultsHeader.append(loseStatement);
+
+    let loseContent = document.createElement('div');
+    loseContent.innerText = `It's ${newFood.foodName}!`
+    
+    resultsContent.prepend(loseContent);
+    resultsContent.classList.remove("hidden");
+
+    resultsShareButton.setAttribute('onclick', 'ShareLoss()');
     ShowPopup(resultsPopup);
 }
 
 function ShareWin() {
     navigator.clipboard.writeText(`I guessed the food in ${numberOfGuesses}! https://feelsfeels.github.io/foodle`);
+    resultsShareButtonText.innerText = 'Copied!';
+    setTimeout(() => {
+        resultsShareButtonText.innerText = 'Share it!'
+    }, 2000)
+}
+function ShareLoss() {
+    navigator.clipboard.writeText(`I didn't manage to guess the food. Maybe you can do better? https://feelsfeels.github.io/foodle`);
     resultsShareButtonText.innerText = 'Copied!';
     setTimeout(() => {
         resultsShareButtonText.innerText = 'Share it!'
@@ -316,7 +360,7 @@ function InitialiseFoodPicture() {
             resultsPicture.width = 150 * aspect;
         }
         
-        PixelateImage(originalFoodImg, 10);
+        PixelateImage(originalFoodImg, initialPixelationFactor);
 
     }
 }
@@ -336,7 +380,7 @@ function PixelateImage(originalImage, pixelationFactor) {
     context.drawImage(originalImage, 0, 0, originalWidth, originalHeight);
     const originalImageData = context.getImageData(0, 0, originalWidth, originalHeight).data;
 
-    if(pixelationFactor > 4){
+    if(pixelationFactor >= 4){
         for (let y = 0; y < originalHeight; y += pixelationFactor){
             for (let x = 0; x < originalWidth; x += pixelationFactor){
                 const pixelIndexPosition = (x + y * originalWidth) * 4;
@@ -370,8 +414,8 @@ function PrepareConfetti(duration) {
     confettiCanvas.width = paper.offsetWidth;
     confettiCanvas.height = paper.offsetHeight;
 
-
     confettiEndTime = Date.now() + duration;
+    confettiCanvas.classList.remove('hidden');
     ShootConfetti();    
 }
 
@@ -388,6 +432,11 @@ function ShootConfetti(){
 
     if(Date.now() < confettiEndTime) {
         requestAnimationFrame(ShootConfetti);
+    }
+    else{
+        setTimeout(() => {
+            confettiCanvas.classList.add('hidden');
+        }, 1200); 
     }
 }
 
