@@ -13,7 +13,7 @@
 #Aush Reshteh/Beans,Lentils,Noodles,Tumeric,Broth/Iran,Afghanistan/Simmering,Stewing/Soup
 #Aushak/Pasta,Chives,Tomato,Yogurt,Mint/Afghanistan/Boiling/???
 #Bolani/Flour,Potato,Scallion,Coriander/Afghanistan/Frying/???
-#Chapli Kabab/Minced Meat,Beef,Mutton,Flour,Chilli,Coriander/Afghanistan,Pakistan,India,Bangaladesh/Frying,Deep Frying/???
+#Chapli Kabab/Minced Meat,Beef,Mutton,Flour,Chilli,Coriander/Afghanistan,Pakistan,India,Bangladesh/Frying,Deep Frying/???
 #Fesenjan/Pomegranate,Walnut,Duck,Chicken,Onion,Tumeric,Cinnamon/Iran/Stewing/Stew
 #Kesme/Noodles,Flour,Egg,Broth,Potato,Meat,Tomato/Turkey/Simmering,Boiling/Soup
 #Gheimeh/Mutton,Tomato,Split Peas,Onion,Dried Lime,Potato/Iran/Stewing/Stew
@@ -48,3 +48,24 @@
 #Khachapuri/Bread,Cheese,Egg,Flour/Georgia/Baking/???
 #Ajapsandali/Eggplant,Onion,Garlic,Tomato,Bell Pepper/Georgia,Armenia/Stewing/???
 #Ghapama/Pumpkin,Rice,Almonds,Apple,Raisins,Dates/Armenia/Baking/Stew
+#Bangers And Mash/Sausage,Potato,Onion,Gravy,Peas/United Kingdom/Boiling,Frying/???
+#Cauliflower Cheese/Cauliflower,Cheese/Britain,United Kingdom/Boiling,Baking/???
+#Chicken Tikka Masala/Chicken,Yogurt,Cream,Tomato,Chilli/India,United Kingdom/Boiling/???
+#Chicken Tikka/Chicken,Yogurt,Chilli,Ginger,Garlic,Lemon/India,Bangladesh,Pakistan/Baking,Grilling/???
+#Butter Chicken/Chicken,Butter,Yogurt,Cream,Tomato/India/Boiling/???
+#Coronation Chicken/Chicken,Mayonnaise,Curry Powder/United Kingdom/Mixing/???
+#Devilled Kidneys/Lamb,Worcestershire Sauce,Mustard,Butter,Pepper/United Kingdom/Frying/???
+#Deviled Eggs/Egg,Mayonnaise,Mustard/Italy,Spain,United States/Boiling/???
+#Eton Mess/Berries,Meringue,Cream,Strawberry/United Kingdom/Baking,Mixing/???
+#Fish And Chips/Fish,Potato,Lemon,Mayonnaise/United Kingdom,England/Frying,Deep Frying/???
+#Platinum Pudding/Lemon,Orange,Biscuits,Jelly,Custard/United Kingdom/Baking/???
+#Potato Salad/Potato,Egg,Mayonnaise,Onion/Germany/Boiling,Mixing/???
+#Black Pudding/Blood,Fat,Oats,Barley/United Kingdom,Ireland/Mixing/???
+#Kitchener Bun/Dough,Jam,Cream/Australia/Baking,Deep Frying/???
+#Palmier/Pastry,Butter,Sugar/France/Baking/???
+#Empanada/Dough,Meat,Cheese,Corn,Tomato/Spain/Baking,Frying/???
+#Locro/Squash,Corn,Potato,Beef/Argentina/Boiling/???
+#Zabaione/Egg,Sugar,Wine,Custard/Italy/Simmering,Mixing/???
+#Sorrentinos/Dough,Cheese,Ham,Spinach/Argentina/Boiling/???
+#Sandwiches De Miga/Bread,Ham,Egg,Cheese,Tomato,Bell Pepper,Tuna,Lettuce/Argentina,Uruguay/Assembling,Toasting/???
+#Lasagna/Dough,Minced Meat,Tomato,Bechamel,Cheese/Italy/Baking/???

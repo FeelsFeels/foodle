@@ -13,7 +13,7 @@ let newFoodLinks;
 
 function GetRandomFood(){
 	let chosenFood = foodList[Math.floor(foodList.length * Math.random())];
-	// chosenFood = 'Tortang Talong';
+	// chosenFood = 'Black Pudding';
 	newFood = new Food(chosenFood, foodObjectList[chosenFood][0], foodObjectList[chosenFood][1], foodObjectList[chosenFood][2]);
 	newFoodLinks = ['src/food_pictures/' + foodLinks[chosenFood][0], 'https://' + foodLinks[chosenFood][1]];
 	console.log(newFoodLinks);
@@ -25,8 +25,7 @@ function GetRandomFood(){
 
 
 
-let foodList = 
-[
+let foodList = [
   'Pizza',
   'Full English Breakfast',
   'Risotto',
@@ -76,12 +75,31 @@ let foodList =
   'Dovga',
   'Khachapuri',
   'Ajapsandali',
-  'Ghapama'
+  'Ghapama',
+  'Bangers And Mash',
+  'Cauliflower Cheese',
+  'Chicken Tikka Masala',
+  'Chicken Tikka',
+  'Butter Chicken',
+  'Coronation Chicken',
+  'Devilled Kidneys',
+  'Deviled Eggs',
+  'Eton Mess',
+  'Fish And Chips',
+  'Platinum Pudding',
+  'Potato Salad',
+  'Black Pudding',
+  'Kitchener Bun',
+  'Palmier',
+  'Empanada',
+  'Locro',
+  'Zabaione',
+  'Sorrentinos',
+  'Sandwiches De Miga',
+  'Lasagna'
 ]
 
-
-let foodObjectList = 
-{
+let foodObjectList = {
   Pizza: [
     [ 'Cheese', 'Flour', 'Tomato', 'Mozzarella' ],
     [ 'Italy' ],
@@ -222,7 +240,7 @@ let foodObjectList =
   ],
   'Chapli Kabab': [
     [ 'Minced Meat', 'Beef', 'Mutton', 'Flour', 'Chilli', 'Coriander' ],
-    [ 'Afghanistan', 'Pakistan', 'India', 'Bangaladesh' ],
+    [ 'Afghanistan', 'Pakistan', 'India', 'Bangladesh' ],
     [ 'Frying', 'Deep Frying' ],
     []
   ],
@@ -402,8 +420,7 @@ let foodObjectList =
     [ 'Steaming' ],
     []
   ],
-  Kasespatzle: [ [ 'Noodles', 'Cheese', 'Onion' ], [ 'Germany' ], [ 'Baked' ], [
-] ],
+  Kasespatzle: [ [ 'Noodles', 'Cheese', 'Onion' ], [ 'Germany' ], [ 'Baked' ], [] ],
   'Wiener Schnitzel': [
     [ 'Veal', 'Breadcrumbs' ],
     [ 'Germany', 'Austria' ],
@@ -450,38 +467,175 @@ let foodObjectList =
     [ 'Armenia' ],
     [ 'Baking' ],
     [ 'Stew' ]
+  ],
+  'Bangers And Mash': [
+    [ 'Sausage', 'Potato', 'Onion', 'Gravy', 'Peas' ],
+    [ 'United Kingdom' ],
+    [ 'Boiling', 'Frying' ],
+    []
+  ],
+  'Cauliflower Cheese': [
+    [ 'Cauliflower', 'Cheese' ],
+    [ 'Britain', 'United Kingdom' ],
+    [ 'Boiling', 'Baking' ],
+    []
+  ],
+  'Chicken Tikka Masala': [
+    [ 'Chicken', 'Yogurt', 'Cream', 'Tomato', 'Chilli' ],
+    [ 'India', 'United Kingdom' ],
+    [ 'Boiling' ],
+    []
+  ],
+  'Chicken Tikka': [
+    [ 'Chicken', 'Yogurt', 'Chilli', 'Ginger', 'Garlic', 'Lemon' ],
+    [ 'India', 'Bangladesh', 'Pakistan' ],
+    [ 'Baking', 'Grilling' ],
+    []
+  ],
+  'Butter Chicken': [
+    [ 'Chicken', 'Butter', 'Yogurt', 'Cream', 'Tomato' ],
+    [ 'India' ],
+    [ 'Boiling' ],
+    []
+  ],
+  'Coronation Chicken': [
+    [ 'Chicken', 'Mayonnaise', 'Curry Powder' ],
+    [ 'United Kingdom' ],
+    [ 'Mixing' ],
+    []
+  ],
+  'Devilled Kidneys': [
+    [ 'Lamb', 'Worcestershire Sauce', 'Mustard', 'Butter', 'Pepper' ],
+    [ 'United Kingdom' ],
+    [ 'Frying' ],
+    []
+  ],
+  'Deviled Eggs': [
+    [ 'Egg', 'Mayonnaise', 'Mustard' ],
+    [ 'Italy', 'Spain', 'United States' ],
+    [ 'Boiling' ],
+    []
+  ],
+  'Eton Mess': [
+    [ 'Berries', 'Meringue', 'Cream', 'Strawberry' ],
+    [ 'United Kingdom' ],
+    [ 'Baking', 'Mixing' ],
+    []
+  ],
+  'Fish And Chips': [
+    [ 'Fish', 'Potato', 'Lemon', 'Mayonnaise' ],
+    [ 'United Kingdom', 'England' ],
+    [ 'Frying', 'Deep Frying' ],
+    []
+  ],
+  'Platinum Pudding': [
+    [ 'Lemon', 'Orange', 'Biscuits', 'Jelly', 'Custard' ],
+    [ 'United Kingdom' ],
+    [ 'Baking' ],
+    []
+  ],
+  'Potato Salad': [
+    [ 'Potato', 'Egg', 'Mayonnaise', 'Onion' ],
+    [ 'Germany' ],
+    [ 'Boiling', 'Mixing' ],
+    []
+  ],
+  'Black Pudding': [
+    [ 'Blood', 'Fat', 'Oats', 'Barley' ],
+    [ 'United Kingdom', 'Ireland' ],
+    [ 'Mixing' ],
+    []
+  ],
+  'Kitchener Bun': [
+    [ 'Dough', 'Jam', 'Cream' ],
+    [ 'Australia' ],
+    [ 'Baking', 'Deep Frying' ],
+    []
+  ],
+  Palmier: [ [ 'Pastry', 'Butter', 'Sugar' ], [ 'France' ], [ 'Baking' ], [] ],
+  Empanada: [
+    [ 'Dough', 'Meat', 'Cheese', 'Corn', 'Tomato' ],
+    [ 'Spain' ],
+    [ 'Baking', 'Frying' ],
+    []
+  ],
+  Locro: [
+    [ 'Squash', 'Corn', 'Potato', 'Beef' ],
+    [ 'Argentina' ],
+    [ 'Boiling' ],
+    []
+  ],
+  Zabaione: [
+    [ 'Egg', 'Sugar', 'Wine', 'Custard' ],
+    [ 'Italy' ],
+    [ 'Simmering', 'Mixing' ],
+    []
+  ],
+  Sorrentinos: [
+    [ 'Dough', 'Cheese', 'Ham', 'Spinach' ],
+    [ 'Argentina' ],
+    [ 'Boiling' ],
+    []
+  ],
+  'Sandwiches De Miga': [
+    [
+      'Bread',
+      'Ham',
+      'Egg',
+      'Cheese',
+      'Tomato',
+      'Bell Pepper',
+      'Tuna',
+      'Lettuce'
+    ],
+    [ 'Argentina', 'Uruguay' ],
+    [ 'Assembling', 'Toasting' ],
+    []
+  ],
+  Lasagna: [
+    [ 'Dough', 'Minced Meat', 'Tomato', 'Bechamel', 'Cheese' ],
+    [ 'Italy' ],
+    [ 'Baking' ],
+    []
   ]
 }
 
 
-let ingredientList = ['Cheese','Flour','Tomato','Mozzarella','Bacon','Sausage','Egg','Mushroom','Bread','Beans','Rice','Stock','Broth','Bouillon','Butter','Onion','White Wine','Pork','Chicken','Breadcrumbs','Soy Sauce','Gochujang','Chilli','Beef','Carrot','Cucumber','Kimchi','Noodles','Fishball','Minced Meat','Oil','Vinegar','Ginger','Sesame Oil','Ginseng','Garlic','Ice','Red Beans','Condensed Milk','Syrup','Eggplant','Salt','Lettuce','Croutons','Lemon','Olive Oil','Worcestershire Sauce','Anchovies','Mustard','Pepper','Fish','Lime','Coriander','Lentils','Tumeric','Pasta','Chives','Yogurt','Mint','Potato','Scallion','Mutton','Pomegranate','Walnut','Duck','Cinnamon','Meat','Split Peas','Dried Lime','Dough','Pistachio','Almonds','Rose Water','Tahini','Cardamom','Saffron','Chickpea','Honey','Orange Blossom Water','Sesame','Sugar','Vegetables','Pastry','Cream','Spinach','Starch','Dates','Gravy','Tofu','Milk','Paprika','Lard','Apple','Horseradish','Poppy Seeds','Jam','Veal','Mushrooms','Cranberry','Dill','Bell Pepper','Pumpkin','Raisins']
+
+let ingredientList = ['Cheese','Flour','Tomato','Mozzarella','Bacon','Sausage','Egg','Mushroom','Bread','Beans','Rice','Stock','Broth','Bouillon','Butter','Onion','White Wine','Pork','Chicken','Breadcrumbs','Soy Sauce','Gochujang','Chilli','Beef','Carrot','Cucumber','Kimchi','Noodles','Fishball','Minced Meat','Oil','Vinegar','Ginger','Sesame Oil','Ginseng','Garlic','Ice','Red Beans','Condensed Milk','Syrup','Eggplant','Salt','Lettuce','Croutons','Lemon','Olive Oil','Worcestershire Sauce','Anchovies','Mustard','Pepper','Fish','Lime','Coriander','Lentils','Tumeric','Pasta','Chives','Yogurt','Mint','Potato','Scallion','Mutton','Pomegranate','Walnut','Duck','Cinnamon','Meat','Split Peas','Dried Lime','Dough','Pistachio','Almonds','Rose Water','Tahini','Cardamom','Saffron','Chickpea','Honey','Orange Blossom Water','Sesame','Sugar','Vegetables','Pastry','Cream','Spinach','Starch','Dates','Gravy','Tofu','Milk','Paprika','Lard','Apple','Horseradish','Poppy Seeds','Jam','Veal','Mushrooms','Cranberry','Dill','Bell Pepper','Pumpkin','Raisins','Peas','Cauliflower','Mayonnaise','Curry Powder','Lamb','Berries','Meringue','Strawberry','Orange','Biscuits','Jelly','Custard','Blood','Fat','Oats','Barley','Corn','Squash','Wine','Ham','Tuna','Bechamel']
 
 let originList = [
-	'Italy',       'England',      'United Kingdom',
-	'Japan',       'Korea',        'Singapore',
-	'Malaysia',    'Thailand',     'Philippines',
-	'Mexico',      'Peru',         'Costa Rica',
-	'Iran',        'Afghanistan',  'Pakistan',
-	'India',       'Bangaladesh',  'Turkey',
-	'Iraq',        'Saudi Arabia', 'Israel',
-	'Jordan',      'Lebanon',      'Palestine',
-	'Syria',       'UAE',          'Algeria',
-	'Libya',       'Morocco',      'Tunisia',
-	'Mauritania',  'Spain',        'Portugal',
-	'France',      'Egypt',        'Australia',
-	'New Zealand', 'China',        'Austria',
-	'Hungary',     'Germany',      'Azerbaijan',
-	'Georgia',     'Armenia'
+  'Italy',         'England',      'United Kingdom',
+  'Japan',         'Korea',        'Singapore',
+  'Malaysia',      'Thailand',     'Philippines',
+  'Mexico',        'Peru',         'Costa Rica',
+  'Iran',          'Afghanistan',  'Pakistan',
+  'India',         'Bangladesh',   'Turkey',
+  'Iraq',          'Saudi Arabia', 'Israel',
+  'Jordan',        'Lebanon',      'Palestine',
+  'Syria',         'UAE',          'Algeria',
+  'Libya',         'Morocco',      'Tunisia',
+  'Mauritania',    'Spain',        'Portugal',
+  'France',        'Egypt',        'Australia',
+  'New Zealand',   'China',        'Austria',
+  'Hungary',       'Germany',      'Azerbaijan',
+  'Georgia',       'Armenia',      'Britain',
+  'United States', 'Ireland',      'Argentina',
+  'Uruguay'
 ]
-let methodList = [
+
+let methodList = 
+[
   'Baking',     'Frying',
   'Simmering',  'Deep Frying',
   'Mixing',     'Boiling',
   'Steaming',   'Freezing',
   'Assembling', 'Grilling',
   'Curing',     'Stewing',
-  'Broiling'
+  'Broiling',   'Baked',
+  'Toasting'
 ]
+
 let courseList = [
   'Entree',    'Breakfast',
   'Soup',      'Dessert',

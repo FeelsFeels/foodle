@@ -58,7 +58,29 @@ let foodLinks =
   Dovga: [ 'dovga.jfif', 'wikipedia.org/wiki/Dovga' ],
   Khachapuri: [ 'khachapuri.jpg', 'wikipedia.org/wiki/Khachapuri' ],
   Ajapsandali: [ 'ajapsandali.jpg', 'wikipedia.org/wiki/Ajapsandali' ],
-  Ghapama: [ 'ghapama.jfif', 'wikipedia.org/wiki/Ghapama' ]
+  Ghapama: [ 'ghapama.jfif', 'wikipedia.org/wiki/Ghapama' ],
+  'Bangers And Mash': [ 'bangers_and_mash.jpg', 'wikipedia.org/wiki/Bangers_and_mash' ],
+  'Cauliflower Cheese': [ 'cauliflower_cheese.jpg', 'wikipedia.org/wiki/Cauliflower_cheese' ],
+  'Chicken Tikka Masala': [
+    'chicken_tikka_masala.jpg',
+    'wikipedia.org/wiki/Chicken_tikka_masala'
+  ],
+  'Chicken Tikka': [ 'chicken_tikka.jpg', 'wikipedia.org/wiki/Chicken_tikka' ],
+  'Butter Chicken': [ 'butter_chicken.jpg', 'wikipedia.org/wiki/Butter_chicken' ],
+  'Coronation Chicken': [ 'coronation_chicken.jpg', 'wikipedia.org/wiki/Coronation_chicken' ],
+  'Devilled Kidneys': [ 'devilled_kidneys.jpg', 'wikipedia.org/wiki/Devilled_kidneys' ],
+  'Deviled Eggs': [ 'deviled_eggs.jpg', 'wikipedia.org/wiki/Deviled_egg' ],
+  'Eton Mess': [ 'eton_mess.jpg', 'wikipedia.org/wiki/Eton_mess' ],
+  'Fish And Chips': [ 'fish_and_chips', 'wikipedia.org/wiki/Fish_and_chips' ],
+  'Platinum Pudding': [ 'platinum_pudding.jpg', 'wikipedia.org/wiki/Platinum_Pudding' ],
+  'Potato Salad': [ 'potato_salad.jpg', 'wikipedia.org/wiki/Potato_salad' ],
+  'Black Pudding': [ 'black_pudding.jpg', 'wikipedia.org/wiki/Black_pudding' ],
+  'Kitchener Bun': [ 'kitchener_bun.jpg', 'wikipedia.org/wiki/Kitchener_bun' ],
+  Palmier: [ 'palmier.jpg', 'wikipedia.org/wiki/Palmier' ],
+  Empanada: [ 'empanada.jfif', 'wikipedia.org/wiki/Empanada' ],
+  Locro: [ 'locro.jpg', 'wikipedia.org/wiki/Locro' ],
+  Zabaione: [ 'zabaione.jpg', 'wikipedia.org/wiki/Zabaione' ],
+  Sorrentinos: [ 'sorrentinos.jpg', 'wikipedia.org/wiki/Sorrentinos' ],
+  'Sandwiches De Miga': [ 'sandwiches_de_miga.jpg', 'wikipedia.org/wiki/Sandwiches_de_miga' ],
+  Lasagna: [ 'lasagna.jpg', 'wikipedia.org/wiki/Lasagna' ]
 }
-
-  
