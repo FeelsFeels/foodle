@@ -42,7 +42,7 @@
 #Germknodel/Dough,Sugar,Butter,Poppy Seeds,Jam/Austria,Germany/Steaming/???
 #Kasespatzle/Noodles,Cheese,Onion/Germany/Baked/???
 #Wiener Schnitzel/Veal,Breadcrumbs/Germany,Austria/Deep Frying/???
-#Mezzelune/Dough,Egg,Olive Oil,Cheese,Spinach,Mushrooms/Italy,Austria/Boiling/???
+#Mezzelune/Dough,Egg,Olive Oil,Cheese,Spinach,Mushroom/Italy,Austria/Boiling/???
 #Kuku Sabzi/Egg,Coriander,Scallion,Cranberry/Iran/Frying,Steaming/???
 #Dovga/Yogurt,Flour,Rice,Egg,Spinach,Dill,Coriander,Mint/Azerbaijan/Simmering/???
 #Khachapuri/Bread,Cheese,Egg,Flour/Georgia/Baking/???
@@ -69,3 +69,24 @@
 #Sorrentinos/Dough,Cheese,Ham,Spinach/Argentina/Boiling/???
 #Sandwiches De Miga/Bread,Ham,Egg,Cheese,Tomato,Bell Pepper,Tuna,Lettuce/Argentina,Uruguay/Assembling,Toasting/???
 #Lasagna/Dough,Minced Meat,Tomato,Bechamel,Cheese/Italy/Baking/???
+#Moussaka/Eggplant,Potato,Minced Meat,Tomato,Bechamel/Egypt,Greece/Baking,Frying/???
+#Tave Kosi/Lamb,Yogurt,Egg,Roux,Rice/Albania/Baking/???
+#Waterzooi/Fish,Chicken,Broth,Egg,Cream,Vegetables/Belgium/Boiling/???
+#Chocolate Mousse/Egg,Cream,Chocolate/France/Freezing,Mixing/???
+#Ema Datshi/Cheese,Chilli,Butter/Bhutan/Simmering/???
+#Feijoada/Beans,Beef,Pork,Sausage/Brazil,Portugal/Boiling/???
+#Ambuyat/Sago/Brunei/???/???
+#Shopska Salad/Tomato,Cucumber,Onion,Bell Pepper,Cheese/Bulgaria/Mixing/???
+#Fish Amok/Fish,Coconut Milk,Egg,Curry,Kroeung/Cambodia/Steaming/???
+#Num Banhchok/Noodles,Kroeung,Fish,Coconut Milk,Bean Sprouts/Cambodia/Boiling/???
+#Samlar Kako/Kroeung,Fish,Rice,Vegetables,Meat/Cambodia/Boiling/???
+#Poutine/Potato,Gravy,Cheese/Canada/Deep Frying/???
+#Butter Tart/Pastry,Butter,Sugar,Syrup,Egg/Canada/Baking/???
+#Pastel De Choclo/Corn,Minced Meat,Raisins,Olives,Onion/Chile/Baking/???
+#Stegt Flaesk/Potato,Pork,Coriander,Cream/Denmark/Frying/???
+#Encebollado/Fish,Cassava,Onion/Ecuador/Boiling/???
+#Guatitas/Tripe,Peanut,Potato,Lemon/Ecuador/Boiling,Brining/???
+#Lohikeitto/Salmon,Potato,Leek,Cream/Finland/Boiling/???
+#Beef Bourguignon/Beef,Wine,Stock,Lard,Onion,Mushroom/France/Stewing/???
+#Blanquette De Veau/Veal,Stock,Mirepoix,Butter,Flour/France/Boiling/???
+#Steak Frites/Beef,Potato,Hollandaise Sauce/Belgium,France/Frying/???

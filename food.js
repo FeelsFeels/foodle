@@ -13,7 +13,7 @@ let newFoodLinks;
 
 function GetRandomFood(){
 	let chosenFood = foodList[Math.floor(foodList.length * Math.random())];
-	// chosenFood = 'Black Pudding';
+	// chosenFood = 'Stegt Flaesk';
 	newFood = new Food(chosenFood, foodObjectList[chosenFood][0], foodObjectList[chosenFood][1], foodObjectList[chosenFood][2]);
 	newFoodLinks = ['src/food_pictures/' + foodLinks[chosenFood][0], 'https://' + foodLinks[chosenFood][1]];
 	console.log(newFoodLinks);
@@ -96,8 +96,30 @@ let foodList = [
   'Zabaione',
   'Sorrentinos',
   'Sandwiches De Miga',
-  'Lasagna'
+  'Lasagna',
+  'Moussaka',
+  'Tave Kosi',
+  'Waterzooi',
+  'Chocolate Mousse',
+  'Ema Datshi',
+  'Feijoada',
+  'Ambuyat',
+  'Shopska Salad',
+  'Fish Amok',
+  'Num Banhchok',
+  'Samlar Kako',
+  'Poutine',
+  'Butter Tart',
+  'Pastel De Choclo',
+  'Stegt Flaesk',
+  'Encebollado',
+  'Guatitas',
+  'Lohikeitto',
+  'Beef Bourguignon',
+  'Blanquette De Veau',
+  'Steak Frites'
 ]
+
 
 let foodObjectList = {
   Pizza: [
@@ -420,7 +442,8 @@ let foodObjectList = {
     [ 'Steaming' ],
     []
   ],
-  Kasespatzle: [ [ 'Noodles', 'Cheese', 'Onion' ], [ 'Germany' ], [ 'Baked' ], [] ],
+  Kasespatzle: [ [ 'Noodles', 'Cheese', 'Onion' ], [ 'Germany' ], [ 'Baked' ], [
+] ],
   'Wiener Schnitzel': [
     [ 'Veal', 'Breadcrumbs' ],
     [ 'Germany', 'Austria' ],
@@ -428,7 +451,7 @@ let foodObjectList = {
     []
   ],
   Mezzelune: [
-    [ 'Dough', 'Egg', 'Olive Oil', 'Cheese', 'Spinach', 'Mushrooms' ],
+    [ 'Dough', 'Egg', 'Olive Oil', 'Cheese', 'Spinach', 'Mushroom' ],
     [ 'Italy', 'Austria' ],
     [ 'Boiling' ],
     []
@@ -597,35 +620,153 @@ let foodObjectList = {
     [ 'Italy' ],
     [ 'Baking' ],
     []
+  ],
+  Moussaka: [
+    [ 'Eggplant', 'Potato', 'Minced Meat', 'Tomato', 'Bechamel' ],
+    [ 'Egypt', 'Greece' ],
+    [ 'Baking', 'Frying' ],
+    []
+  ],
+  'Tave Kosi': [
+    [ 'Lamb', 'Yogurt', 'Egg', 'Roux', 'Rice' ],
+    [ 'Albania' ],
+    [ 'Baking' ],
+    []
+  ],
+  Waterzooi: [
+    [ 'Fish', 'Chicken', 'Broth', 'Egg', 'Cream', 'Vegetables' ],
+    [ 'Belgium' ],
+    [ 'Boiling' ],
+    []
+  ],
+  'Chocolate Mousse': [
+    [ 'Egg', 'Cream', 'Chocolate' ],
+    [ 'France' ],
+    [ 'Freezing', 'Mixing' ],
+    []
+  ],
+  'Ema Datshi': [
+    [ 'Cheese', 'Chilli', 'Butter' ],
+    [ 'Bhutan' ],
+    [ 'Simmering' ],
+    []
+  ],
+  Feijoada: [
+    [ 'Beans', 'Beef', 'Pork', 'Sausage' ],
+    [ 'Brazil', 'Portugal' ],
+    [ 'Boiling' ],
+    []
+  ],
+  Ambuyat: [ [ 'Sago' ], [ 'Brunei' ], [], [] ],
+  'Shopska Salad': [
+    [ 'Tomato', 'Cucumber', 'Onion', 'Bell Pepper', 'Cheese' ],
+    [ 'Bulgaria' ],
+    [ 'Mixing' ],
+    []
+  ],
+  'Fish Amok': [
+    [ 'Fish', 'Coconut Milk', 'Egg', 'Curry', 'Kroeung' ],
+    [ 'Cambodia' ],
+    [ 'Steaming' ],
+    []
+  ],
+  'Num Banhchok': [
+    [ 'Noodles', 'Kroeung', 'Fish', 'Coconut Milk', 'Bean Sprouts' ],
+    [ 'Cambodia' ],
+    [ 'Boiling' ],
+    []
+  ],
+  'Samlar Kako': [
+    [ 'Kroeung', 'Fish', 'Rice', 'Vegetables', 'Meat' ],
+    [ 'Cambodia' ],
+    [ 'Boiling' ],
+    []
+  ],
+  Poutine: [
+    [ 'Potato', 'Gravy', 'Cheese' ],
+    [ 'Canada' ],
+    [ 'Deep Frying' ],
+    []
+  ],
+  'Butter Tart': [
+    [ 'Pastry', 'Butter', 'Sugar', 'Syrup', 'Egg' ],
+    [ 'Canada' ],
+    [ 'Baking' ],
+    []
+  ],
+  'Pastel De Choclo': [
+    [ 'Corn', 'Minced Meat', 'Raisins', 'Olives', 'Onion' ],
+    [ 'Chile' ],
+    [ 'Baking' ],
+    []
+  ],
+  'Stegt Flaesk': [
+    [ 'Potato', 'Pork', 'Coriander', 'Cream' ],
+    [ 'Denmark' ],
+    [ 'Frying' ],
+    []
+  ],
+  Encebollado: [ [ 'Fish', 'Cassava', 'Onion' ], [ 'Ecuador' ], [ 'Boiling' ], [
+] ],
+  Guatitas: [
+    [ 'Tripe', 'Peanut', 'Potato', 'Lemon' ],
+    [ 'Ecuador' ],
+    [ 'Boiling', 'Brining' ],
+    []
+  ],
+  Lohikeitto: [
+    [ 'Salmon', 'Potato', 'Leek', 'Cream' ],
+    [ 'Finland' ],
+    [ 'Boiling' ],
+    []
+  ],
+  'Beef Bourguignon': [
+    [ 'Beef', 'Wine', 'Stock', 'Lard', 'Onion', 'Mushroom' ],
+    [ 'France' ],
+    [ 'Stewing' ],
+    []
+  ],
+  'Blanquette De Veau': [
+    [ 'Veal', 'Stock', 'Mirepoix', 'Butter', 'Flour' ],
+    [ 'France' ],
+    [ 'Boiling' ],
+    []
+  ],
+  'Steak Frites': [
+    [ 'Beef', 'Potato', 'Hollandaise Sauce' ],
+    [ 'Belgium', 'France' ],
+    [ 'Frying' ],
+    []
   ]
 }
 
 
 
+
 let ingredientList = ['Cheese','Flour','Tomato','Mozzarella','Bacon','Sausage','Egg','Mushroom','Bread','Beans','Rice','Stock','Broth','Bouillon','Butter','Onion','White Wine','Pork','Chicken','Breadcrumbs','Soy Sauce','Gochujang','Chilli','Beef','Carrot','Cucumber','Kimchi','Noodles','Fishball','Minced Meat','Oil','Vinegar','Ginger','Sesame Oil','Ginseng','Garlic','Ice','Red Beans','Condensed Milk','Syrup','Eggplant','Salt','Lettuce','Croutons','Lemon','Olive Oil','Worcestershire Sauce','Anchovies','Mustard','Pepper','Fish','Lime','Coriander','Lentils','Tumeric','Pasta','Chives','Yogurt','Mint','Potato','Scallion','Mutton','Pomegranate','Walnut','Duck','Cinnamon','Meat','Split Peas','Dried Lime','Dough','Pistachio','Almonds','Rose Water','Tahini','Cardamom','Saffron','Chickpea','Honey','Orange Blossom Water','Sesame','Sugar','Vegetables','Pastry','Cream','Spinach','Starch','Dates','Gravy','Tofu','Milk','Paprika','Lard','Apple','Horseradish','Poppy Seeds','Jam','Veal','Mushrooms','Cranberry','Dill','Bell Pepper','Pumpkin','Raisins','Peas','Cauliflower','Mayonnaise','Curry Powder','Lamb','Berries','Meringue','Strawberry','Orange','Biscuits','Jelly','Custard','Blood','Fat','Oats','Barley','Corn','Squash','Wine','Ham','Tuna','Bechamel']
 
-let originList = [
-  'Italy',         'England',      'United Kingdom',
-  'Japan',         'Korea',        'Singapore',
-  'Malaysia',      'Thailand',     'Philippines',
-  'Mexico',        'Peru',         'Costa Rica',
-  'Iran',          'Afghanistan',  'Pakistan',
-  'India',         'Bangladesh',   'Turkey',
-  'Iraq',          'Saudi Arabia', 'Israel',
-  'Jordan',        'Lebanon',      'Palestine',
-  'Syria',         'UAE',          'Algeria',
-  'Libya',         'Morocco',      'Tunisia',
-  'Mauritania',    'Spain',        'Portugal',
-  'France',        'Egypt',        'Australia',
-  'New Zealand',   'China',        'Austria',
-  'Hungary',       'Germany',      'Azerbaijan',
-  'Georgia',       'Armenia',      'Britain',
-  'United States', 'Ireland',      'Argentina',
-  'Uruguay'
+let originList = 
+[
+  'Italy',       'England',       'United Kingdom', 'Japan',
+  'Korea',       'Singapore',     'Malaysia',       'Thailand',
+  'Philippines', 'Mexico',        'Peru',           'Costa Rica',
+  'Iran',        'Afghanistan',   'Pakistan',       'India',
+  'Bangladesh',  'Turkey',        'Iraq',           'Saudi Arabia',
+  'Israel',      'Jordan',        'Lebanon',        'Palestine',
+  'Syria',       'UAE',           'Algeria',        'Libya',
+  'Morocco',     'Tunisia',       'Mauritania',     'Spain',
+  'Portugal',    'France',        'Egypt',          'Australia',
+  'New Zealand', 'China',         'Austria',        'Hungary',
+  'Germany',     'Azerbaijan',    'Georgia',        'Armenia',
+  'Britain',     'United States', 'Ireland',        'Argentina',
+  'Uruguay',     'Greece',        'Albania',        'Belgium',
+  'Bhutan',      'Brazil',        'Brunei',         'Bulgaria',
+  'Cambodia',    'Canada',        'Chile',          'Denmark',
+  'Ecuador',     'Finland'
 ]
 
-let methodList = 
-[
+
+let methodList = [
   'Baking',     'Frying',
   'Simmering',  'Deep Frying',
   'Mixing',     'Boiling',
@@ -633,10 +774,12 @@ let methodList =
   'Assembling', 'Grilling',
   'Curing',     'Stewing',
   'Broiling',   'Baked',
-  'Toasting'
+  'Toasting',   'Brining'
 ]
 
-let courseList = [
+
+let courseList = 
+[
   'Entree',    'Breakfast',
   'Soup',      'Dessert',
   'Side Dish', 'Appetiser',
@@ -644,6 +787,7 @@ let courseList = [
   'Pastry',    'Confection',
   'Dumpling',  'Pie'
 ]
+
 
 
 // let ingredientList = [
