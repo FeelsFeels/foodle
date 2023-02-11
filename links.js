@@ -71,7 +71,7 @@ let foodLinks =
   'Devilled Kidneys': [ 'devilled_kidneys.jpg', 'wikipedia.org/wiki/Devilled_kidneys' ],
   'Deviled Eggs': [ 'deviled_eggs.jpg', 'wikipedia.org/wiki/Deviled_egg' ],
   'Eton Mess': [ 'eton_mess.jpg', 'wikipedia.org/wiki/Eton_mess' ],
-  'Fish And Chips': [ 'fish_and_chips', 'wikipedia.org/wiki/Fish_and_chips' ],
+  'Fish And Chips': [ 'fish_and_chips.jpg', 'wikipedia.org/wiki/Fish_and_chips' ],
   'Platinum Pudding': [ 'platinum_pudding.jpg', 'wikipedia.org/wiki/Platinum_Pudding' ],
   'Potato Salad': [ 'potato_salad.jpg', 'wikipedia.org/wiki/Potato_salad' ],
   'Black Pudding': [ 'black.pudding.jpg', 'wikipedia.org/wiki/Black_pudding' ],

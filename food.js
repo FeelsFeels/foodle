@@ -13,7 +13,7 @@ let newFoodLinks;
 
 function GetRandomFood(){
 	let chosenFood = foodList[Math.floor(foodList.length * Math.random())];
-	// chosenFood = 'Stegt Flaesk';
+	// chosenFood = 'Fish And Chips';
 	newFood = new Food(chosenFood, foodObjectList[chosenFood][0], foodObjectList[chosenFood][1], foodObjectList[chosenFood][2]);
 	newFoodLinks = ['src/food_pictures/' + foodLinks[chosenFood][0], 'https://' + foodLinks[chosenFood][1]];
 	console.log(newFoodLinks);
