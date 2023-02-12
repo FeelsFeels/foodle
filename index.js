@@ -482,7 +482,7 @@ function Init() {
     
 
     SetScrollPosition();
-    GetRandomFood();
+    
     InitialiseFoodPicture();
     ShowPopup(infoPopup);
 

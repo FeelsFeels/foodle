@@ -21,6 +21,43 @@ function GetRandomFood(){
 	foodList.sort();
 }
 
+function GetDailyfood(){
+	Shuffle(foodList, 1337);
+	
+	let day = GetDayDifference();
+	let chosenFood = foodList[day % foodList.length];
+	newFood = new Food(chosenFood, foodObjectList[chosenFood][0], foodObjectList[chosenFood][1], foodObjectList[chosenFood][2]);
+	newFoodLinks = ['src/food_pictures/' + foodLinks[chosenFood][0], 'https://' + foodLinks[chosenFood][1]];
+	console.log(newFoodLinks);
+	
+	foodList.sort();	
+}
+
+function Shuffle(array, seed) {
+	let m = array.length;
+	let i;
+	let j;
+
+	while (m) {
+		i = Math.floor(Random(seed) * m--);
+
+		j = array[m];
+		array[m] = array[i];
+		array[i] = j;
+		++seed;
+	}
+	return array;
+}
+function Random(seed){
+	let x = Math.sin(seed++) * 10000;
+	return x - Math.floor(x);
+}
+function GetDayDifference(){
+	let myDate = new Date('2023/02/12');
+	let yourDate = new Date();
+	let diffTime = Math.abs(yourDate - myDate);
+	return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+}
 
 
 
