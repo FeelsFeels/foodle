@@ -7,6 +7,7 @@
     <title>Foodle!</title>
     <link rel="stylesheet" href="bootstrap-5.2.2-dist\css\bootstrap.min.css">
     <link rel="stylesheet" href="app.css">
+    <link rel="icon" href="src/doko.png">
     <title>Document</title>
 </head>
 <body>
@@ -14,8 +15,17 @@
         <div id="title-container">
             <span style="font-size: 32px;">F🍩🍩DLE</span>
             <div>
-                <input type="image" src='src/question-circle.svg' id="info-button" onclick="ShowPopup(infoPopup)"></input>
-                <input type="image" src='src/bar-chart.svg' id="info-button" onclick="ShowPopup(resultsPopup)"></input>                
+                <input type="image" src='src/question-circle.svg' class="header-button" onclick="ShowPopup(infoPopup)">
+                <input type="image" src='src/bar-chart.svg' class="header-button" onclick="ShowPopup(resultsPopup)">
+                <input type="image" src="src/menu.svg" id ="menu-button" class="header-button" style="width:36px; height:36px; top: 10px;" onclick="OpenMenu()">
+                <div id="menu-container" class="hidden">
+                    <ul>
+                        <li onclick="window.location = 'index.html'">Home</li>
+                        <li onclick="window.location = 'random.html'">Random</li>
+                        <li onclick="window.location = 'about.html'">About</li>
+                        <li onclick="Lose()">Give Up</li>
+                    </ul>
+                </div>               
             </div>
         </div>
         <div id="title-description" >the round-the-world food guessing game</div>
@@ -27,7 +37,6 @@
             <span id="guess-count">0/6</span>
         </div>
         <div class="paper-content">
-            <datalist id="guess-options_food"></datalist>
             <img id="food-picture">
             
             <div id="guessed-food"></div>
@@ -80,12 +89,10 @@
                 <input type="image" src='src/x-circle.svg' id="popup-close-button" onclick="RemovePopup(resultsPopup)"></input>
             </div>
             <div id="results-content" class="hidden">
+                <div id="results-food-description">It's Pizza!</div>
                 <img id="results-food-picture" src="src/food_pictures/pizza.jpg">                
-                <button id="share-button" onclick="ShareWin()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
-                        <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
-                    </svg>
-                    <span id="share-button_text">Share it!</span>
+                <button id="share-button" onclick="NextRound()">
+                    <span id="share-button_text">Next Round!</span>
                 </button>
                 <div>
                     <a id="info-link" target="_blank">Find out more</a>                    
@@ -102,8 +109,8 @@
     <script src="bootstrap-5.2.2-dist\js\bootstrap.min.js"></script>
     <script src="links.js"></script>
     <script src="food.js"></script>
-    <script src="random.js"></script>
     <script src="index.js"></script>
+    <script src="random.js"></script>
 </body>
 </html>
 

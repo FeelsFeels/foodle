@@ -60,7 +60,7 @@
 #Fish And Chips\fish_and_chips\wikipedia.org/wiki/Fish_and_chips
 #Platinum Pudding\platinum_pudding.jpg\wikipedia.org/wiki/Platinum_Pudding
 #Potato Salad\potato_salad.jpg\wikipedia.org/wiki/Potato_salad
-#Black Pudding\black.pudding.jpg\wikipedia.org/wiki/Black_pudding
+#Black Pudding\black_pudding.jpg\wikipedia.org/wiki/Black_pudding
 #Kitchener Bun\kitchener_bun.jpg\wikipedia.org/wiki/Kitchener_bun
 #Palmier\palmier.jpg\wikipedia.org/wiki/Palmier
 #Empanada\empanada.jfif\wikipedia.org/wiki/Empanada

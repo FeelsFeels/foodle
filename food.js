@@ -23,14 +23,16 @@ function GetRandomFood(){
 
 function GetDailyfood(){
 	Shuffle(foodList, 1337);
-	
+
 	let day = GetDayDifference();
 	let chosenFood = foodList[day % foodList.length];
 	newFood = new Food(chosenFood, foodObjectList[chosenFood][0], foodObjectList[chosenFood][1], foodObjectList[chosenFood][2]);
 	newFoodLinks = ['src/food_pictures/' + foodLinks[chosenFood][0], 'https://' + foodLinks[chosenFood][1]];
 	console.log(newFoodLinks);
-	
-	foodList.sort();	
+
+	document.getElementById('day-counter').textContent = 'DAY ' + day;
+
+	foodList.sort();
 }
 
 function Shuffle(array, seed) {
@@ -780,7 +782,7 @@ let foodObjectList = {
 
 
 
-let ingredientList = ['Cheese','Flour','Tomato','Mozzarella','Bacon','Sausage','Egg','Mushroom','Bread','Beans','Rice','Stock','Broth','Bouillon','Butter','Onion','White Wine','Pork','Chicken','Breadcrumbs','Soy Sauce','Gochujang','Chilli','Beef','Carrot','Cucumber','Kimchi','Noodles','Fishball','Minced Meat','Oil','Vinegar','Ginger','Sesame Oil','Ginseng','Garlic','Ice','Red Beans','Condensed Milk','Syrup','Eggplant','Salt','Lettuce','Croutons','Lemon','Olive Oil','Worcestershire Sauce','Anchovies','Mustard','Pepper','Fish','Lime','Coriander','Lentils','Tumeric','Pasta','Chives','Yogurt','Mint','Potato','Scallion','Mutton','Pomegranate','Walnut','Duck','Cinnamon','Meat','Split Peas','Dried Lime','Dough','Pistachio','Almonds','Rose Water','Tahini','Cardamom','Saffron','Chickpea','Honey','Orange Blossom Water','Sesame','Sugar','Vegetables','Pastry','Cream','Spinach','Starch','Dates','Gravy','Tofu','Milk','Paprika','Lard','Apple','Horseradish','Poppy Seeds','Jam','Veal','Mushrooms','Cranberry','Dill','Bell Pepper','Pumpkin','Raisins','Peas','Cauliflower','Mayonnaise','Curry Powder','Lamb','Berries','Meringue','Strawberry','Orange','Biscuits','Jelly','Custard','Blood','Fat','Oats','Barley','Corn','Squash','Wine','Ham','Tuna','Bechamel']
+let ingredientList = ['Cheese','Flour','Tomato','Mozzarella','Bacon','Sausage','Egg','Mushroom','Bread','Beans','Rice','Stock','Broth','Bouillon','Butter','Onion','White Wine','Pork','Chicken','Breadcrumbs','Soy Sauce','Gochujang','Chilli','Beef','Carrot','Cucumber','Kimchi','Noodles','Fishball','Minced Meat','Oil','Vinegar','Ginger','Sesame Oil','Ginseng','Garlic','Ice','Red Beans','Condensed Milk','Syrup','Eggplant','Salt','Lettuce','Croutons','Lemon','Olive Oil','Worcestershire Sauce','Anchovies','Mustard','Pepper','Fish','Lime','Coriander','Lentils','Tumeric','Pasta','Chives','Yogurt','Mint','Potato','Scallion','Mutton','Pomegranate','Walnut','Duck','Cinnamon','Meat','Split Peas','Dried Lime','Dough','Pistachio','Almonds','Rose Water','Tahini','Cardamom','Saffron','Chickpea','Honey','Orange Blossom Water','Sesame','Sugar','Vegetables','Pastry','Cream','Spinach','Starch','Dates','Gravy','Tofu','Milk','Paprika','Lard','Apple','Horseradish','Poppy Seeds','Jam','Veal','Cranberry','Dill','Bell Pepper','Pumpkin','Raisins','Peas','Cauliflower','Mayonnaise','Curry Powder','Lamb','Berries','Meringue','Strawberry','Orange','Biscuits','Jelly','Custard','Blood','Fat','Oats','Barley','Corn','Squash','Wine','Ham','Tuna','Bechamel','Roux','Chocolate','Sago','Coconut Milk','Curry','Kroeung','Bean Sprouts','Olives','Cassava','Tripe','Peanut','Salmon','Leek','Mirepoix','Hollandaise Sauce']
 
 let originList = 
 [

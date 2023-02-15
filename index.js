@@ -1,8 +1,6 @@
 input_food = document.getElementById('input_food');
+
 guessedDiv_food = document.getElementById('guessed-food')
-guessOptions_food = document.getElementById('guess-options_food');
-
-
 guessedDiv_ingredient = document.getElementById('category-ingredient');
 guessedDiv_origin = document.getElementById('category-origin');
 guessedDiv_method = document.getElementById('category-method');
@@ -13,9 +11,13 @@ resultsPopup = document.getElementById('results-popup');
 resultsHeader = document.getElementById('results-header');
 resultsContent = document.getElementById('results-content');
 resultsPicture = document.getElementById('results-food-picture');
+resultsPictureDescription = document.getElementById('results-food-description');
 resultsShareButton = document.getElementById('share-button');
 resultsShareButtonText = document.getElementById('share-button_text');
 resultsLink = document.getElementById('info-link');
+
+let menuContainer = document.getElementById('menu-container');
+let menuOpened = false;
 
 let searchResultsDiv = document.getElementById('search-results-container');
 let searchResultsDisplayed = false;
@@ -42,6 +44,11 @@ let mostPreviousGuessElements = [];
 let numberOfGuesses = 0;
 let initialPixelationFactor = 14;
 let scrollPosition;
+
+// 0: daily
+// 1: random
+// 3: win game
+let gamemode = 0;
 
 
 function GuessFormatter(str){
@@ -216,7 +223,6 @@ function GuessFood(guess){
         //wingame
         Win();
         newGuessElement.classList.add('pill-food', 'pill--success');
-        PixelateImage(originalFoodImg, 0);
 
     }
     else{
@@ -224,7 +230,6 @@ function GuessFood(guess){
 
         if(numberOfGuesses >= 6){
             Lose();
-            PixelateImage(originalFoodImg, 0);
         }
         else{
             PixelateImage(originalFoodImg, initialPixelationFactor - numberOfGuesses * 2);
@@ -241,6 +246,7 @@ function GuessFood(guess){
 }
 
 function Win() {
+    PixelateImage(originalFoodImg, 0);
     input_food.readOnly = true;
     input_food.setAttribute("placeholder", `It's ${newFood.foodName}!`);
     input_food.classList.add("input_food_gameend");
@@ -258,19 +264,27 @@ function Win() {
     resultsHeader.append(congratulations);
     resultsHeader.append(winStatement);
     
-    let winContent = document.createElement('div');
-    winContent.innerText = `It's ${newFood.foodName}!`
-    
-    resultsContent.prepend(winContent);
     resultsContent.classList.remove("hidden");
 
     PrepareConfetti(500);
 
-    resultsShareButton.setAttribute('onclick', 'ShareWin()');
+    if(gamemode == 0){
+        resultsShareButton.setAttribute('onclick', 'ShareWin()');
+    }
+    else if (gamemode == 1){
+        resultsShareButton.setAttribute('onclick', 'NextRound()');
+    }
+
+    gamemode = 3;
     ShowPopup(resultsPopup);
 }
 
 function Lose() {
+    if(gamemode == 3){
+        return;
+    }
+    PixelateImage(originalFoodImg, 0);
+
     input_food.readOnly = true;
     input_food.setAttribute("placeholder", `It's ${newFood.foodName}!`);
     input_food.classList.add("input_food_gameend");
@@ -281,18 +295,21 @@ function Lose() {
     consolations.textContent = "Oops!";
 
     let loseStatement = document.createElement('div');
-    loseStatement.textContent = `You didn't get it this time. Try again tomorrow?`;
+
+    if(gamemode == 0){
+        resultsShareButton.setAttribute('onclick', 'ShareLoss()');
+        loseStatement.textContent = `Better luck next time! Try again tomorrow?`;
+    }
+    else if (gamemode == 1){
+        resultsShareButton.setAttribute('onclick', 'NextRound()');
+        loseStatement.textContent = `Better luck next time! Let's go to the next round!`;
+    }
 
     resultsHeader.append(consolations);
     resultsHeader.append(loseStatement);
 
-    let loseContent = document.createElement('div');
-    loseContent.innerText = `It's ${newFood.foodName}!`
-    
-    resultsContent.prepend(loseContent);
     resultsContent.classList.remove("hidden");
 
-    resultsShareButton.setAttribute('onclick', 'ShareLoss()');
     ShowPopup(resultsPopup);
 }
 
@@ -324,6 +341,10 @@ function ShowPopup(target) {
 let originalFoodImg = new Image();
 
 function InitialiseFoodPicture() {
+    //Set results screen description text
+    resultsPictureDescription.textContent = `It's ${newFood.foodName}!`
+    resultsLink.href = newFoodLinks[1];
+
     //Need to adjust all sizes based on screen size
     let deviceWidth = window.innerWidth;
     let deviceHeight = window.innerHeight;
@@ -361,7 +382,6 @@ function InitialiseFoodPicture() {
         }
         
         PixelateImage(originalFoodImg, initialPixelationFactor);
-
     }
 }
 
@@ -399,6 +419,12 @@ function PixelateImage(originalImage, pixelationFactor) {
     foodImg.src = canvas.toDataURL();
 
 }
+
+function OpenMenu(){
+    menuContainer.classList.remove('hidden');
+    menuOpened = true;
+}
+
 
 function SetScrollPosition() {
     // let pos = guessedDiv_ingredient.getBoundingClientRect().bottom;
@@ -440,6 +466,46 @@ function ShootConfetti(){
     }
 }
 
+
+function NextRound(){
+    //what to reset?
+    //guess counter
+    //fuckin pills for all the categories
+    //get a new picture
+    //results popup
+    gamemode = 1;
+
+    GetRandomFood();
+    InitialiseFoodPicture();
+    
+    //reset hint pills
+    guessedDiv_food.innerHTML = '';
+    guessedDiv_ingredient.innerHTML = `<span style="flex-basis: 100%; margin-top:-2px;">Ingredients:</span>`;
+    guessedDiv_origin.innerHTML = `<span style="flex-basis: 100%; margin-top:-2px;">Country of Origin:</span>`; 
+    guessedDiv_method.innerHTML = `<span style="flex-basis: 100%; margin-top:-2px;">Cooking Method:</span>`;
+
+    //reset results popup
+    resultsHeader.innerHTML = `<span style="font-size: larger; color: #ff4e3d;">Game in progress...</span>`
+    resultsContent.classList.add('hidden');
+    RemovePopup(resultsPopup);
+
+    //Guesses
+    numberOfGuesses = 0;
+    guessCountDisplay.textContent = '0/6';
+    guessed_food = [];
+    guessed_ingredient = [];
+    guessed_origin = [];
+    guessed_method = [];
+    guessed_course = [];
+    mostPreviousGuessElements = [];
+    
+    //Input
+    input_food.readOnly = false;
+    input_food.setAttribute("placeholder", 'What food is this...?');
+    input_food.classList.remove("input_food_gameend");
+
+}
+
 function Init() {
     //Event listeners
     input_food.addEventListener('keyup', (e) => {
@@ -464,6 +530,13 @@ function Init() {
     });
 
     document.addEventListener('click', (e)=> {
+        if(menuOpened){
+            if(e.target.id !='menu-button'){
+                menuContainer.classList.add('hidden');
+                menuOpened = false;
+            }
+        }
+
         if(!searchResultsDisplayed){
             if(e.target.id == 'input_food'){
                 FilterFoodSearch('');
@@ -484,12 +557,10 @@ function Init() {
     SetScrollPosition();
     
     InitialiseFoodPicture();
-    ShowPopup(infoPopup);
+    // ShowPopup(infoPopup);
 
-    resultsLink.href = newFoodLinks[1];
 }
 
-Init();
 
 
 
