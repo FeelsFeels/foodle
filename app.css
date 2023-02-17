@@ -10,10 +10,11 @@ header {
 
 #title-container {
     display: flex;
-    width: 60%;
+    /* width: 60%; */
     max-width: 500px;
-    min-width: 280px;
+    min-width: 320px;
     margin: auto;
+    padding: 0px 20px 0px;
     text-align: center;
     font-family: 'Neucha';
     justify-content: space-between;
@@ -23,12 +24,18 @@ header {
     top: -5px;
     text-align: center; 
     font-family: 'Neucha';
-    width: 60%;
+    /* width: 60%; */
     max-width: 500px;
     min-width: 280px;
     margin: auto;
+    padding: 0px 20px 0px;
     text-align: left;
 }
+#title-icons {
+    position: relative;
+    top: -4px;
+}
+
 #day-counter {
     position: relative;
     text-align: center;
@@ -375,9 +382,9 @@ body {
 }
 .popup-content {
     background-color: #fefefe;
-    margin: auto; /* 15% from the top and centered */
+    margin: auto;
     margin-top: 6%;
-    padding: 20px;
+    padding: 15px 20px 10px 20px;
     border: 2px solid rgb(2, 132, 199);
     border-radius: 1rem;
     width: 60%;
@@ -417,10 +424,12 @@ body {
 
 #share-button {
     margin-top: 10px;
+    margin-bottom: 3px;
 
 }
 #info-link{
-    font-size: 14px;
+    position: relative;
+    font-size: 18px;
     color: rgb(14 165 233);
 }
 

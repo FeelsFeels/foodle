@@ -28,7 +28,6 @@ let confettiCanvas = document.getElementById('confetti-canvas')
 let confettiEndTime;
 let winConfetti = window.confetti.create(confettiCanvas, {
     resize: true,
-    // useWorker: true,
     disableForReducedMotion: true
 });
 
@@ -135,7 +134,6 @@ function Guess(guessInfo, div, categoryList) {
 
     if(guessInfo[1].includes(value)){
         newGuessElement.classList.add('pill', 'pill--success');
-        // div.prepend(newGuessElement);
         div.firstElementChild.insertAdjacentElement("afterend", newGuessElement)
     }
     else{
@@ -468,11 +466,6 @@ function ShootConfetti(){
 
 
 function NextRound(){
-    //what to reset?
-    //guess counter
-    //fuckin pills for all the categories
-    //get a new picture
-    //results popup
     gamemode = 1;
 
     GetRandomFood();
@@ -557,8 +550,6 @@ function Init() {
     SetScrollPosition();
     
     InitialiseFoodPicture();
-    // ShowPopup(infoPopup);
-
 }
 
 
