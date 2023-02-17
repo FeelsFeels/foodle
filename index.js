@@ -258,7 +258,7 @@ function RemoveRecentGuessBorderHighlights() {
 }
 
 function Win() {
-    if(gamemode == 4){
+    if(gamemode > 2){
         return;
     }
 
@@ -296,9 +296,10 @@ function Win() {
 }
 
 function Lose() {
-    if(gamemode == 3){
+    if(gamemode > 2){
         return;
     }
+    gamemode = 4;
 
     PopulateHintCategories(newFood.foodName);
     PixelateImage(originalFoodImg, 0);
