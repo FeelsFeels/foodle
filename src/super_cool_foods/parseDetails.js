@@ -77,18 +77,32 @@ fs.readFile("fooddeets.txt", (err, file) => {
     console.log(methodHolder);
     console.log(courseHolder);
 
+    
+    let foodString = '[';
+    foodHolder.forEach(element => {
+        foodString += `'${element}',`
+    });
+    foodString += ']';
+
     let ingredientString = '[';
     ingredientHolder.forEach(element => {
         ingredientString += `'${element}',`
     });
     ingredientString += ']';
 
-    fs.writeFile("parsedthedeetshaha.txt", ingredientString, function(err) {
+    fs.writeFile("parsed_ingredients.txt", ingredientString, function(err) {
         if(err) {
             return console.log(err);
         }
-        console.log("The file was saved!");
+        console.log("The file ingredient saved!");
     });
+    fs.writeFile("parsed_food.txt", foodString, function(err) {
+        if(err) {
+            return console.log(err);
+        }
+        console.log("The file food saved!");
+    });
+
 });
 
 

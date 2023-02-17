@@ -1,5 +1,4 @@
-let foodLinks = 
-{
+let foodLinks = {
   Pizza: [ 'pizza.jpg', 'wikipedia.org/wiki/Pizza' ],
   'Full English Breakfast': [ 'full_english_breakfast.jpg', 'wikipedia.org/wiki/Full_breakfast' ],
   Risotto: [ 'risotto.jpg', 'wikipedia.org/wiki/Risotto' ],
@@ -71,7 +70,7 @@ let foodLinks =
   'Devilled Kidneys': [ 'devilled_kidneys.jpg', 'wikipedia.org/wiki/Devilled_kidneys' ],
   'Deviled Eggs': [ 'deviled_eggs.jpg', 'wikipedia.org/wiki/Deviled_egg' ],
   'Eton Mess': [ 'eton_mess.jpg', 'wikipedia.org/wiki/Eton_mess' ],
-  'Fish And Chips': [ 'fish_and_chips.jpg', 'wikipedia.org/wiki/Fish_and_chips' ],
+  'Fish And Chips': [ 'fish_and_chips', 'wikipedia.org/wiki/Fish_and_chips' ],
   'Platinum Pudding': [ 'platinum_pudding.jpg', 'wikipedia.org/wiki/Platinum_Pudding' ],
   'Potato Salad': [ 'potato_salad.jpg', 'wikipedia.org/wiki/Potato_salad' ],
   'Black Pudding': [ 'black_pudding.jpg', 'wikipedia.org/wiki/Black_pudding' ],
@@ -103,5 +102,41 @@ let foodLinks =
   Lohikeitto: [ 'lohikeitto.jpg', 'wikipedia.org/wiki/Lohikeitto' ],
   'Beef Bourguignon': [ 'beef_bourguignon.jpg', 'wikipedia.org/wiki/Beef_bourguignon' ],
   'Blanquette De Veau': [ 'blanquette_de_veau.jpg', 'wikipedia.org/wiki/Blanquette_de_veau' ],
-  'Steak Frites': [ 'steak_frites.jpg', 'wikipedia.org/wiki/Steak_frites' ]
+  'Steak Frites': [ 'steak_frites.jpg', 'wikipedia.org/wiki/Steak_frites' ],
+  'Chilli Crab': [ 'chilli_crab.jpg', 'wikipedia.org/wiki/Chilli_crab' ],
+  Laksa: [ 'laksa.jpg', 'wikipedia.org/wiki/Laksa' ],
+  'Char Kway Teow': [ 'char_kway_teow.jpg', 'wikipedia.org/wiki/Char_kway_teow' ],
+  'Hokkien Mee': [ 'hokkien_mee.jfif', 'wikipedia.org/wiki/Hokkien_mee' ],
+  'Fish Head Curry': [ 'fish_head_curry.jfif', 'wikipedia.org/wiki/Fish_head_curry' ],
+  Banmian: [ 'banmian.jpg', 'wikipedia.org/wiki/Banmian' ],
+  'Mee Rebus': [ 'mee-rebus.jpg', 'wikipedia.org/wiki/Mee_rebus' ],
+  'Ayam Penyet': [ 'ayam_penyet.jpg', 'wikipedia.org/wiki/Ayam_penyet' ],
+  'Bak Kut Teh': [ 'bak_kut_teh.jpg', 'wikipedia.org/wiki/Bak_kut_teh' ],
+  'Chai Tow Kway': [ 'chai_tow_kway.jpg', 'wikipedia.org/wiki/Chai_tow_kway' ],
+  'Hainanese Curry Rice': [
+    'hainanese_curry_rice.jpg',
+    'wikipedia.org/wiki/Hainanese_curry_rice'
+  ],
+  'Duck Rice': [ 'duck_rice.jpg', 'wikipedia.org/wiki/Duck_rice' ],
+  'Nasi Goreng': [ 'nasi_goreng.jpg', 'wikipedia.org/wiki/Nasi_goreng' ],
+  Rojak: [ 'rojak.jfif', 'wikipedia.org/wiki/Rojak' ],
+  'Pig Organ Soup': [ 'pig_organ_soup.jfif', 'wikipedia.org/wiki/Pig%27s_organ_soup' ],
+  'Roti John': [ 'roti_john.jpg', 'wikipedia.org/wiki/Roti_john' ],
+  'Roti Canai': [ 'roti_canai.jpg', 'wikipedia.org/wiki/Roti_canai' ],
+  Satay: [ 'satay.jpg', 'wikipedia.org/wiki/Satay' ],
+  'Sliced Fish Soup': [ 'sliced_fish_soup.jpg', 'wikipedia.org/wiki/Sliced_fish_soup' ],
+  'Ais Kacang': [ 'ais_kacang.jpg', 'wikipedia.org/wiki/Ais_kacang' ],
+  'Kaya Toast': [ 'kaya_toast.jpg', 'wikipedia.org/wiki/Kaya_toast' ],
+  'Chwee Kueh': [ 'chwee_kueh.jpg', 'wikipedia.org/wiki/Chwee_kueh' ],
+  'Pulut Hitam': [ 'pulut_hitam.jpg', 'wikipedia.org/wiki/Bubur_ketan_hitam' ],
+  'Nasi Lemak': [ 'nasi_lemak.jpg', 'wikipedia.org/wiki/Nasi_lemak' ],
+  'Banh Mi': [ 'banh_mi.png', 'wikipedia.org/wiki/Bánh_mì' ],
+  'Egg Coffee': [ 'egg_coffee.jpg', 'wikipedia.org/wiki/Egg_coffee' ],
+  Pho: [ 'pho.jpg', 'wikipedia.org/wiki/Pho' ],
+  Popiah: [ 'popiah.jpg', 'wikipedia.org/wiki/Popiah' ],
+  'Pad Thai': [ 'pad_thai.jpg', 'wikipedia.org/wiki/Pad_thai' ],
+  'Green Curry': [ 'green_curry.jpg', 'wikipedia.org/wiki/Green_curry' ],
+  'Tom Yum': [ 'tom_yum.jpg', 'wikipedia.org/wiki/Tom_yum' ],
+  'Oyster Meesua': [ 'oyster_meesua.jpg', 'wikipedia.org/wiki/Oyster_vermicelli' ],
+  Rosti: [ 'rosti.jpg', 'wikipedia.org/wiki/Rösti' ]
 }

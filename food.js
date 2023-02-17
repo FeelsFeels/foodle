@@ -64,105 +64,13 @@ function GetDayDifference(){
 
 
 
-let foodList = [
-  'Pizza',
-  'Full English Breakfast',
-  'Risotto',
-  'Katsudon',
-  'Bibimbap',
-  'Bak Chor Mee',
-  'Hainanese Chicken Rice',
-  'Ginseng Chicken Soup',
-  'Bingsu',
-  'Tortang Talong',
-  'Caesar Salad',
-  'Ceviche',
-  'Aush Reshteh',
-  'Aushak',
-  'Bolani',
-  'Chapli Kabab',
-  'Fesenjan',
-  'Kesme',
-  'Gheimeh',
-  'Baklava',
-  'Knafeh',
-  'Baba Ghanoush',
-  'Balaleet',
-  'Chakhchoukha',
-  'Chebakia',
-  'Churros',
-  'Frittata',
-  'Quiche Lorraine',
-  'Faloodeh',
-  'Fatayer',
-  'Turkish Delight',
-  'Australian Meat Pie',
-  'Egg Drop Soup',
-  'Eiernockerl',
-  'Gnocchi',
-  'Frankenburger Bratknodel',
-  'Goulash',
-  'Tafelspitz',
-  'Apple Strudel',
-  'Apple Pie',
-  'Kaiserschmarrn',
-  'Germknodel',
-  'Kasespatzle',
-  'Wiener Schnitzel',
-  'Mezzelune',
-  'Kuku Sabzi',
-  'Dovga',
-  'Khachapuri',
-  'Ajapsandali',
-  'Ghapama',
-  'Bangers And Mash',
-  'Cauliflower Cheese',
-  'Chicken Tikka Masala',
-  'Chicken Tikka',
-  'Butter Chicken',
-  'Coronation Chicken',
-  'Devilled Kidneys',
-  'Deviled Eggs',
-  'Eton Mess',
-  'Fish And Chips',
-  'Platinum Pudding',
-  'Potato Salad',
-  'Black Pudding',
-  'Kitchener Bun',
-  'Palmier',
-  'Empanada',
-  'Locro',
-  'Zabaione',
-  'Sorrentinos',
-  'Sandwiches De Miga',
-  'Lasagna',
-  'Moussaka',
-  'Tave Kosi',
-  'Waterzooi',
-  'Chocolate Mousse',
-  'Ema Datshi',
-  'Feijoada',
-  'Ambuyat',
-  'Shopska Salad',
-  'Fish Amok',
-  'Num Banhchok',
-  'Samlar Kako',
-  'Poutine',
-  'Butter Tart',
-  'Pastel De Choclo',
-  'Stegt Flaesk',
-  'Encebollado',
-  'Guatitas',
-  'Lohikeitto',
-  'Beef Bourguignon',
-  'Blanquette De Veau',
-  'Steak Frites'
-]
+let foodList = ['Pizza','Full English Breakfast','Risotto','Katsudon','Bibimbap','Bak Chor Mee','Hainanese Chicken Rice','Ginseng Chicken Soup','Bingsu','Tortang Talong','Caesar Salad','Ceviche','Aush Reshteh','Aushak','Bolani','Chapli Kabab','Fesenjan','Kesme','Gheimeh','Baklava','Knafeh','Baba Ghanoush','Balaleet','Chakhchoukha','Chebakia','Churros','Frittata','Quiche Lorraine','Faloodeh','Fatayer','Turkish Delight','Australian Meat Pie','Egg Drop Soup','Eiernockerl','Gnocchi','Frankenburger Bratknodel','Goulash','Tafelspitz','Apple Strudel','Apple Pie','Kaiserschmarrn','Germknodel','Kasespatzle','Wiener Schnitzel','Mezzelune','Kuku Sabzi','Dovga','Khachapuri','Ajapsandali','Ghapama','Bangers And Mash','Cauliflower Cheese','Chicken Tikka Masala','Chicken Tikka','Butter Chicken','Coronation Chicken','Devilled Kidneys','Deviled Eggs','Eton Mess','Fish And Chips','Platinum Pudding','Potato Salad','Black Pudding','Kitchener Bun','Palmier','Empanada','Locro','Zabaione','Sorrentinos','Sandwiches De Miga','Lasagna','Moussaka','Tave Kosi','Waterzooi','Chocolate Mousse','Ema Datshi','Feijoada','Ambuyat','Shopska Salad','Fish Amok','Num Banhchok','Samlar Kako','Poutine','Butter Tart','Pastel De Choclo','Stegt Flaesk','Encebollado','Guatitas','Lohikeitto','Beef Bourguignon','Blanquette De Veau','Steak Frites','Chilli Crab','Laksa','Char Kway Teow','Hokkien Mee','Fish Head Curry','Banmian','Mee Rebus','Ayam Penyet','Bak Kut Teh','Chai Tow Kway','Hainanese Curry Rice','Duck Rice','Nasi Goreng','Rojak','Pig Organ Soup','Roti John','Roti Canai','Satay','Sliced Fish Soup','Ais Kacang','Kaya Toast','Chwee Kueh','Pulut Hitam','Nasi Lemak','Banh Mi','Egg Coffee','Pho','Popiah','Pad Thai','Green Curry','Tom Yum','Oyster Meesua','Rosti']
 
 
-let foodObjectList = {
+let foodObjectList = 
+{
   Pizza: [
-    [ 'Cheese', 'Flour', 'Tomato', 'Mozzarella' ],
+    [ 'Cheese', 'Flour', 'Dough', 'Tomato' ],
     [ 'Italy' ],
     [ 'Baking' ],
     [ 'Entree' ]
@@ -246,7 +154,7 @@ let foodObjectList = {
     [ 'Soup' ]
   ],
   Bingsu: [
-    [ 'Ice', 'Red Beans', 'Condensed Milk', 'Syrup' ],
+    [ 'Ice', 'Red Bean', 'Condensed Milk', 'Syrup' ],
     [ 'Korea' ],
     [ 'Freezing', 'Assembling' ],
     [ 'Dessert' ]
@@ -481,8 +389,7 @@ let foodObjectList = {
     [ 'Steaming' ],
     []
   ],
-  Kasespatzle: [ [ 'Noodles', 'Cheese', 'Onion' ], [ 'Germany' ], [ 'Baked' ], [
-] ],
+  Kasespatzle: [ [ 'Noodles', 'Cheese', 'Onion' ], [ 'Germany' ], [ 'Baked' ], [] ],
   'Wiener Schnitzel': [
     [ 'Veal', 'Breadcrumbs' ],
     [ 'Germany', 'Austria' ],
@@ -655,7 +562,7 @@ let foodObjectList = {
     []
   ],
   Lasagna: [
-    [ 'Dough', 'Minced Meat', 'Tomato', 'Bechamel', 'Cheese' ],
+    [ 'Pasta', 'Minced Meat', 'Tomato', 'Bechamel', 'Cheese' ],
     [ 'Italy' ],
     [ 'Baking' ],
     []
@@ -745,8 +652,7 @@ let foodObjectList = {
     [ 'Frying' ],
     []
   ],
-  Encebollado: [ [ 'Fish', 'Cassava', 'Onion' ], [ 'Ecuador' ], [ 'Boiling' ], [
-] ],
+  Encebollado: [ [ 'Fish', 'Cassava', 'Onion' ], [ 'Ecuador' ], [ 'Boiling' ], [] ],
   Guatitas: [
     [ 'Tripe', 'Peanut', 'Potato', 'Lemon' ],
     [ 'Ecuador' ],
@@ -776,16 +682,207 @@ let foodObjectList = {
     [ 'Belgium', 'France' ],
     [ 'Frying' ],
     []
-  ]
+  ],
+  'Chilli Crab': [
+    [ 'Crab', 'Tomato', 'Chilli', 'Egg' ],
+    [ 'Singapore' ],
+    [ 'Frying', 'Boiling' ],
+    []
+  ],
+  Laksa: [
+    [ 'Noodles', 'Coconut Milk', 'Chicken', 'Prawn', 'Chilli' ],
+    [ 'Singapore', 'Malaysia' ],
+    [ 'Boiling' ],
+    []
+  ],
+  'Char Kway Teow': [
+    [
+      'Noodles',
+      'Soy Sauce',
+      'Chilli',
+      'Prawn',
+      'Cockles',
+      'Bean Sprouts'
+    ],
+    [ 'China', 'Singapore', 'Malaysia' ],
+    [ 'Frying' ],
+    []
+  ],
+  'Hokkien Mee': [
+    [ 'Noodles', 'Egg', 'Prawn', 'Pork', 'Squid', 'Chilli' ],
+    [ 'Singapore', 'Malaysia' ],
+    [ 'Frying' ],
+    []
+  ],
+  'Fish Head Curry': [
+    [ 'Fish', 'Curry', 'Eggplant', 'Okra' ],
+    [ 'Singapore' ],
+    [ 'Boiling' ],
+    []
+  ],
+  Banmian: [
+    [ 'Noodles', 'Vegetables', 'Anchovies', 'Egg', 'Minced Meat' ],
+    [ 'Singapore', 'Malaysia' ],
+    [ 'Boiling' ],
+    []
+  ],
+  'Mee Rebus': [
+    [ 'Noodles', 'Lime', 'Shrimp', 'Tofu', 'Egg' ],
+    [ 'Indonesia', 'Malaysia', 'Singapore' ],
+    [ 'Boiling' ],
+    []
+  ],
+  'Ayam Penyet': [
+    [ 'Chicken', 'Chilli', 'Tomato' ],
+    [ 'Indonesia' ],
+    [ 'Deep Frying' ],
+    []
+  ],
+  'Bak Kut Teh': [
+    [ 'Pork', 'Broth' ],
+    [ 'China', 'Malaysia', 'Singapore' ],
+    [ 'Boiling' ],
+    []
+  ],
+  'Chai Tow Kway': [
+    [ 'Radish', 'Egg', 'Flour' ],
+    [ 'China' ],
+    [ 'Steaming', 'Frying' ],
+    []
+  ],
+  'Hainanese Curry Rice': [
+    [ 'Rice', 'Curry', 'Gravy', 'Egg', 'Chicken' ],
+    [ 'Singapore' ],
+    [ 'Frying', 'Braising' ],
+    []
+  ],
+  'Duck Rice': [
+    [ 'Duck', 'Rice' ],
+    [ 'Singapore' ],
+    [ 'Braising', 'Roasting' ],
+    []
+  ],
+  'Nasi Goreng': [
+    [ 'Rice', 'Meat', 'Vegetables', 'Soy Sauce', 'Egg' ],
+    [ 'Indonesia' ],
+    [ 'Frying' ],
+    []
+  ],
+  Rojak: [
+    [ 'Pineapple', 'Cucumber', 'Sugar', 'Chilli' ],
+    [ 'Indonesia' ],
+    [ 'Mixing' ],
+    []
+  ],
+  'Pig Organ Soup': [
+    [ 'Pork', 'Vegetables', 'Pepper', 'Broth' ],
+    [ 'Malaysia', 'Singapore' ],
+    [ 'Boiling' ],
+    []
+  ],
+  'Roti John': [
+    [ 'Bread', 'Minced Meat', 'Onion', 'Egg', 'Chilli', 'Mayonnaise' ],
+    [ 'Singapore' ],
+    [ 'Frying' ],
+    []
+  ],
+  'Roti Canai': [ [ 'Dough', 'Flour' ], [ 'India' ], [ 'Frying' ], [] ],
+  Satay: [ [ 'Meat', 'Peanut' ], [ 'Indonesia' ], [ 'Grilling' ], [] ],
+  'Sliced Fish Soup': [
+    [ 'Fish', 'Vegetables', 'Tomato', 'Seaweed' ],
+    [ 'Singapore' ],
+    [ 'Boiling' ],
+    []
+  ],
+  'Ais Kacang': [
+    [ 'Ice', 'Red Bean', 'Syrup' ],
+    [ 'Malaysia' ],
+    [ 'Freezing' ],
+    []
+  ],
+  'Kaya Toast': [
+    [ 'Bread', 'Coconut', 'Butter' ],
+    [ 'Singapore' ],
+    [ 'Toasting' ],
+    []
+  ],
+  'Chwee Kueh': [
+    [ 'Radish', 'Flour' ],
+    [ 'Singapore', 'China' ],
+    [ 'Steaming' ],
+    []
+  ],
+  'Pulut Hitam': [
+    [ 'Rice', 'Coconut Milk', 'Sugar' ],
+    [ 'Malaysia' ],
+    [ 'Boiling' ],
+    []
+  ],
+  'Nasi Lemak': [
+    [ 'Rice', 'Coconut Milk', 'Pandan', 'Chilli', 'Anchovies' ],
+    [ 'Malaysia' ],
+    [ 'Boiling' ],
+    []
+  ],
+  'Banh Mi': [
+    [ 'Bread', 'Pork', 'Meat', 'Vegetables' ],
+    [ 'Vietnam' ],
+    [ 'Assembling' ],
+    []
+  ],
+  'Egg Coffee': [
+    [ 'Coffee', 'Condensed Milk', 'Butter', 'Egg' ],
+    [ 'Vietnam' ],
+    [ 'Mixing' ],
+    []
+  ],
+  Pho: [ [ 'Noodles', 'Beef', 'Broth' ], [ 'Vietnam' ], [ 'Boiling' ], [] ],
+  Popiah: [
+    [ 'Flour', 'Vegetables', 'Peanut', 'Soy Sauce' ],
+    [ 'China' ],
+    [],
+    []
+  ],
+  'Pad Thai': [
+    [
+      'Noodles',
+      'Egg',
+      'Tamarind',
+      'Fish Sauce',
+      'Prawn',
+      'Lime',
+      'Bean Sprouts',
+      'Peanut',
+      'Chilli'
+    ],
+    [ 'Thailand' ],
+    [ 'Frying' ],
+    []
+  ],
+  'Green Curry': [
+    [ 'Coconut Milk', 'Curry', 'Fish Sauce', 'Basil' ],
+    [ 'Thailand' ],
+    [ 'Boiling' ],
+    []
+  ],
+  'Tom Yum': [
+    [ 'Broth', 'Lemongrass', 'Lime', 'Fish Sauce', 'Chilli' ],
+    [ 'Thailand' ],
+    [ 'Boiling' ],
+    []
+  ],
+  'Oyster Meesua': [ [ 'Oyster', 'Noodles', 'Flour' ], [ 'Taiwan' ], [ 'Boiling' ], [] ],
+  Rosti: [ [ 'Potato', 'Butter' ], [ 'Switzerland' ], [ 'Frying' ], [] ]
 }
 
 
 
 
-let ingredientList = ['Cheese','Flour','Tomato','Mozzarella','Bacon','Sausage','Egg','Mushroom','Bread','Beans','Rice','Stock','Broth','Bouillon','Butter','Onion','White Wine','Pork','Chicken','Breadcrumbs','Soy Sauce','Gochujang','Chilli','Beef','Carrot','Cucumber','Kimchi','Noodles','Fishball','Minced Meat','Oil','Vinegar','Ginger','Sesame Oil','Ginseng','Garlic','Ice','Red Beans','Condensed Milk','Syrup','Eggplant','Salt','Lettuce','Croutons','Lemon','Olive Oil','Worcestershire Sauce','Anchovies','Mustard','Pepper','Fish','Lime','Coriander','Lentils','Tumeric','Pasta','Chives','Yogurt','Mint','Potato','Scallion','Mutton','Pomegranate','Walnut','Duck','Cinnamon','Meat','Split Peas','Dried Lime','Dough','Pistachio','Almonds','Rose Water','Tahini','Cardamom','Saffron','Chickpea','Honey','Orange Blossom Water','Sesame','Sugar','Vegetables','Pastry','Cream','Spinach','Starch','Dates','Gravy','Tofu','Milk','Paprika','Lard','Apple','Horseradish','Poppy Seeds','Jam','Veal','Cranberry','Dill','Bell Pepper','Pumpkin','Raisins','Peas','Cauliflower','Mayonnaise','Curry Powder','Lamb','Berries','Meringue','Strawberry','Orange','Biscuits','Jelly','Custard','Blood','Fat','Oats','Barley','Corn','Squash','Wine','Ham','Tuna','Bechamel','Roux','Chocolate','Sago','Coconut Milk','Curry','Kroeung','Bean Sprouts','Olives','Cassava','Tripe','Peanut','Salmon','Leek','Mirepoix','Hollandaise Sauce']
 
-let originList = 
-[
+let ingredientList = ['Cheese','Flour','Dough','Tomato','Bacon','Sausage','Egg','Mushroom','Bread','Beans','Rice','Stock','Broth','Bouillon','Butter','Onion','White Wine','Pork','Chicken','Breadcrumbs','Soy Sauce','Gochujang','Chilli','Beef','Carrot','Cucumber','Kimchi','Noodles','Fishball','Minced Meat','Oil','Vinegar','Ginger','Sesame Oil','Ginseng','Garlic','Ice','Red Bean','Condensed Milk','Syrup','Eggplant','Salt','Lettuce','Croutons','Lemon','Olive Oil','Worcestershire Sauce','Anchovies','Mustard','Pepper','Fish','Lime','Coriander','Lentils','Tumeric','Pasta','Chives','Yogurt','Mint','Potato','Scallion','Mutton','Pomegranate','Walnut','Duck','Cinnamon','Meat','Split Peas','Dried Lime','Pistachio','Almonds','Rose Water','Tahini','Cardamom','Saffron','Chickpea','Honey','Orange Blossom Water','Sesame','Sugar','Vegetables','Pastry','Cream','Spinach','Starch','Dates','Gravy','Tofu','Milk','Paprika','Lard','Apple','Horseradish','Poppy Seeds','Jam','Veal','Cranberry','Dill','Bell Pepper','Pumpkin','Raisins','Peas','Cauliflower','Mayonnaise','Curry Powder','Lamb','Berries','Meringue','Strawberry','Orange','Biscuits','Jelly','Custard','Blood','Fat','Oats','Barley','Corn','Squash','Wine','Ham','Tuna','Bechamel','Roux','Chocolate','Sago','Coconut Milk','Curry','Kroeung','Bean Sprouts','Olives','Cassava','Tripe','Peanut','Salmon','Leek','Mirepoix','Hollandaise Sauce','Crab','Prawn','Cockles','Squid','Okra','Shrimp','Radish','Pineapple','Seaweed','Coconut','Pandan','Coffee','Tamarind','Fish Sauce','Basil','Lemongrass','Oyster'];
+
+
+let originList = [
   'Italy',       'England',       'United Kingdom', 'Japan',
   'Korea',       'Singapore',     'Malaysia',       'Thailand',
   'Philippines', 'Mexico',        'Peru',           'Costa Rica',
@@ -801,8 +898,10 @@ let originList =
   'Uruguay',     'Greece',        'Albania',        'Belgium',
   'Bhutan',      'Brazil',        'Brunei',         'Bulgaria',
   'Cambodia',    'Canada',        'Chile',          'Denmark',
-  'Ecuador',     'Finland'
+  'Ecuador',     'Finland',       'Indonesia',      'Vietnam',
+  'Taiwan',      'Switzerland'
 ]
+
 
 
 let methodList = [
@@ -813,7 +912,8 @@ let methodList = [
   'Assembling', 'Grilling',
   'Curing',     'Stewing',
   'Broiling',   'Baked',
-  'Toasting',   'Brining'
+  'Toasting',   'Brining',
+  'Braising',   'Roasting'
 ]
 
 
