@@ -390,6 +390,10 @@ body {
     width: 60%;
     max-width: 500px;
     min-width: 320px;
+    
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 0.2s, opacity 0.2s;
 }
 
 .popup-header{
