@@ -1,0 +1,21 @@
+@media screen and (max-width: 510px) {
+    .paper {
+        height: 1200px;
+    }
+}
+@media screen and (max-width: 440px) {
+    .paper {
+        height: 1350px;
+    }
+}
+@media screen and (max-width: 370px) {
+    .paper {
+        height: 1500px;
+    }
+}
+
+
+.paragraph-content {
+    font-weight: 400;
+    line-height: 30px;
+}

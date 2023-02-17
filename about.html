@@ -7,6 +7,7 @@
     <title>Foodle!</title>
     <link rel="stylesheet" href="bootstrap-5.2.2-dist\css\bootstrap.min.css">
     <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="about.css">
     <link rel="icon" href="src/doko.png">
     <title>Document</title>
 </head>
@@ -15,13 +16,11 @@
         <div id="title-container">
             <span style="font-size: 32px;">F🍩🍩DLE</span>
             <div>
-                <!-- <input type="image" src='src/question-circle.svg' class="header-button" onclick="ShowPopup(infoPopup)">
-                <input type="image" src='src/bar-chart.svg' class="header-button" onclick="ShowPopup(resultsPopup)"> -->
                 <input type="image" src="src/menu.svg" id ="menu-button" class="header-button" style="width:36px; height:36px; top: 10px;" onclick="OpenMenu()">
                 <div id="menu-container" class="hidden">
                     <ul>
                         <li onclick="window.location = 'index.html'">Home</li>
-                        <li onclick="window.location = 'random.html'">Random</li>
+                        <li onclick="window.location = 'daily.html'">Daily</li>
                         <li onclick="window.location = 'about.html'">About</li>
                     </ul>
                 </div>               
@@ -30,15 +29,51 @@
         <div id="title-description" >the round-the-world food guessing game</div>
     </header>
     <div class="paper">
-        <div id="paper-header">
+        <div id="paper-header" style="font-weight: 800">
+            What is Foodle?
         </div>
-        <div class="paper-content">
+        <div class="paper-content" style="font-weight: 400; padding-top: 30px;">
+            <div class="paragraph-content" style="margin:0px 20px;">
+                Foodle is a food guessing game inspired by other Wordle-esque daily games. 
+                The twist is - instead of guessing the word, you'll have to guess the food in 6 tries instead!
+                <br><br>
+                The idea was born from the developer, Rook's interest in food from other countries. 
+                Having lived in a place famous for the diversity of its cuisine, he naturally became interested in how the history and culture of other countries shaped their cuisine. 
+                <br><br>
+                He hopes that through this game, you too can also learn more about food from all around the world!                
+                <br><br>
+            </div>
+            <div>
+                <div style="font-weight: 800; text-align: center; font-size: 30px;">
+                    How to play?
+                </div>
+                <div class="paragraph-content" style="margin:14px 30px 0px;">
+                    After every time you guess a food, hints will appear on based on three categories: <b>"Ingredients"</b>, <b>"Country of Origin"</b>, and <b>"Cooking Method"</b>. 
+                    <br><br>
+                    For example, if the correct dish is Pizza, and you guess Lasagna, this would appear for the "Ingredients" hint:<br>
+                </div>
+                <div style="margin: auto; width: 90%;">
+                    <span class="pill pill--success pill--border-color">Cheese</span>
+                    <span class="pill pill--success pill--border-color">Tomato</span>
+                    <span class="pill pill--danger pill--border-color">Pasta</span>
+                    <span class="pill pill--danger pill--border-color">Minced Meat</span>
+                    <span class="pill pill--danger pill--border-color">Bechamel</span>
+                </div>
+                <div class="paragraph-content" style="margin:-8px 30px 0px;">
+                    The Cheese and Tomato are green, because these are ingredients used in Pizza.
+                    <br>
+                    However, Pasta, Minced Meat, and Bechamel Sauce are red because they are used in Lasagna, but not Pizza.
+                    <br>
+                    This same logic is used for the "Country of Origin" and "Cooking Method" hints as well.
+                </div>
+            </div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script src="bootstrap-5.2.2-dist\js\bootstrap.min.js"></script>
     <script src="index.js"></script>
+    <script src="about.js"></script>
 </body>
 </html>
 

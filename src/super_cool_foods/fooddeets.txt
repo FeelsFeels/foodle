@@ -1,4 +1,4 @@
-#Pizza/Cheese,Flour,Tomato,Mozzarella/Italy/Baking/Entree
+#Pizza/Cheese,Flour,Dough,Tomato/Italy/Baking/Entree
 #Full English Breakfast/Bacon,Sausage,Egg,Tomato,Mushroom,Bread,Beans/England,United Kingdom/Frying/Breakfast
 #Risotto/Rice,Stock,Broth,Bouillon,Butter,Onion,Cheese,White Wine/Italy/Simmering/Entree
 #Katsudon/Rice,Pork,Chicken,Breadcrumbs,Egg,Soy Sauce,Onion/Japan/Deep Frying/???
@@ -68,7 +68,7 @@
 #Zabaione/Egg,Sugar,Wine,Custard/Italy/Simmering,Mixing/???
 #Sorrentinos/Dough,Cheese,Ham,Spinach/Argentina/Boiling/???
 #Sandwiches De Miga/Bread,Ham,Egg,Cheese,Tomato,Bell Pepper,Tuna,Lettuce/Argentina,Uruguay/Assembling,Toasting/???
-#Lasagna/Dough,Minced Meat,Tomato,Bechamel,Cheese/Italy/Baking/???
+#Lasagna/Pasta,Minced Meat,Tomato,Bechamel,Cheese/Italy/Baking/???
 #Moussaka/Eggplant,Potato,Minced Meat,Tomato,Bechamel/Egypt,Greece/Baking,Frying/???
 #Tave Kosi/Lamb,Yogurt,Egg,Roux,Rice/Albania/Baking/???
 #Waterzooi/Fish,Chicken,Broth,Egg,Cream,Vegetables/Belgium/Boiling/???
