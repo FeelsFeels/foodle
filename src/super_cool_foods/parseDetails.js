@@ -21,10 +21,13 @@ fs.readFile("fooddeets.txt", (err, file) => {
     
     
     details.forEach(element => {
-        foodInfo = element.split('/');
+        foodInfo = element.trim().split('/');
 
         foodHolder.push(foodInfo[0]);
-        foodObjectsHolder[foodInfo[0]] = [[],[],[],[]];
+        foodObjectsHolder[foodInfo[0]] = [[],[],[], ''];
+
+        let description = foodInfo[4];
+        foodObjectsHolder[foodInfo[0]][3] = description;
 
         let ingredientArray = foodInfo[1].split(',');
         ingredientArray.forEach(element => {
@@ -52,30 +55,29 @@ fs.readFile("fooddeets.txt", (err, file) => {
             foodObjectsHolder[foodInfo[0]][2].push(element);
             methodHolder.push(element);
         });
-        
-        let courseArray = foodInfo[4].split(',');
-        courseArray.forEach(element => {
-            if(element == '???'){
-                return;
-            }
-            foodObjectsHolder[foodInfo[0]][3].push(element);
-            courseHolder.push(element);
-        });
+
+        // let courseArray = foodInfo[4].split(',');
+        // courseArray.forEach(element => {
+        //     if(element == '???'){
+        //         return;
+        //     }
+        //     foodObjectsHolder[foodInfo[0]][3].push(element);
+        //     courseHolder.push(element);
+        // });
 
     });
-
     ingredientHolder = [...new Set(ingredientHolder)];
     originHolder = [...new Set(originHolder)];
     methodHolder = [...new Set(methodHolder)];
-    courseHolder = [...new Set(courseHolder)];
+    // courseHolder = [...new Set(courseHolder)];
 
 
-    console.log(foodHolder);
+    // console.log(foodHolder);
     console.log(foodObjectsHolder);
-    console.log(ingredientHolder);
+    // console.log(ingredientHolder);
     console.log(originHolder);
     console.log(methodHolder);
-    console.log(courseHolder);
+    // console.log(courseHolder);
 
     
     let foodString = '[';

@@ -11,7 +11,7 @@ resultsPopup = document.getElementById('results-popup');
 resultsHeader = document.getElementById('results-header');
 resultsContent = document.getElementById('results-content');
 resultsPicture = document.getElementById('results-food-picture');
-resultsPictureDescription = document.getElementById('results-food-description');
+// resultsPictureDescription = document.getElementById('results-food-description');
 resultsShareButton = document.getElementById('share-button');
 resultsShareButtonText = document.getElementById('share-button_text');
 resultsLink = document.getElementById('info-link');
@@ -272,13 +272,15 @@ function Win() {
 
     let congratulations = document.createElement('div');
     congratulations.setAttribute('style', 'font-size: larger; color: #4CAF50;');
-    congratulations.textContent = 'Congratulations!';
+    congratulations.textContent = `Congrats! It's ${newFood.foodName}!`;
 
-    let winStatement = document.createElement('div');
-    winStatement.textContent = `You got it in ${numberOfGuesses}!`;
+    let foodDescription = document.createElement('div');
+    foodDescription.setAttribute('id' ,'results-description');
+    foodDescription.textContent = `"${newFood.description}"`;
+    // winStatement.textContent = `You got it in ${numberOfGuesses}!`;
 
     resultsHeader.append(congratulations);
-    resultsHeader.append(winStatement);
+    resultsHeader.append(foodDescription);
     
     resultsContent.classList.remove("hidden");
 
@@ -299,7 +301,6 @@ function Lose() {
     if(gamemode > 2){
         return;
     }
-    gamemode = 4;
 
     PopulateHintCategories(newFood.foodName);
     PixelateImage(originalFoodImg, 0);
@@ -311,24 +312,27 @@ function Lose() {
     resultsHeader.innerHTML = '';
     let consolations = document.createElement('div');
     consolations.setAttribute('style', 'font-size: larger; color: #DC2626');
-    consolations.textContent = "Oops!";
+    consolations.textContent = `Oops! It's ${newFood.foodName}.`;
 
-    let loseStatement = document.createElement('div');
+    let foodDescription = document.createElement('div');
+    foodDescription.setAttribute('id' ,'results-description');
+    foodDescription.textContent = `"${newFood.description}"`;
 
-    if(gamemode == 0){
-        resultsShareButton.setAttribute('onclick', 'ShareLoss()');
-        loseStatement.textContent = `Better luck next time! Try again tomorrow?`;
-    }
-    else if (gamemode == 1){
-        resultsShareButton.setAttribute('onclick', 'NextRound()');
-        loseStatement.textContent = `Better luck next time! Let's go to the next round!`;
-    }
+    // if(gamemode == 0){
+    //     resultsShareButton.setAttribute('onclick', 'ShareLoss()');
+    //     loseStatement.textContent = `Better luck next time! Try again tomorrow?`;
+    // }
+    // else if (gamemode == 1){
+    //     resultsShareButton.setAttribute('onclick', 'NextRound()');
+    //     console.log(loseStatement);
+    // }
 
     resultsHeader.append(consolations);
-    resultsHeader.append(loseStatement);
+    resultsHeader.append(foodDescription);
 
     resultsContent.classList.remove("hidden");
 
+    gamemode = 4;
     ShowPopup(resultsPopup);
 }
 
@@ -368,7 +372,7 @@ let originalFoodImg = new Image();
 
 function InitialiseFoodPicture() {
     //Set results screen description text
-    resultsPictureDescription.textContent = `It's ${newFood.foodName}!`
+    // resultsPictureDescription.textContent = `It's ${newFood.foodName}!`
     resultsLink.href = newFoodLinks[1];
 
     //Need to adjust all sizes based on screen size

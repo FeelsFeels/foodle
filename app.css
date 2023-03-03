@@ -414,6 +414,7 @@ body {
     display: block;
     /* width: 70%; */
     margin: auto;
+    margin-top: 1rem;
 
     box-shadow: 3px 3px 5px #575450;
     box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
@@ -424,6 +425,20 @@ body {
     font-weight: bold;
     text-align: center;
     margin-top: 5px;
+}
+
+#results-description {
+    font-size: 18px;
+    line-height: 20px;
+    color: #2e2e2e;
+
+    margin-bottom: 0.5rem;
+    margin-left: 0.2rem;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 0.3rem;
+
+    border-left: 3px solid rgb(131, 131, 131);
 }
 
 #share-button {
