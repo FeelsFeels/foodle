@@ -67,7 +67,7 @@ function GetDayDifference(){
 let foodList = ['Pizza','Full English Breakfast','Risotto','Katsudon','Bibimbap','Bak Chor Mee','Hainanese Chicken Rice','Ginseng Chicken Soup','Bingsu','Tortang Talong','Caesar Salad','Ceviche','Aush Reshteh','Aushak','Bolani','Chapli Kabab','Fesenjan','Kesme','Gheimeh','Baklava','Knafeh','Baba Ghanoush','Balaleet','Chakhchoukha','Chebakia','Churros','Frittata','Quiche Lorraine','Faloodeh','Fatayer','Turkish Delight','Australian Meat Pie','Egg Drop Soup','Eiernockerl','Gnocchi','Frankenburger Bratknodel','Goulash','Tafelspitz','Apple Strudel','Apple Pie','Kaiserschmarrn','Germknodel','Kasespatzle','Wiener Schnitzel','Mezzelune','Kuku Sabzi','Dovga','Khachapuri','Ajapsandali','Ghapama','Bangers And Mash','Cauliflower Cheese','Chicken Tikka Masala','Chicken Tikka','Butter Chicken','Coronation Chicken','Devilled Kidneys','Deviled Eggs','Eton Mess','Fish And Chips','Platinum Pudding','Potato Salad','Black Pudding','Kitchener Bun','Palmier','Empanada','Locro','Zabaione','Sorrentinos','Sandwiches De Miga','Lasagna','Moussaka','Tave Kosi','Waterzooi','Chocolate Mousse','Ema Datshi','Feijoada','Ambuyat','Shopska Salad','Fish Amok','Num Banhchok','Samlar Kako','Poutine','Butter Tart','Pastel De Choclo','Stegt Flaesk','Encebollado','Guatitas','Lohikeitto','Beef Bourguignon','Blanquette De Veau','Steak Frites','Chilli Crab','Laksa','Char Kway Teow','Hokkien Mee','Fish Head Curry','Banmian','Mee Rebus','Ayam Penyet','Bak Kut Teh','Chai Tow Kway','Hainanese Curry Rice','Duck Rice','Nasi Goreng','Rojak','Pig Organ Soup','Roti John','Roti Canai','Satay','Sliced Fish Soup','Ais Kacang','Kaya Toast','Chwee Kueh','Pulut Hitam','Nasi Lemak','Banh Mi','Egg Coffee','Pho','Popiah','Pad Thai','Green Curry','Tom Yum','Oyster Meesua','Rosti']
 
 
-let foodObjectList = 
+let foodObjectList =
 {
   Pizza: [
     [ 'Cheese', 'Flour', 'Dough', 'Tomato' ],
@@ -748,117 +748,127 @@ let foodObjectList =
     [ 'Chicken', 'Chilli', 'Tomato' ],
     [ 'Indonesia' ],
     [ 'Deep Frying' ],
-    '???'
+    'Ayam Penyet is a Javanese dish of fried chicken that is smashed and served with spicy sambal chili paste.'
   ],
   'Bak Kut Teh': [
     [ 'Pork', 'Broth' ],
     [ 'China', 'Malaysia', 'Singapore' ],
     [ 'Boiling' ],
-    '???'
+    'Bak Kut Teh is a Chinese soup dish of pork ribs simmered in a broth of herbs and spices, usually served with rice, youtiao (fried dough sticks), and pickled vegetables.'
   ],
   'Chai Tow Kway': [
     [ 'Radish', 'Egg', 'Flour' ],
     [ 'China' ],
     [ 'Steaming', 'Frying' ],
-    '???'
+    'Chai Tow Kway is a Teochew dish of radish cake stir-fried with eggs, garlic, and preserved radish, often seasoned with soy sauce and fish sauce.'
   ],
   'Hainanese Curry Rice': [
     [ 'Rice', 'Curry', 'Gravy', 'Egg', 'Chicken' ],
     [ 'Singapore' ],
     [ 'Frying', 'Braising' ],
-    '???'
+    'Hainanese Curry Rice is a Singaporean dish of steamed rice covered with curry and gravy, along with various dishes such as curry chicken, pork chop, and braised cabbage.'
   ],
   'Duck Rice': [
     [ 'Duck', 'Rice' ],
     [ 'Singapore' ],
     [ 'Braising', 'Roasting' ],
-    '???'
+    'Duck Rice is a Singaporean dish of white or braised rice served with either braised or roasted duck meat, usually accompanied by a dark sauce and pickled vegetables.'
   ],
   'Nasi Goreng': [
     [ 'Rice', 'Meat', 'Vegetables', 'Soy Sauce', 'Egg' ],
     [ 'Indonesia' ],
     [ 'Frying' ],
-    '???'
+    'Nasi Goreng is an Indonesian dish of fried rice cooked with kecap manis (sweet dark soy sauce), chilli, garlic, onion and chicken or prawns, often served with a friedegg on top.'
   ],
   Rojak: [
     [ 'Pineapple', 'Cucumber', 'Sugar', 'Chilli' ],
     [ 'Indonesia' ],
     [ 'Mixing' ],
-    '???'
+    'Rojak is a salad dish of Javanese origin that consists of sliced fruit and vegetables tossed with a spicy palm sugar dressing, often topped with crushed peanuts.'
   ],
   'Pig Organ Soup': [
     [ 'Pork', 'Vegetables', 'Pepper', 'Broth' ],
     [ 'Malaysia', 'Singapore' ],
     [ 'Boiling' ],
-    '???'
+    'Pig Organ Soup is a Teochew dish of clear soup that is made from pork offal such as liver, intestines, stomach, heart and blood, usually served with rice and other side dishes.'
   ],
   'Roti John': [
     [ 'Bread', 'Minced Meat', 'Onion', 'Egg', 'Chilli', 'Mayonnaise' ],
     [ 'Singapore' ],
     [ 'Frying' ],
-    '???'
+    'Roti john is a popular snack in Brunei, Malaysia and Singapore that consists of an omelette sandwich with minced meat, onion and tomato-chilli sauce on a baguette.'
   ],
-  'Roti Canai': [ [ 'Dough', 'Flour' ], [ 'India' ], [ 'Frying' ], '???' ],
-  Satay: [ [ 'Meat', 'Peanut' ], [ 'Indonesia' ], [ 'Grilling' ], '???' ],
+  'Roti Canai': [
+    [ 'Dough', 'Flour' ],
+    [ 'India' ],
+    [ 'Frying' ],
+    'Roti canai is a type of flatbread with Indian influence that is popular in Southeast Asia, especially in Malaysia, Brunei, Indonesia and Singapore.'
+  ],
+  Satay: [
+    [ 'Meat', 'Peanut' ],
+    [ 'Indonesia' ],
+    [ 'Grilling' ],
+    'Satay is a dish of seasoned, skewered and grilled meat that originated in Java island and is widely enjoyed in Southeast Asia.'
+  ],
   'Sliced Fish Soup': [
     [ 'Fish', 'Vegetables', 'Tomato', 'Seaweed' ],
     [ 'Singapore' ],
     [ 'Boiling' ],
-    '???'
+    'Sliced fish soup is a light and healthy Singaporean dish that is believed to have Teochew origins and consists of fish slices, vegetables and beancurd in a clear broth.'
   ],
   'Ais Kacang': [
     [ 'Ice', 'Red Bean', 'Syrup' ],
     [ 'Malaysia' ],
     [ 'Freezing' ],
-    '???'
+    'Ais kacang is a Malaysian dessert that consists of shaved ice topped with various ingredients such as red beans, corn, grass jelly, cendol and syrup.'
   ],
   'Kaya Toast': [
     [ 'Bread', 'Coconut', 'Butter' ],
     [ 'Singapore' ],
     [ 'Toasting' ],
-    '???'
+    'A traditional breakfast staple in Singapore, Kaya Toast consists of crispy toast with cold butter and a sweet kaya spread. It is usually served with soft-boiled eggs and coffee or tea.'
   ],
   'Chwee Kueh': [
     [ 'Radish', 'Flour' ],
     [ 'Singapore', 'China' ],
     [ 'Steaming' ],
-    '???'
+    'Chwee kueh is a steamed rice cake that is served with preserved radish and chilli relish.'
   ],
   'Pulut Hitam': [
     [ 'Rice', 'Coconut Milk', 'Sugar' ],
     [ 'Malaysia' ],
     [ 'Boiling' ],
-    '???'
+    'Pulut hitam is a sweet dessert made from black glutinous rice porridge with coconut milk and palm sugar or cane sugar.'
   ],
   'Nasi Lemak': [
     [ 'Rice', 'Coconut Milk', 'Pandan', 'Chilli', 'Anchovies' ],
     [ 'Malaysia' ],
     [ 'Boiling' ],
-    '???'
+    'A traditional Malay dish, nasi lemak consists of rice enriched with coconut milk and accompanied by spicy sambal, roasted peanuts, cucumber slices and other ingredients.'
   ],
   'Banh Mi': [
     [ 'Bread', 'Pork', 'Meat', 'Vegetables' ],
     [ 'Vietnam' ],
     [ 'Assembling' ],
-    '???'
+    'Banh mi is a Vietnamese sandwich made with a short baguette filled with various savory ingredients such as meat, herbs, vegetables and sauces.'
   ],
   'Egg Coffee': [
     [ 'Coffee', 'Condensed Milk', 'Butter', 'Egg' ],
     [ 'Vietnam' ],
     [ 'Mixing' ],
-    '???'
+    'Egg coffee is a Vietnamese drink that consists of robusta coffee topped with a layer of creamy egg yolk, sugar and condensed milk mixture.'
   ],
   Pho: [
     [ 'Noodles', 'Beef', 'Broth' ],
     [ 'Vietnam' ],
     [ 'Boiling' ],
-    '???'
+    'Pho is a traditional Vietnamese dish that features thin slices of beef or chicken cooked in a fragrant beef broth with rice noodles and various toppings such as bean sprouts, lime and basil.'
   ],
   Popiah: [
     [ 'Flour', 'Vegetables', 'Peanut', 'Soy Sauce' ],
     [ 'China' ],
     [ 'Assembling' ],
-    '???'
+    'Popiah is a fresh spring roll made with a thin wrapper filled with various ingredients such as vegetables, meat, eggs and peanuts.'
   ],
   'Pad Thai': [
     [
@@ -874,27 +884,32 @@ let foodObjectList =
     ],
     [ 'Thailand' ],
     [ 'Frying' ],
-    '???'
+    'Pad thai is a traditional Thai dish of stir-fried rice noodles with eggs, tofu, bean sprouts and a tangy sauce made from tamarind, fish sauce and palm sugar.'
   ],
   'Green Curry': [
     [ 'Coconut Milk', 'Curry', 'Fish Sauce', 'Basil' ],
     [ 'Thailand' ],
     [ 'Boiling' ],
-    '???'
+    'Green curry is a type of Thai curry that has a creamy and spicy sauce made from coconut milk, green chilies and various herbs.'
   ],
   'Tom Yum': [
     [ 'Broth', 'Lemongrass', 'Lime', 'Fish Sauce', 'Chilli' ],
     [ 'Thailand' ],
     [ 'Boiling' ],
-    '???'
+    'Tom yum is a spicy and sour Thai soup that is usually cooked with shrimp or prawn and flavored with lemongrass, galangal, kaffir lime leaves, chili, tomato and fish sauce.'
   ],
   'Oyster Meesua': [
     [ 'Oyster', 'Noodles', 'Flour' ],
     [ 'Taiwan' ],
     [ 'Boiling' ],
-    '???'
+    'Oyster Meesua is a Taiwanese noodle soup that consists of thin wheat noodles and fresh oysters cooked in a savory broth.'
   ],
-  Rosti: [ [ 'Potato', 'Butter' ], [ 'Switzerland' ], [ 'Frying' ], '???' ]
+  Rosti: [
+    [ 'Potato', 'Butter' ],
+    [ 'Switzerland' ],
+    [ 'Frying' ],
+    'A traditional Swiss dish, rosti is made with potatoes that are grated, seasoned and cooked in a thin layer of oil or butter until they form a crunchy crust.'
+  ]
 }
 
 

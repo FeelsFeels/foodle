@@ -32,33 +32,35 @@
     </header>
     <div class="paper">
         <div id="paper-header">
-            <input list="guess-options_food" role="combobox" id="input_food" type="text" spellcheck="false" placeholder="What food is this...?">            
-            <div id="search-results-container"></div>
-            <span id="guess-count">0/6</span>
+            <div class="game-content">
+                <input list="guess-options_food" role="combobox" id="input_food" type="text" spellcheck="false" placeholder="What food is this...?">            
+                <div id="search-results-container"></div>
+                <span id="guess-count">0/6</span>
+            </div>
         </div>
         <div class="paper-content">
-            <img id="food-picture">
+            <div class="game-content">
+                <img id="food-picture">
             
-            <div id="guessed-food"></div>
-            <div id ="category-holder">
-                <div id="left">
-                    <div class="category" id="category-ingredient">
-                        <span style="flex-basis: 100%; margin-top:-2px;">Ingredients:</span>
+                <div id="guessed-food"></div>
+                <div id ="category-holder">
+                    <div id="left">
+                        <div class="category" id="category-ingredient">
+                            <span style="flex-basis: 100%; margin-top:-2px;">Ingredients:</span>
+                        </div>
                     </div>
-                </div>
-    
-                <div id="right">
-                    <div class="category" id="category-origin">
-                        <span style="flex-basis: 100%; margin-top:-2px;">Country of Origin:</span>
-                        
-                    </div>
-                    <div class="category" id="category-method">
-                        <span style="flex-basis: 100%; margin-top:-2px;">Cooking Method:</span>
+        
+                    <div id="right">
+                        <div class="category" id="category-origin">
+                            <span style="flex-basis: 100%; margin-top:-2px;">Country of Origin:</span>
+                            
+                        </div>
+                        <div class="category" id="category-method">
+                            <span style="flex-basis: 100%; margin-top:-2px;">Cooking Method:</span>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            
         </div>
     </div>
 
