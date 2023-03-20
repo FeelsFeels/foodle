@@ -32,16 +32,27 @@
     </header>
     <div class="paper">
         <div id="paper-header">
-            <div class="game-content">
+            <div class="main-menu menu-header fade-transition-05">
+                <div>Welcome to Foodle!</div>
+            </div>
+            <div class="game-content hidden fade-transition-1">
                 <input list="guess-options_food" role="combobox" id="input_food" type="text" spellcheck="false" placeholder="What food is this...?">            
                 <div id="search-results-container"></div>
                 <span id="guess-count">0/6</span>
             </div>
         </div>
         <div class="paper-content">
-            <div class="game-content">
+            <div class="main-menu menu-content fade-transition-05">
+                <div>Try to guess the food image in six tries!</div>
+                <div class="start">
+                    <button class="menu-button" onclick="StartGame([])">Classic Mode</button>
+                    <button class="menu-button">Categories</button>
+                    <button class="menu-button" onclick="location.href='about.html'">About</button>
+                    <button class="menu-button">Check Recipes</button>
+                </div>
+            </div>
+            <div class="game-content hidden fade-transition-1">
                 <img id="food-picture">
-            
                 <div id="guessed-food"></div>
                 <div id ="category-holder">
                     <div id="left">

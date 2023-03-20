@@ -107,12 +107,32 @@ body {
     font-family: 'Neucha';
 }
 
+.menu-header{
+    font-size: 35px;
+}
 .menu-content{
+    padding: 20px 20px 120px;
+    font-size: 25px;
+    font-family: 'Handlee';
+    text-align: center;
+}
+.start{
+    display: flex;
+    text-align: center;
+    font-size: 30px;
 
+    flex-direction: column;
+    margin: auto;
+    width: fit-content;
+}
+.menu-button {
+    background-color: #93db8c; /* Green */
+    border-radius: 0.75rem;
+    margin: 20px;
 }
 
 .game-content{
-    /* display: none; */
+    
 }
 
 .paper {
@@ -401,7 +421,7 @@ body {
     min-width: 320px;
     
     transform: scale(0);
-    opacity: 0;
+    /* opacity: 0; */
     transition: transform 0.2s, opacity 0.2s;
 }
 
@@ -472,9 +492,18 @@ body {
     z-index: 21;
 }
 
+.fade-transition-05 {
+    transition: opacity 0.5s;
+}
+.fade-transition-1 {
+    transition: opacity 1s;
+}
 
 .hidden {
-    display: none;
+    /* display: none; */
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
 }
 
 

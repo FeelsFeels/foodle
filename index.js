@@ -1,3 +1,6 @@
+game_content = document.getElementsByClassName('game-content');
+main_menu_items = document.getElementsByClassName('main-menu');
+
 input_food = document.getElementById('input_food');
 
 guessedDiv_food = document.getElementById('guessed-food')
@@ -11,7 +14,6 @@ resultsPopup = document.getElementById('results-popup');
 resultsHeader = document.getElementById('results-header');
 resultsContent = document.getElementById('results-content');
 resultsPicture = document.getElementById('results-food-picture');
-// resultsPictureDescription = document.getElementById('results-food-description');
 resultsShareButton = document.getElementById('share-button');
 resultsShareButtonText = document.getElementById('share-button_text');
 resultsLink = document.getElementById('info-link');
@@ -318,15 +320,6 @@ function Lose() {
     foodDescription.setAttribute('id' ,'results-description');
     foodDescription.textContent = `"${newFood.description}"`;
 
-    // if(gamemode == 0){
-    //     resultsShareButton.setAttribute('onclick', 'ShareLoss()');
-    //     loseStatement.textContent = `Better luck next time! Try again tomorrow?`;
-    // }
-    // else if (gamemode == 1){
-    //     resultsShareButton.setAttribute('onclick', 'NextRound()');
-    //     console.log(loseStatement);
-    // }
-
     resultsHeader.append(consolations);
     resultsHeader.append(foodDescription);
 
@@ -356,6 +349,7 @@ function RemovePopup(target) {
     target.firstElementChild.style.opacity = 0;
     target.firstElementChild.style.transform = 'scale(0)';
     setTimeout(() => {
+        // target.classList.add("hidden");
         target.classList.add("hidden");
     }, 200);
     document.body.style.overflow = "auto";
@@ -385,7 +379,7 @@ function InitialiseFoodPicture() {
     resultsPicture.src = newFoodLinks[0];
 
     originalFoodImg.onload = function() {
-        //dont choose shitty pics with bad aspect ratio
+        //dont choose pics with bad aspect ratio
         let w = originalFoodImg.naturalWidth;
         let h = originalFoodImg.naturalHeight;
         let aspect = w/h;
@@ -531,8 +525,40 @@ function NextRound(){
 
 }
 
+
+function StartGame(tags){
+    if(tags.length == 0){
+        GetRandomFood();
+        InitialiseFoodPicture();
+    }
+    else{
+        GetFoodsFromCategories();
+        InitialiseFoodPicture();
+    }
+
+    //Fade in
+    for (let i = 0; i < game_content.length; i++) {
+        let element = game_content[i];
+        element.classList.remove('hidden');
+    }
+    //Fade out
+    for (let i = 0; i < main_menu_items.length; i++) {
+        let element = main_menu_items[i];
+        element.classList.add('hidden');
+    }
+}
+function GetFoodsFromCategories(tags){
+
+}
+
 function Init() {
     //Event listeners
+    // document.addEventListener('keyup', (e) => {
+    //     if(e.key == "Home"){
+    //         Fate();
+    //     }
+    // });
+
     input_food.addEventListener('keyup', (e) => {
         if(e.key == "Enter"){
             GuessFood(input_food.value);
@@ -578,13 +604,7 @@ function Init() {
         input_food.blur();
     });
     
-
     SetScrollPosition();
-    
-    InitialiseFoodPicture();
 }
 
-
-
-
-
+Init();
